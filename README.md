@@ -1,9 +1,7 @@
 <div align="center">
   
-# Termux-Pentesting-Distro
+# Termux Penetration Testing Distros
 | Kali Linux | BlackArch Linux | BackBox Linux | Parrot Sec Linux | Kali Debian |
-for
-Termux Proot-Distro & Chroot
 </div>
 
 # Kali Nethunter Full [chroot]
