@@ -37,6 +37,13 @@ apt update && apt install proot-distro wget -y && wget -qO- https://raw.githubus
 ```
 apt update && apt install proot-distro wget -y && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Proot/kali-minimal | sh && pd sh kali-minimal
 ```
+- Setup .zshrc profile
+```
+wget -O /root/.zshrc https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Proot/.zshrc
+```
+<div align="center">
+<img src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/KaliLinux/Proot/kali-proot.png">
+</div>
 
 # BackBox Linux [proot-distro]
 > Custom build tarball
