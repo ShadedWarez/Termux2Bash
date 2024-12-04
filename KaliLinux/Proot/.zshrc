@@ -1,18 +1,3 @@
-# Ensure terminal size is updated
-zmodload zsh/terminfo
-autoload -Uz add-zsh-hook
-
-# Function to update the terminal size
-function update_terminal_size() {
-  if (( $LINES != $(tput lines) || $COLUMNS != $(tput cols) )); then
-    eval $(resize)
-  fi
-}
-
-# Hook to check terminal size after commands
-add-zsh-hook -Uz precmd update_terminal_size
-
-
 # ~/.zshrc file for zsh interactive shells.
 # see /usr/share/doc/zsh/examples/zshrc for examples
 
@@ -112,7 +97,7 @@ configure_prompt() {
     #[ "$EUID" -eq 0 ] && prompt_symbol=💀
     case "$PROMPT_ALTERNATIVE" in
         twoline)
-user=kali
+            user=kali
             PROMPT=$'%F{%(#.blue.green)}┌──${debian_chroot:+($debian_chroot)─}${VIRTUAL_ENV:+($(basename $VIRTUAL_ENV))─}(%B%F{%(#.red.blue)}%n'$prompt_symbol$'$user%b%F{%(#.blue.green)})-[%B%F{reset}%(6~.%-1~/…/%4~.%5~)%b%F{%(#.blue.green)}]\n└─%B%(#.%F{red}#.%F{blue}$)%b%F{reset} '
             # Right-side prompt with exit codes and background processes
             #RPROMPT=$'%(?.. %? %F{red}%B⨯%b%F{reset})%(1j. %j %F{yellow}%B⚙%b%F{reset}.)'
