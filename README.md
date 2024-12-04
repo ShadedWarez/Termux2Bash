@@ -26,3 +26,11 @@ apt update && apt install proot wget -y && wget -qO https://raw.githubuserconten
 ```
 apt update && apt install proot-distro wget -y && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Proot/kali-full | sh && pd sh kali-full
 ```
+
+# Kali Nethunter Minimal [proot-distro]
+> - Official tarball
+> - login:`pd sh kali-minimal`
+> - uninstall:`pd rm kali-minimal`
+```
+apt update && apt install proot-distro wget -y && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Proot/kali-minimal | sh && pd sh kali-minimal
+```
