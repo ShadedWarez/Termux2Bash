@@ -65,6 +65,10 @@ apt update && apt install proot-distro wget -y && wget -qO- https://raw.githubus
 ```
 apt update && apt install proot-distro wget -y && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliDeb/install | sh && pd sh debkali
 ```
+<div align="center">
+<img src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/KaliDeb/debkali.png">
+</div>
+
 
 # ParrotSec [proot-distro]
 > - arch to blackarch custom build tarball
@@ -73,3 +77,6 @@ apt update && apt install proot-distro wget -y && wget -qO- https://raw.githubus
 ```
 apt update && apt install proot-distro wget -y && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliDeb/install | sh && pd sh parrot
 ```
+<div align="center">
+<img src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/ParrotSec/parrot.png">
+</div>
