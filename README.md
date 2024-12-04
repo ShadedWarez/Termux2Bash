@@ -50,3 +50,19 @@ apt update && apt install proot-distro wget -y && wget -qO- https://raw.githubus
 ```
 apt update && apt install proot-distro wget -y && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/BlackArch/install | sh && pd sh blackarch
 ```
+
+# Kali in Debian [proot-distro]
+> - debian convert to kali custom build tarball
+> - login:`pd sh debkali`
+> - uninstall:`pd rm debkali`
+```
+apt update && apt install proot-distro wget -y && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliDeb/install | sh && pd sh debkali
+```
+
+# ParrotSec [proot-distro]
+> - arch to blackarch custom build tarball
+> - login:`pd sh parrot`
+> - uninstall:`pd rm parrot`
+```
+apt update && apt install proot-distro wget -y && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliDeb/install | sh && pd sh parrot
+```
