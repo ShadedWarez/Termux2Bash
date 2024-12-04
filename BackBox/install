@@ -13,4 +13,3 @@ tar -xvJf backbox.tar.xz
 echo "
 To login BackBox: pd sh backbox
 "
-pd sh backbox
