@@ -13,5 +13,3 @@ tar -xvJf blackarch.tar.xz
 echo "
 To login BackBox: pd sh blackarch
 "
-pd sh blackarch
-
