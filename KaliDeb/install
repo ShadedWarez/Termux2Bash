@@ -1,1 +1,17 @@
 #!/bin/sh
+
+echo 'DISTRO_NAME="Debian Kali"' >> $PREFIX/etc/proot-distro/debkali.sh
+###
+mkdir -p $PREFIX/var/lib/proot-distro/installed-rootfs
+###
+cd $PREFIX/var/lib/proot-distro/installed-rootfs
+###
+wget https://github.com/xiv3r/Kali-Linux-Nethunter/releases/download/rootfs/debkali-arm64-rootfs.tar.xz
+###
+tar -xvJf debkali-arm64-rootfs.tar.xz
+###
+echo "
+To login Parrot Sec: pd sh parrot
+"
+pd sh debkali
+
