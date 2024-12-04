@@ -34,3 +34,19 @@ apt update && apt install proot-distro wget -y && wget -qO- https://raw.githubus
 ```
 apt update && apt install proot-distro wget -y && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Proot/kali-minimal | sh && pd sh kali-minimal
 ```
+
+# BackBox Linux [proot-distro]
+> Custom build tarball
+> login:`pd sh backbox`
+> uninstall:`pd rm backbox`
+```
+apt update && apt install proot-distro wget -y && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/BackBox/install | sh && pd sh backbox
+```
+
+# BlackArch Linux [proot-distro]
+> - Custom build tarball
+> - login:`pd sh blackarch`
+> - uninstall:`pd rm blackarch`
+```
+apt update && apt install proot-distro wget -y && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/BlackArch/install | sh && pd sh blackarch
+```
