@@ -1,6 +1,6 @@
 #!/bin/sh
 
-echo 'DISTRO_NAME="Kali Full"' >> $PREFIX/etc/proot-distro/kali.sh
+echo 'DISTRO_NAME="Kali Linux Full"' >> $PREFIX/etc/proot-distro/kali.sh
 ###
 mkdir -p $PREFIX/var/lib/proot-distro/installed-rootfs/kali
 ###
