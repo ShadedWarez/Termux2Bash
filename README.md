@@ -19,7 +19,7 @@ apt update && apt install proot wget -y && wget -qO- https://raw.githubuserconte
 > - login:`nethunter` or `nethunter -r`
 > - uninstall:`cd && rm -rf chroot`
 ```
-apt update && apt install proot wget -y && wget -qO https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Chroot/kali-minimal | sh && nethunter -r
+apt update && apt install proot wget -y && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Chroot/kali-minimal | sh && nethunter -r
 ```
 
 # Kali Nethunter Full [proot-distro]
