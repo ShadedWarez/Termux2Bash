@@ -1,0 +1,18 @@
+#!/bin/sh
+
+echo 'DISTRO_NAME="Kali Full"' >> $PREFIX/etc/proot-distro/kali.sh
+###
+mkdir -p $PREFIX/var/lib/proot-distro/installed-rootfs/kali
+###
+cd $PREFIX/var/lib/proot-distro/installed-rootfs
+###
+wget https://kali.download/nethunter-images/current/rootfs/ kali-nethunter-rootfs-full-arm64.tar.xz
+###
+tar -xvJf kali-nethunter-rootfs-full-arm64.tar.xz
+###
+mv chroot/kali-arm64/* $PREFIX/var/lib/proot-distro/installed-rootfs/kali
+###
+echo "
+To login Parrot Sec: pd sh kali
+"
+pd sh kali
