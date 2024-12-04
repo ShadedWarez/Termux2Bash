@@ -15,4 +15,3 @@ mv chroot/kali-arm64/* $PREFIX/var/lib/proot-distro/installed-rootfs/kali
 echo "
 To login Parrot Sec: pd sh kali
 "
-pd sh kali
