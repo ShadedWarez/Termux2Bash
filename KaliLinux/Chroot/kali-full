@@ -1,6 +1,7 @@
 #!/bin/sh
 
-
+cd $HOME
+###
 wget -O $PREFIX/bin/nethunter https://raw.githubusercontent.com/xiv3r/Kali-Linux-Nethunter/refs/heads/main/chroot/nethunter
 ###
 chmod 700 $PREFIX/bin/nethunter
