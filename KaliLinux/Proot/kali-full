@@ -6,7 +6,7 @@ mkdir -p $PREFIX/var/lib/proot-distro/installed-rootfs/kali
 ###
 cd $PREFIX/var/lib/proot-distro/installed-rootfs
 ###
-wget https://kali.download/nethunter-images/current/rootfs/ kali-nethunter-rootfs-full-arm64.tar.xz
+wget https://kali.download/nethunter-images/current/rootfs/kali-nethunter-rootfs-full-arm64.tar.xz
 ###
 tar -xvJf kali-nethunter-rootfs-full-arm64.tar.xz
 ###
