@@ -6,9 +6,9 @@ mkdir -p $PREFIX/var/lib/proot-distro/installed-rootfs
 ###
 cd $PREFIX/var/lib/proot-distro/installed-rootfs
 ###
-wget https://github.com/xiv3r/Kali-Linux-Nethunter/releases/download/rootfs/debkali-arm64-rootfs.tar.xz
+wget https://github.com/xiv3r/Termux-Pentesting-Distro/releases/download/rootfs/debkali.tar.xz
 ###
-tar -xvJf debkali-arm64-rootfs.tar.xz
+tar -xvJf debkali.tar.xz
 ###
 echo "
 To login Parrot Sec: pd sh parrot
