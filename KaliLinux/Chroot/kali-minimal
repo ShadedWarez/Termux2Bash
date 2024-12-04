@@ -21,5 +21,4 @@ echo "
 user terminal: nethunter
 root terminal: nethunter -r
 "
-nethunter -r 
 
