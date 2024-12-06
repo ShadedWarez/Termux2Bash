@@ -15,5 +15,5 @@ wget https://github.com/xiv3r/Termux-Pentesting-Distro/releases/download/rootfs/
 tar -xvJf backbox.tar.xz
 ###
 echo "
-To login BackBox: pd sh backbox
+To login BackBox: backbox
 "
