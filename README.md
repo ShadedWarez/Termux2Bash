@@ -6,14 +6,13 @@
 
 ------------
 # Kali Nethunter Full [chroot]
-> - official tarball
 > - support vnc service
-> - login:`nethunter` or `nethunter -r` `nh` or `nh -r`
-> - login w/ vnc:`nethunter kex &` or `nethunter -r kex &` or `nh kex &` `nh -r kex &`
+> - login:`nethunter` or `nethunter -r` `kali` or `kali -r`
+> - login w/ vnc:`nethunter kex &` or `nethunter -r kex &` or `kali kex &` `kali -r kex &`
 > - uninstall:`cd && rm -rf chroot`
 - Install
 ```
-apt update && apt install bsdtar proot wget -y && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Chroot/kali-full | sh && nh -r
+apt update && apt install bsdtar proot wget -y && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Chroot/kali-full | sh && kali -r
 ```
 - Configure profile
 ```
@@ -22,19 +21,18 @@ wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/
 - Add custom terminal name
 > replace `xiv3r` to your name
 ```
-sed -i 's/user=kali/user=xiv3r/' .bashrc
-sed -i 's/user=kali/user=xiv3r/' /home/.bashrc
+sed -i 's/user=kali/user=xiv3r/' /root/.bashrc
+sed -i 's/user=kali/user=xiv3r/' /home/kali/.bashrc
 sed -i 's/user=kali/user=xiv3r/' /etc/bash.bashrc
 ```
 
 -------------
 # Kali Nethunter Minimal [chroot]
-> - official tarball
-> - login:`nethunter` or `nethunter -r` `nh` or `nh -r`
+> - login:`nethunter` or `nethunter -r` `kali` or `kali -r`
 > - uninstall:`cd && rm -rf chroot`
 - Install
 ```
-apt update && apt install bsdtar proot wget -y && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Chroot/kali-minimal | sh && nh -r
+apt update && apt install bsdtar proot wget -y && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Chroot/kali-minimal | sh && kali -r
 ```
 - Configure profile
 ```
@@ -43,14 +41,13 @@ wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/
 - Add custom terminal name
 > replace `xiv3r` to your name
 ```
-sed -i 's/user=kali/user=xiv3r/' .bashrc
-sed -i 's/user=kali/user=xiv3r/' /home/.bashrc
+sed -i 's/user=kali/user=xiv3r/' /root/.bashrc
+sed -i 's/user=kali/user=xiv3r/' /home/kali/.bashrc
 sed -i 's/user=kali/user=xiv3r/' /etc/bash.bashrc
 ```
 
 ---------------
 # Kali Nethunter Full [proot-distro]
-> - Official tarball
 > - login:`kali`
 > - uninstall:`pd rm kali-full`
 - Install
@@ -68,12 +65,11 @@ sed -i 's/user=kali/user=xiv3r/' .zshrc && source .zshrc
 ```
 ----------------
 # Kali Nethunter Minimal [proot-distro]
-> - Official tarball
-> - login:`kalimin`
+> - login:`kali`
 > - uninstall:`pd rm kali-minimal`
 - Install
 ```
-apt update && apt install bsdtar proot-distro wget -y && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Proot/kali-minimal | sh && kalimin
+apt update && apt install bsdtar proot-distro wget -y && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Proot/kali-minimal | sh && kali
 ```
 - Setup .zshrc profile
 ```
@@ -90,7 +86,6 @@ sed -i 's/user=kali/user=xiv3r/' .zshrc && source .zshrc
 
 ----------
 # BackBox Linux [proot-distro]
-> - Custom build tarball
 > - login:`backbox`
 > - uninstall:`pd rm backbox`
 - Install
@@ -103,8 +98,7 @@ apt update && apt install bsdtar proot-distro wget -y && wget -qO- https://raw.g
 
 -----------
 # BlackArch Linux [proot-distro]
-> - Arch to Balackarch
-> - Custom build tarball
+> - Custom build rootfs tarball
 > - login:`blackarch`
 > - uninstall:`pd rm blackarch`
 ```
@@ -116,7 +110,6 @@ apt update && apt install bsdtar proot-distro wget -y && wget -qO- https://raw.g
 
 ------------
 # Kali in Debian [proot-distro]
-> - debian convert to kali custom build tarball
 > - login:`debkali`
 > - uninstall:`pd rm debkali`
 ```
@@ -128,7 +121,6 @@ apt update && apt install bsdtar proot-distro wget -y && wget -qO- https://raw.g
 
 -----------
 # ParrotSec [proot-distro]
-> - custom build tarball
 > - login:`parrot`
 > - uninstall:`pd rm parrot`
 ```
