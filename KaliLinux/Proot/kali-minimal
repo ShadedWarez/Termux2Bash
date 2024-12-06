@@ -14,7 +14,7 @@ wget https://kali.download/nethunter-images/current/rootfs/kali-nethunter-rootfs
 ###
 tar -xvJf kali-nethunter-rootfs-minimal-arm64.tar.xz
 ###
-mv chroot/kali-arm64 $PREFIX/var/lib/proot-distro/installed-rootfs/kali-minimal
+mv chroot/kali-arm64/* $PREFIX/var/lib/proot-distro/installed-rootfs/kali-minimal
 ###
 echo "
 To login Parrot Sec: kalimin
