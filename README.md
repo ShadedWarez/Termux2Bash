@@ -240,7 +240,7 @@ echo "parrot" >>$PREFIX/etc/bash.bashrc
 ```
 - Install
 ```
-apt update && apt install bsdtar proot-distro wget -y && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliDeb/install | sh && parrot
+apt update && apt install bsdtar proot-distro wget -y && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/ParrotSec/install | sh && parrot
 ```
 - Update and Upgrade
 ```
