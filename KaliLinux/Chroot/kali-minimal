@@ -4,7 +4,7 @@ cd $HOME
 ###
 wget -O $PREFIX/bin/nethunter https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Chroot/nethunter
 ###
-cp $PREFIX/bin/nethunter $PREFIX/bin/nh
+cp -r $PREFIX/bin/nethunter $PREFIX/bin/nh
 ###
 chmod 700 $PREFIX/bin/nethunter
 ###
@@ -12,7 +12,7 @@ chmod 700 $PREFIX/bin/nh
 ###
 wget -O kali-minimal.tar.xz https://kali.download/nethunter-images/current/rootfs/kali-nethunter-rootfs-minimal-arm64.tar.xz
 ###
-tar -xvJf kali-minimal.tar.xz
+bsdtar -xpf kali-minimal.tar.xz
 ###
 echo "
        To Login 👇
