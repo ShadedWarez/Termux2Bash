@@ -21,7 +21,7 @@ apt update && apt install bsdtar proot wget -y && wget -qO- https://raw.githubus
 ```
 - Configure profile
 ```
-wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/rcfiles/install.sh | sh
+apt update && apt install wget -y && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/rcfiles/install.sh | sh
 ```
 - Add custom terminal name
 > replace `xiv3r` to your name
@@ -45,7 +45,7 @@ apt update && apt install bsdtar proot wget -y && wget -qO- https://raw.githubus
 ```
 - Configure profile
 ```
-wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/rcfiles/install.sh | sh
+apt update && apt install wget -y && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/rcfiles/install.sh | sh
 ```
 - Add custom terminal name
 > replace `xiv3r` to your name
@@ -69,7 +69,7 @@ apt update && apt install bsdtar proot-distro wget -y && wget -qO- https://raw.g
 ```
 - Setup .zshrc profile
 ```
-wget -O /root/.zshrc https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Proot/.zshrc
+apt update && apt install wget -y && wget -O /root/.zshrc https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Proot/.zshrc
 ```
 - Add custom terminal name
 > replace `xiv3r` to your name
@@ -91,7 +91,7 @@ apt update && apt install bsdtar proot-distro wget -y && wget -qO- https://raw.g
 ```
 - Setup .zshrc profile
 ```
-wget -O /root/.zshrc https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Proot/.zshrc && source .zshrc
+apt update && apt install wget -y && wget -O /root/.zshrc https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Proot/.zshrc && source .zshrc
 ```
 - Add custom terminal name
 > replace `xiv3r` to your name
@@ -178,6 +178,10 @@ sed -i 's/user=kali/user=xiv3r/' /etc/bash.bashrc && source /etc/bash.bashrc
 > - uninstall:`pd rm parrot`
 ```
 apt update && apt install bsdtar proot-distro wget -y && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliDeb/install | sh && parrot
+```
+- Update and Upgrade
+```
+
 ```
 - Add custom terminal name
 > replace `xiv3r` to your name
