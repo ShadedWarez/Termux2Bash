@@ -29,6 +29,10 @@ apt update && apt install proot wget -y && wget -qO- https://raw.githubuserconte
 ```
 apt update && apt install proot-distro wget -y && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Proot/kali-full | sh && kali
 ```
+- Setup .zshrc profile
+```
+wget -O /root/.zshrc https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Proot/.zshrc
+```
 
 # Kali Nethunter Minimal [proot-distro]
 > - Official tarball
@@ -52,6 +56,9 @@ wget -O /root/.zshrc https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-D
 ```
 apt update && apt install proot-distro wget -y && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/BackBox/install | sh && backbox
 ```
+<div align="center">
+<img src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/BackBox/backbox.png">
+</div>
 
 # BlackArch Linux [proot-distro]
 > - Custom build tarball
