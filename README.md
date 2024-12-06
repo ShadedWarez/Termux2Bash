@@ -10,6 +10,7 @@
 > - login:`nethunter` or `nethunter -r` `nh` or `nh -r`
 > - login w/ vnc:`nethunter kex &` or `nethunter -r kex &` or `nh kex &` `nh -r kex &`
 > - uninstall:`cd && rm -rf chroot`
+- Install
 ```
 apt update && apt install proot wget -y && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Chroot/kali-full | sh && nh -r
 ```
@@ -30,6 +31,7 @@ sed -i 's/user=kali/user=xiv3r/' /etc/bash.bashrc
 > - official tarball
 > - login:`nethunter` or `nethunter -r` `nh` or `nh -r`
 > - uninstall:`cd && rm -rf chroot`
+- Install
 ```
 apt update && apt install proot wget -y && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Chroot/kali-minimal | sh && nh -r
 ```
@@ -49,6 +51,7 @@ sed -i 's/user=kali/user=xiv3r/' /etc/bash.bashrc
 > - Official tarball
 > - login:`kali`
 > - uninstall:`pd rm kali-full`
+- Install
 ```
 apt update && apt install proot-distro wget -y && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Proot/kali-full | sh && kali
 ```
@@ -65,6 +68,7 @@ sed -i 's/user=kali/user=xiv3r/' .zshrc && source .zshrc
 > - Official tarball
 > - login:`kalimin`
 > - uninstall:`pd rm kali-minimal`
+- Install
 ```
 apt update && apt install proot-distro wget -y && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Proot/kali-minimal | sh && kalimin
 ```
@@ -85,6 +89,7 @@ sed -i 's/user=kali/user=xiv3r/' .zshrc && source .zshrc
 > - Custom build tarball
 > - login:`backbox`
 > - uninstall:`pd rm backbox`
+- Install
 ```
 apt update && apt install proot-distro wget -y && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/BackBox/install | sh && backbox
 ```
