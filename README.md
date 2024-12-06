@@ -45,6 +45,11 @@ apt update && apt install proot-distro wget -y && wget -qO- https://raw.githubus
 ```
 wget -O /root/.zshrc https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Proot/.zshrc && source .zshrc
 ```
+- Add custom terminal name
+> replace `xiv3r` to your name
+```
+sed -i 's/user=kali/user=xiv3r/' .zshrc && source .zshrc
+```
 <div align="center">
 <img src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/KaliLinux/Proot/kali-proot.png">
 </div>
