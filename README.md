@@ -36,7 +36,6 @@ apt update && apt full-upgrade -o Dpkg::Options::="--force-confdef" -o Dpkg::Opt
 ```
 sed -i 's/user=kali/user=xiv3r/' /root/.bashrc
 sed -i 's/user=kali/user=xiv3r/' /home/kali/.bashrc
-sed -i 's/user=kali/user=xiv3r/' /etc/bash.bashrc
 ```
 <br>
 <br>
@@ -68,7 +67,6 @@ apt update && apt full-upgrade -o Dpkg::Options::="--force-confdef" -o Dpkg::Opt
 ```
 sed -i 's/user=kali/user=xiv3r/' /root/.bashrc
 sed -i 's/user=kali/user=xiv3r/' /home/kali/.bashrc
-sed -i 's/user=kali/user=xiv3r/' /etc/bash.bashrc
 ```
 <br>
 <br>
