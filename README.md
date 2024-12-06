@@ -58,7 +58,7 @@ apt update && apt install proot-distro wget -y && wget -qO- https://raw.githubus
 > - login:`pd sh blackarch`
 > - uninstall:`pd rm blackarch`
 ```
-apt update && apt install proot-distro wget -y && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/BlackArch/install | sh && pd sh blackarch
+apt update && apt install proot-distro wget -y && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/BlackArch/install | sh && blackarch
 ```
 <div align="center">
 <img src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/BlackArch/blackarch.png">
