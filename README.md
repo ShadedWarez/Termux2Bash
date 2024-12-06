@@ -229,6 +229,30 @@ pacman -Syyu
 ```
 sed -i 's/user=kali/user=xiv3r/' /etc/bash.bashrc && source /etc/bash.bashrc
 ```
+
+<details><summary> Blackarch Tools</summary>
+
+- To list all of the available tools, run
+```
+pacman -Sgg | grep blackarch | cut -d' ' -f2 | sort -u
+```
+
+- To install a category of tools, run
+```
+pacman -S blackarch-<category>
+```
+
+- To see the blackarch categories, run
+```
+pacman -Sg | grep blackarch
+````
+- To search for a specific package, run
+```
+pacman -Ss <package_name>
+```
+
+</details>
+
 <div align="center">
 <img src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/BlackArch/blackarch.png">
 </div>
