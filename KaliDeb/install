@@ -12,7 +12,7 @@ cd $PREFIX/var/lib/proot-distro/installed-rootfs
 ###
 wget https://github.com/xiv3r/Termux-Pentesting-Distro/releases/download/rootfs/debkali.tar.xz
 ###
-bsdtar -xpf debkali.tar.xz
+bsdtar -xpJf debkali.tar.xz
 ###
 echo "
 To login Parrot Sec: debkali
