@@ -2,7 +2,7 @@
 
 echo 'DISTRO_NAME="BlackArch Linux"' >> $PREFIX/etc/proot-distro/blackarch.sh
 ###
-wget -O $PREFIX/bin/blackarch https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/BlackArch/blackarch
+echo "pd sh blackarch" > $PREFIX/bin/blackarch
 ###
 chmod 700 $PREFIX/bin/blackarch
 ###
