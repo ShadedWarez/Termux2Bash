@@ -45,7 +45,6 @@ sed -i 's/user=kali/user=xiv3r/' /root/.bashrc
 sed -i 's/user=kali/user=xiv3r/' /home/kali/.bashrc
 sed -i 's/user=kali/user=xiv3r/' /etc/bash.bashrc
 ```
-
 ---------------
 # Kali Nethunter Full [proot-distro]
 > - login:`kali`
@@ -92,6 +91,11 @@ sed -i 's/user=kali/user=xiv3r/' .zshrc && source .zshrc
 ```
 apt update && apt install bsdtar proot-distro wget -y && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/BackBox/install | sh && backbox
 ```
+- Add custom terminal name
+> replace `xiv3r` to your name
+```
+sed -i 's/user=kali/user=xiv3r/' /etc/bash.bashrc && source /etc/bash.bashrc
+```
 <div align="center">
 <img src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/BackBox/backbox.png">
 </div>
@@ -104,6 +108,11 @@ apt update && apt install bsdtar proot-distro wget -y && wget -qO- https://raw.g
 ```
 apt update && apt install bsdtar proot-distro wget -y && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/BlackArch/install | sh && blackarch
 ```
+- Add custom terminal name
+> replace `xiv3r` to your name
+```
+sed -i 's/user=kali/user=xiv3r/' .zshrc && source .zshrc
+```
 <div align="center">
 <img src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/BlackArch/blackarch.png">
 </div>
@@ -115,6 +124,11 @@ apt update && apt install bsdtar proot-distro wget -y && wget -qO- https://raw.g
 ```
 apt update && apt install bsdtar proot-distro wget -y && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliDeb/install | sh && debkali
 ```
+- Add custom terminal name
+> replace `xiv3r` to your name
+```
+sed -i 's/user=kali/user=xiv3r/' /etc/bash.bashrc && source /etc/bash.bashrc
+```
 <div align="center">
 <img src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/KaliDeb/debkali.png">
 </div>
@@ -125,6 +139,11 @@ apt update && apt install bsdtar proot-distro wget -y && wget -qO- https://raw.g
 > - uninstall:`pd rm parrot`
 ```
 apt update && apt install bsdtar proot-distro wget -y && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliDeb/install | sh && parrot
+```
+- Add custom terminal name
+> replace `xiv3r` to your name
+```
+sed -i 's/user=kali/user=xiv3r/' /etc/bash.bashrc && source /etc/bash.bashrc
 ```
 <div align="center">
 <img src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/ParrotSec/parrot.png">
