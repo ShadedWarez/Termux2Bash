@@ -254,7 +254,7 @@ pacman -Ss <package_name>
 </details>
 
 <div align="center">
-<img src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/BlackArch/blackarch.png">
+<img src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/BlackArch/bl4ckarch.png">
 </div>
 
 <br>
