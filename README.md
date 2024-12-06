@@ -255,6 +255,11 @@ sed -i 's/user=kali/user=xiv3r/' .zshrc && source .zshrc
 <img src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/ParrotSec/parrot.png">
 </div>
 
+<br>
+<br>
+<br>
+<br>
+-------------
 # Termux
 - Install
 ```
