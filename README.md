@@ -13,7 +13,7 @@
 > - uninstall:`cd && rm -rf chroot`
 - Install
 ```
-apt update && apt install proot wget -y && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Chroot/kali-full | sh && nh -r
+apt update && apt install bsdtar proot wget -y && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Chroot/kali-full | sh && nh -r
 ```
 - Configure profile
 ```
@@ -34,7 +34,7 @@ sed -i 's/user=kali/user=xiv3r/' /etc/bash.bashrc
 > - uninstall:`cd && rm -rf chroot`
 - Install
 ```
-apt update && apt install proot wget -y && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Chroot/kali-minimal | sh && nh -r
+apt update && apt install bsdtar proot wget -y && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Chroot/kali-minimal | sh && nh -r
 ```
 - Configure profile
 ```
@@ -55,7 +55,7 @@ sed -i 's/user=kali/user=xiv3r/' /etc/bash.bashrc
 > - uninstall:`pd rm kali-full`
 - Install
 ```
-apt update && apt install proot-distro wget -y && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Proot/kali-full | sh && kali
+apt update && apt install bsdtar proot-distro wget -y && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Proot/kali-full | sh && kali
 ```
 - Setup .zshrc profile
 ```
@@ -73,7 +73,7 @@ sed -i 's/user=kali/user=xiv3r/' .zshrc && source .zshrc
 > - uninstall:`pd rm kali-minimal`
 - Install
 ```
-apt update && apt install proot-distro wget -y && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Proot/kali-minimal | sh && kalimin
+apt update && apt install bsdtar proot-distro wget -y && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Proot/kali-minimal | sh && kalimin
 ```
 - Setup .zshrc profile
 ```
@@ -95,7 +95,7 @@ sed -i 's/user=kali/user=xiv3r/' .zshrc && source .zshrc
 > - uninstall:`pd rm backbox`
 - Install
 ```
-apt update && apt install proot-distro wget -y && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/BackBox/install | sh && backbox
+apt update && apt install bsdtar proot-distro wget -y && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/BackBox/install | sh && backbox
 ```
 <div align="center">
 <img src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/BackBox/backbox.png">
@@ -108,7 +108,7 @@ apt update && apt install proot-distro wget -y && wget -qO- https://raw.githubus
 > - login:`blackarch`
 > - uninstall:`pd rm blackarch`
 ```
-apt update && apt install proot-distro wget -y && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/BlackArch/install | sh && blackarch
+apt update && apt install bsdtar proot-distro wget -y && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/BlackArch/install | sh && blackarch
 ```
 <div align="center">
 <img src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/BlackArch/blackarch.png">
@@ -120,7 +120,7 @@ apt update && apt install proot-distro wget -y && wget -qO- https://raw.githubus
 > - login:`debkali`
 > - uninstall:`pd rm debkali`
 ```
-apt update && apt install proot-distro wget -y && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliDeb/install | sh && debkali
+apt update && apt install bsdtar proot-distro wget -y && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliDeb/install | sh && debkali
 ```
 <div align="center">
 <img src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/KaliDeb/debkali.png">
@@ -132,7 +132,7 @@ apt update && apt install proot-distro wget -y && wget -qO- https://raw.githubus
 > - login:`parrot`
 > - uninstall:`pd rm parrot`
 ```
-apt update && apt install proot-distro wget -y && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliDeb/install | sh && parrot
+apt update && apt install bsdtar proot-distro wget -y && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliDeb/install | sh && parrot
 ```
 <div align="center">
 <img src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/ParrotSec/parrot.png">
