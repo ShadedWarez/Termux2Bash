@@ -19,5 +19,5 @@ mv chroot/kali-arm64/* $PREFIX/var/lib/proot-distro/installed-rootfs/kali-minima
 rm -rf chroot
 ###
 echo "
-To login Parrot Sec: kali
+To login: kali
 "
