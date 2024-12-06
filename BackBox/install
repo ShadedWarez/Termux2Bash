@@ -2,6 +2,10 @@
 
 echo 'DISTRO_NAME="BackBox Linux"' >> $PREFIX/etc/proot-distro/backbox.sh
 ###
+echo "pd sh backbox" > $PREFIX/bin/backbox
+###
+chmod 700 $PREFIX/bin/backbox
+###
 mkdir -p $PREFIX/var/lib/proot-distro/installed-rootfs
 ###
 cd $PREFIX/var/lib/proot-distro/installed-rootfs
