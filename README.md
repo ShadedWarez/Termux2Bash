@@ -4,6 +4,7 @@
 | Kali Linux | BlackArch Linux | BackBox Linux | Parrot Sec Linux | Kali Debian |
 </div>
 
+------------
 # Kali Nethunter Full [chroot]
 > - official tarball
 > - support vnc service
@@ -26,7 +27,7 @@ sed -i 's/user=kali/user=xiv3r/' /home/.bashrc
 sed -i 's/user=kali/user=xiv3r/' /etc/bash.bashrc
 ```
 
-
+-------------
 # Kali Nethunter Minimal [chroot]
 > - official tarball
 > - login:`nethunter` or `nethunter -r` `nh` or `nh -r`
@@ -47,6 +48,7 @@ sed -i 's/user=kali/user=xiv3r/' /home/.bashrc
 sed -i 's/user=kali/user=xiv3r/' /etc/bash.bashrc
 ```
 
+---------------
 # Kali Nethunter Full [proot-distro]
 > - Official tarball
 > - login:`kali`
@@ -64,6 +66,7 @@ wget -O /root/.zshrc https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-D
 ```
 sed -i 's/user=kali/user=xiv3r/' .zshrc && source .zshrc
 ```
+----------------
 # Kali Nethunter Minimal [proot-distro]
 > - Official tarball
 > - login:`kalimin`
@@ -85,6 +88,7 @@ sed -i 's/user=kali/user=xiv3r/' .zshrc && source .zshrc
 <img src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/KaliLinux/Proot/kali-proot.png">
 </div>
 
+----------
 # BackBox Linux [proot-distro]
 > - Custom build tarball
 > - login:`backbox`
@@ -97,6 +101,7 @@ apt update && apt install proot-distro wget -y && wget -qO- https://raw.githubus
 <img src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/BackBox/backbox.png">
 </div>
 
+-----------
 # BlackArch Linux [proot-distro]
 > - Arch to Balackarch
 > - Custom build tarball
@@ -109,7 +114,7 @@ apt update && apt install proot-distro wget -y && wget -qO- https://raw.githubus
 <img src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/BlackArch/blackarch.png">
 </div>
 
-
+------------
 # Kali in Debian [proot-distro]
 > - debian convert to kali custom build tarball
 > - login:`debkali`
@@ -121,7 +126,7 @@ apt update && apt install proot-distro wget -y && wget -qO- https://raw.githubus
 <img src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/KaliDeb/debkali.png">
 </div>
 
-
+-----------
 # ParrotSec [proot-distro]
 > - custom build tarball
 > - login:`parrot`
