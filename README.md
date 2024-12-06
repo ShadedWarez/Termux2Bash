@@ -254,3 +254,13 @@ sed -i 's/user=kali/user=xiv3r/' .zshrc && source .zshrc
 <div align="center">
 <img src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/ParrotSec/parrot.png">
 </div>
+
+# Termux
+- Install
+```
+wget -O $PREFIX/etc/bash.bashrc https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Termux/bash.bashrc
+```
+
+<div align="center">
+<img src="https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Termux/termux.png">
+</div>
