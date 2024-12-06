@@ -12,7 +12,7 @@ cd $PREFIX/var/lib/proot-distro/installed-rootfs
 ###
 wget https://kali.download/nethunter-images/current/rootfs/kali-nethunter-rootfs-minimal-arm64.tar.xz
 ###
-bsdtar -xvJf kali-nethunter-rootfs-minimal-arm64.tar.xz
+bsdtar -xpf kali-nethunter-rootfs-minimal-arm64.tar.xz
 ###
 mv chroot/kali-arm64/* $PREFIX/var/lib/proot-distro/installed-rootfs/kali-minimal
 ###
