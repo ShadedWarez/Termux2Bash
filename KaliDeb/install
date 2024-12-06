@@ -15,5 +15,5 @@ wget https://github.com/xiv3r/Termux-Pentesting-Distro/releases/download/rootfs/
 bsdtar -xpJf debkali.tar.xz
 ###
 echo "
-To login Parrot Sec: debkali
+To login Kali in Debain: debkali
 "
