@@ -61,6 +61,7 @@ apt update && apt install proot-distro wget -y && wget -qO- https://raw.githubus
 </div>
 
 # BlackArch Linux [proot-distro]
+> - Arch to Balackarch
 > - Custom build tarball
 > - login:`blackarch`
 > - uninstall:`pd rm blackarch`
@@ -85,7 +86,7 @@ apt update && apt install proot-distro wget -y && wget -qO- https://raw.githubus
 
 
 # ParrotSec [proot-distro]
-> - arch to blackarch custom build tarball
+> - custom build tarball
 > - login:`parrot`
 > - uninstall:`pd rm parrot`
 ```
