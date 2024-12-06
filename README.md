@@ -13,6 +13,18 @@
 ```
 apt update && apt install proot wget -y && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Chroot/kali-full | sh && nh -r
 ```
+- Configure profile
+```
+wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/rcfiles/install.sh | sh
+```
+- Add custom terminal name
+> replace `xiv3r` to your name
+```
+sed -i 's/user=kali/user=xiv3r/' .bashrc
+sed -i 's/user=kali/user=xiv3r/' /home/.bashrc
+sed -i 's/user=kali/user=xiv3r/' /etc/bash.bashrc
+```
+
 
 # Kali Nethunter Minimal [chroot]
 > - official tarball
@@ -20,6 +32,17 @@ apt update && apt install proot wget -y && wget -qO- https://raw.githubuserconte
 > - uninstall:`cd && rm -rf chroot`
 ```
 apt update && apt install proot wget -y && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Chroot/kali-minimal | sh && nh -r
+```
+- Configure profile
+```
+wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/rcfiles/install.sh | sh
+```
+- Add custom terminal name
+> replace `xiv3r` to your name
+```
+sed -i 's/user=kali/user=xiv3r/' .bashrc
+sed -i 's/user=kali/user=xiv3r/' /home/.bashrc
+sed -i 's/user=kali/user=xiv3r/' /etc/bash.bashrc
 ```
 
 # Kali Nethunter Full [proot-distro]
@@ -33,7 +56,11 @@ apt update && apt install proot-distro wget -y && wget -qO- https://raw.githubus
 ```
 wget -O /root/.zshrc https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Proot/.zshrc
 ```
-
+- Add custom terminal name
+> replace `xiv3r` to your name
+```
+sed -i 's/user=kali/user=xiv3r/' .zshrc && source .zshrc
+```
 # Kali Nethunter Minimal [proot-distro]
 > - Official tarball
 > - login:`kalimin`
