@@ -23,6 +23,10 @@ apt update && apt install bsdtar proot wget -y && wget -qO- https://raw.githubus
 ```
 apt update && apt install wget -y && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/rcfiles/install.sh | sh
 ```
+- Update and Upgrade
+```
+apt update && apt full-upgrade -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" -y
+```
 - Add custom terminal name
 > replace `xiv3r` to your name
 ```
@@ -46,6 +50,10 @@ apt update && apt install bsdtar proot wget -y && wget -qO- https://raw.githubus
 - Configure profile
 ```
 apt update && apt install wget -y && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/rcfiles/install.sh | sh
+```
+- Update and Upgrade
+```
+apt update && apt full-upgrade -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" -y
 ```
 - Add custom terminal name
 > replace `xiv3r` to your name
@@ -71,6 +79,10 @@ apt update && apt install bsdtar proot-distro wget -y && wget -qO- https://raw.g
 ```
 apt update && apt install wget -y && wget -O /root/.zshrc https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Proot/.zshrc
 ```
+- Update and Upgrade
+```
+apt update && apt full-upgrade -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" -y
+```
 - Add custom terminal name
 > replace `xiv3r` to your name
 ```
@@ -92,6 +104,10 @@ apt update && apt install bsdtar proot-distro wget -y && wget -qO- https://raw.g
 - Setup .zshrc profile
 ```
 apt update && apt install wget -y && wget -O /root/.zshrc https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Proot/.zshrc && source .zshrc
+```
+- Update and Upgrade
+```
+apt update && apt full-upgrade -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" -y
 ```
 - Add custom terminal name
 > replace `xiv3r` to your name
@@ -115,6 +131,10 @@ sed -i 's/user=kali/user=xiv3r/' .zshrc && source .zshrc
 ```
 apt update && apt install bsdtar proot-distro wget -y && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/BackBox/install | sh && backbox
 ```
+- Update and Upgrade
+```
+apt update && apt full-upgrade -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" -y
+```
 - Add custom terminal name
 > replace `xiv3r` to your name
 ```
@@ -137,6 +157,10 @@ sed -i 's/user=kali/user=xiv3r/' /etc/bash.bashrc && source /etc/bash.bashrc
 ```
 apt update && apt install bsdtar proot-distro wget -y && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/BlackArch/install | sh && blackarch
 ```
+- Update and Upgrade
+```
+pacman -Syyu
+```
 - Add custom terminal name
 > replace `xiv3r` to your name
 ```
@@ -157,6 +181,10 @@ sed -i 's/user=kali/user=xiv3r/' .zshrc && source .zshrc
 > - uninstall:`pd rm debkali`
 ```
 apt update && apt install bsdtar proot-distro wget -y && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliDeb/install | sh && debkali
+```
+- Update and Upgrade
+```
+apt update && apt full-upgrade -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" -y
 ```
 - Add custom terminal name
 > replace `xiv3r` to your name
@@ -181,7 +209,7 @@ apt update && apt install bsdtar proot-distro wget -y && wget -qO- https://raw.g
 ```
 - Update and Upgrade
 ```
-
+apt update && apt full-upgrade -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" -y
 ```
 - Add custom terminal name
 > replace `xiv3r` to your name
