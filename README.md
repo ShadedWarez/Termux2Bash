@@ -50,9 +50,9 @@ wget -O /root/.zshrc https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-D
 </div>
 
 # BackBox Linux [proot-distro]
-> Custom build tarball
-> login:`backbox`
-> uninstall:`pd rm backbox`
+> - Custom build tarball
+> - login:`backbox`
+> - uninstall:`pd rm backbox`
 ```
 apt update && apt install proot-distro wget -y && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/BackBox/install | sh && backbox
 ```
