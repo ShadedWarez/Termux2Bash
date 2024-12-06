@@ -4,6 +4,11 @@
 | Kali Linux | BlackArch Linux | BackBox Linux | Parrot Sec Linux | Kali Debian |
 </div>
 
+<br>
+<br>
+<br>
+<br>
+
 ------------
 # Kali Nethunter Full [chroot]
 > - support vnc service
@@ -25,6 +30,10 @@ sed -i 's/user=kali/user=xiv3r/' /root/.bashrc
 sed -i 's/user=kali/user=xiv3r/' /home/kali/.bashrc
 sed -i 's/user=kali/user=xiv3r/' /etc/bash.bashrc
 ```
+<br>
+<br>
+<br>
+<br>
 
 -------------
 # Kali Nethunter Minimal [chroot]
@@ -45,6 +54,11 @@ sed -i 's/user=kali/user=xiv3r/' /root/.bashrc
 sed -i 's/user=kali/user=xiv3r/' /home/kali/.bashrc
 sed -i 's/user=kali/user=xiv3r/' /etc/bash.bashrc
 ```
+<br>
+<br>
+<br>
+<br>
+
 ---------------
 # Kali Nethunter Full [proot-distro]
 > - login:`kali`
@@ -62,6 +76,11 @@ wget -O /root/.zshrc https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-D
 ```
 sed -i 's/user=kali/user=xiv3r/' .zshrc && source .zshrc
 ```
+<br>
+<br>
+<br>
+<br>
+
 ----------------
 # Kali Nethunter Minimal [proot-distro]
 > - login:`kali`
@@ -83,6 +102,11 @@ sed -i 's/user=kali/user=xiv3r/' .zshrc && source .zshrc
 <img src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/KaliLinux/Proot/kali-proot.png">
 </div>
 
+<br>
+<br>
+<br>
+<br>
+
 ----------
 # BackBox Linux [proot-distro]
 > - login:`backbox`
@@ -99,6 +123,11 @@ sed -i 's/user=kali/user=xiv3r/' /etc/bash.bashrc && source /etc/bash.bashrc
 <div align="center">
 <img src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/BackBox/backbox.png">
 </div>
+
+<br>
+<br>
+<br>
+<br>
 
 -----------
 # BlackArch Linux [proot-distro]
@@ -117,6 +146,11 @@ sed -i 's/user=kali/user=xiv3r/' .zshrc && source .zshrc
 <img src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/BlackArch/blackarch.png">
 </div>
 
+<br>
+<br>
+<br>
+<br>
+
 ------------
 # Kali in Debian [proot-distro]
 > - login:`debkali`
@@ -132,6 +166,11 @@ sed -i 's/user=kali/user=xiv3r/' /etc/bash.bashrc && source /etc/bash.bashrc
 <div align="center">
 <img src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/KaliDeb/debkali.png">
 </div>
+
+<br>
+<br>
+<br>
+<br>
 
 -----------
 # ParrotSec [proot-distro]
