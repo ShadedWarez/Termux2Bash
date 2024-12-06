@@ -264,7 +264,7 @@ sed -i 's/user=kali/user=xiv3r/' .zshrc && source .zshrc
 # Termux
 - Install
 ```
-wget -O $PREFIX/etc/bash.bashrc https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Termux/bash.bashrc
+wget -O $PREFIX/etc/bash.bashrc https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Termux/bash.bashrc && source $PREFIX/etc/bash.bashrc
 ```
 
 <div align="center">
