@@ -15,6 +15,10 @@
 > - login:`nethunter` or `nethunter -r` `kali` or `kali -r`
 > - login w/ vnc:`nethunter kex &` or `nethunter -r kex &` or `kali kex &` `kali -r kex &`
 > - uninstall:`cd && rm -rf chroot`
+- Autologin
+```
+echo "kali -r kex &" >>$PREFIX/etc/bash.bashrc
+```
 - Install
 ```
 apt update && apt install bsdtar proot wget -y && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Chroot/kali-full | sh && kali -r
@@ -43,6 +47,10 @@ sed -i 's/user=kali/user=xiv3r/' /etc/bash.bashrc
 # Kali Nethunter Minimal [chroot]
 > - login:`nethunter` or `nethunter -r` `kali` or `kali -r`
 > - uninstall:`cd && rm -rf chroot`
+- Autologin
+```
+echo "kali -r" >>$PREFIX/etc/bash.bashrc
+```
 - Install
 ```
 apt update && apt install bsdtar proot wget -y && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Chroot/kali-minimal | sh && kali -r
@@ -71,6 +79,10 @@ sed -i 's/user=kali/user=xiv3r/' /etc/bash.bashrc
 # Kali Nethunter Full [proot-distro]
 > - login:`kali`
 > - uninstall:`pd rm kali-full`
+- Autologin
+```
+echo "kali" >>$PREFIX/etc/bash.bashrc
+```
 - Install
 ```
 apt update && apt install bsdtar proot-distro wget -y && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Proot/kali-full | sh && kali
@@ -97,6 +109,10 @@ sed -i 's/user=kali/user=xiv3r/' .zshrc && source .zshrc
 # Kali Nethunter Minimal [proot-distro]
 > - login:`kali`
 > - uninstall:`pd rm kali-minimal`
+- Autologin
+```
+echo "kali" >>$PREFIX/etc/bash.bashrc
+```
 - Install
 ```
 apt update && apt install bsdtar proot-distro wget -y && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Proot/kali-minimal | sh && kali
@@ -127,6 +143,10 @@ sed -i 's/user=kali/user=xiv3r/' .zshrc && source .zshrc
 # BackBox Linux [proot-distro]
 > - login:`backbox`
 > - uninstall:`pd rm backbox`
+- Autologin
+```
+echo "backbox" >>$PREFIX/etc/bash.bashrc
+```
 - Install
 ```
 apt update && apt install bsdtar proot-distro wget -y && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/BackBox/install | sh && backbox
@@ -154,6 +174,11 @@ sed -i 's/user=kali/user=xiv3r/' /etc/bash.bashrc && source /etc/bash.bashrc
 > - Custom build rootfs tarball
 > - login:`blackarch`
 > - uninstall:`pd rm blackarch`
+- Autologin
+```
+echo "blackarch" >>$PREFIX/etc/bash.bashrc
+```
+- Install 
 ```
 apt update && apt install bsdtar proot-distro wget -y && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/BlackArch/install | sh && blackarch
 ```
@@ -164,7 +189,7 @@ pacman -Syyu
 - Add custom terminal name
 > replace `xiv3r` to your name
 ```
-sed -i 's/user=kali/user=xiv3r/' .zshrc && source .zshrc
+sed -i 's/user=kali/user=xiv3r/' /etc/bash.bashrc && source /etc/bash.bashrc
 ```
 <div align="center">
 <img src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/BlackArch/blackarch.png">
@@ -179,6 +204,11 @@ sed -i 's/user=kali/user=xiv3r/' .zshrc && source .zshrc
 # Kali in Debian [proot-distro]
 > - login:`debkali`
 > - uninstall:`pd rm debkali`
+- Autologin
+```
+echo "debkali" >>$PREFIX/etc/bash.bashrc
+```
+- Install
 ```
 apt update && apt install bsdtar proot-distro wget -y && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliDeb/install | sh && debkali
 ```
@@ -204,6 +234,11 @@ sed -i 's/user=kali/user=xiv3r/' /etc/bash.bashrc && source /etc/bash.bashrc
 # ParrotSec [proot-distro]
 > - login:`parrot`
 > - uninstall:`pd rm parrot`
+- Autologin
+```
+echo "parrot" >>$PREFIX/etc/bash.bashrc
+```
+- Install
 ```
 apt update && apt install bsdtar proot-distro wget -y && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliDeb/install | sh && parrot
 ```
@@ -214,7 +249,7 @@ apt update && apt full-upgrade -o Dpkg::Options::="--force-confdef" -o Dpkg::Opt
 - Add custom terminal name
 > replace `xiv3r` to your name
 ```
-sed -i 's/user=kali/user=xiv3r/' /etc/bash.bashrc && source /etc/bash.bashrc
+sed -i 's/user=kali/user=xiv3r/' .zshrc && source .zshrc
 ```
 <div align="center">
 <img src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/ParrotSec/parrot.png">
