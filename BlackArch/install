@@ -12,7 +12,7 @@ cd $PREFIX/var/lib/proot-distro/installed-rootfs
 ###
 wget https://github.com/xiv3r/Termux-Pentesting-Distro/releases/download/rootfs/blackarch.tar.xz
 ###
-tar -xvJf blackarch.tar.xz
+bsdtar -xpf blackarch.tar.xz
 ###
 echo "
 To login Blackarch: blackarch
