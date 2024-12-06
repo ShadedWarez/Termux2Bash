@@ -2,6 +2,10 @@
 
 echo 'DISTRO_NAME="BlackArch Linux"' >> $PREFIX/etc/proot-distro/blackarch.sh
 ###
+wget -O $PREFIX/bin/blackarch https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/BlackArch/blackarch
+###
+chmod 700 $PREFIX/bin/blackarch
+###
 mkdir -p $PREFIX/var/lib/proot-distro/installed-rootfs
 ###
 cd $PREFIX/var/lib/proot-distro/installed-rootfs
@@ -11,5 +15,5 @@ wget https://github.com/xiv3r/Termux-Pentesting-Distro/releases/download/rootfs/
 tar -xvJf blackarch.tar.xz
 ###
 echo "
-To login BackBox: pd sh blackarch
+To login Blackarch: blackarch
 "
