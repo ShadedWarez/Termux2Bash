@@ -4,15 +4,18 @@ echo 'DISTRO_NAME="Kali Nethunter Minimal"' >> $PREFIX/etc/proot-distro/kali-min
 ###
 mkdir -p $PREFIX/var/lib/proot-distro/installed-rootfs/kali-minimal
 ###
+echo "pd sh kali-minimal" > $PREFIX/bin/kalimin
+###
+chmod 700 $PREFIX/bin/kalimin
+###
 cd $PREFIX/var/lib/proot-distro/installed-rootfs
 ###
 wget https://kali.download/nethunter-images/current/rootfs/kali-nethunter-rootfs-minimal-arm64.tar.xz
 ###
 tar -xvJf kali-nethunter-rootfs-minimal-arm64.tar.xz
 ###
-mv chroot/kali-arm64/* $PREFIX/var/lib/proot-distro/installed-rootfs/kali-minimal
+mv chroot/kali-arm64 $PREFIX/var/lib/proot-distro/installed-rootfs/kali-minimal
 ###
 echo "
-To login Parrot Sec: pd sh kali-minimal
+To login Parrot Sec: kalimin
 "
-pd sh kali-minimal
