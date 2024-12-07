@@ -113,7 +113,7 @@ extract() {
 }
 
 createloginfile() {
-	bin=$PREFIX/bin/startkali.sh
+	bin=$PREFIX/bin/kali
         printf "\n${blue} [*] Creating ${bin}"
         printf "${reset}\n"
 	cat > $bin <<- EOM
