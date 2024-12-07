@@ -10,18 +10,18 @@ mkdir -p $PREFIX/var/lib/proot-distro/installed-rootfs
 ###
 cd $PREFIX/var/lib/proot-distro/installed-rootfs
 ###
-axel -a -n 6 https://github.com/xiv3r/Termux-Pentesting-Distro/releases/download/rootfs/backbox.tar.xz
+axel -a -n 1 https://github.com/xiv3r/Termux-Pentesting-Distro/releases/download/rootfs/backbox.tar.xz
 ###
 echo "
 [*] Extracting rootfs...
 "
 ###
-bsdtar -xpJf backbox.tar.xz &>/dev/null
+bsdtar -xpJf backbox.tar.xz >/dev/null 2>&1
 ###
 echo "
 [*] Done!
 "
 ###
 echo "
-To login BackBox: backbox
+To login BackBox type: backbox
 "
