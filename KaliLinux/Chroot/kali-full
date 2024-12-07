@@ -229,12 +229,5 @@ finalwork() {
 finalwork
 
 printline
-printf "\n${yellow} Now you can enjoy Kali Nethuter in your Termux :)"
-printf "\n Don't forget to like my hard work for termux and many other things"
-printline
-printline
-printf "\n${blue} [*] My official email:${yellow} lkpandey950@gmail.com"
-printf "\n${blue} [*] My website:${yellow} https://hax4us.com"
-printf "\n${blue} [*] My YouTube channel:${yellow} https://youtube.com/hax4us"
-printline
+printf "\n${yellow} Enjoy Kali Nethuter in your Termux"
 printf "${reset}\n"
