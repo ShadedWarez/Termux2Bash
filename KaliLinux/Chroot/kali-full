@@ -93,7 +93,6 @@ getsha() {
 
 checkintegrity() {
 	printf "\n${blue} [*] Checking integrity of file..."
-	prinf "\n [*]Script will immediately terminate in case of integrity failure"
 	printf "${reset}\n"
 	sha512sum -c $rootfs.sha512sum || \\
         {
@@ -197,8 +196,7 @@ if [[ ! -z $1 ]]; then
     fi
 fi
 
-printf "\n${yellow} You are going to install Kali Nethunter"
-printf "\n In Termux Without Root ;) Cool"
+printf "\n${yellow} Installing Kali Nethunter Rootless"
 
 pre_cleanup
 checksysinfo
@@ -211,7 +209,7 @@ extract
 createloginfile
 post_cleanup
 
-printf "\n${blue} [*] Configuring Kali For You ..."
+printf "\n${blue} [*] Configuring Kali..."
 
 resolvconf() {
 	#create resolv.conf file 
@@ -221,10 +219,10 @@ resolvconf
 
 
 finalwork() {
-	[ -e $HOME/finaltouchup.sh ] && rm $HOME/finaltouchup.sh
+	[ -e $HOME/touch.sh ] && rm $HOME/touch.sh
 	echo
-	axel -a https://github.com/Hax4us/Nethunter-In-Termux/raw/master/finaltouchup.sh
-	DESTINATION=$DESTINATION SETARCH=$SETARCH bash $HOME/finaltouchup.sh
+	axel -a https://github.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Chroot/touch.sh
+	DESTINATION=$DESTINATION SETARCH=$SETARCH bash $HOME/touch.sh
 } 
 finalwork
 
