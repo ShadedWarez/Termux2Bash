@@ -10,21 +10,21 @@ chmod 700 $PREFIX/bin/nethunter
 ###
 chmod 700 $PREFIX/bin/kali
 ###
-axel -a -n 6 -o kali-minimal.tar.xz https://kali.download/nethunter-images/current/rootfs/kali-nethunter-rootfs-minimal-arm64.tar.xz
+axel -a -n 1 -o kali-minimal.tar.xz https://kali.download/nethunter-images/current/rootfs/kali-nethunter-rootfs-minimal-arm64.tar.xz
 ###
 echo "
 [*] Extracting rootfs...
 "
 ###
-bsdtar -xpJf kali-minimal.tar.xz &>/dev/null
+bsdtar -xpJf kali-minimal.tar.xz >/dev/null 2>&1
 ###
 echo "
 [*] Done!
 "
 ###
 echo "
-To Login 👇
-user: "kali"
-root: "kali -r"
+   To Login 👇
+user type: "kali"
+root type: "kali -r"
 "
 
