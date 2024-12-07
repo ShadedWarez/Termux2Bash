@@ -10,7 +10,7 @@ mkdir -p $PREFIX/var/lib/proot-distro/installed-rootfs
 ###
 cd $PREFIX/var/lib/proot-distro/installed-rootfs
 ###
-wget https://github.com/xiv3r/Termux-Pentesting-Distro/releases/download/rootfs/parrot.tar.xz
+axel -a -n 6 https://github.com/xiv3r/Termux-Pentesting-Distro/releases/download/rootfs/parrot.tar.xz
 ###
 echo "
 [*] Extracting rootfs...
