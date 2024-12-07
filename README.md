@@ -23,17 +23,17 @@ echo "kali -r && vnc start" >>$PREFIX/etc/bash.bashrc
 
 - Install
 ```
-apt update && apt install axel proot wget -y && wget https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Chroot/kali-full && chmod +x kali-full && ./kali-full
+apt update && apt install axel proot wget -y && wget https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Chroot/kali-full && chmod +x kali-full && ./kali-full && kali -r
+```
+
+- start VNC
+```
+vnc start
 ```
 
 - Configure profile
 ```
 apt update && apt install wget -y && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/rcfiles/install.sh | sh
-```
-
-- VNC
-```
-vnc start
 ```
 
 - Update and Upgrade
@@ -69,7 +69,7 @@ echo "kali -r" >>$PREFIX/etc/bash.bashrc
 
 - Install
 ```
-apt update && apt install bsdtar proot wget -y && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Chroot/kali-minimal | sh && kali -r
+apt update && apt install axel bsdtar proot wget -y && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Chroot/kali-minimal | sh && kali -r
 ```
 
 - Configure profile
@@ -105,7 +105,7 @@ echo "kali" >>$PREFIX/etc/bash.bashrc
 
 - Install
 ```
-apt update && apt install bsdtar proot-distro wget -y && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Proot/kali-full | sh && kali
+apt update && apt install axel bsdtar proot-distro wget -y && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Proot/kali-full | sh && kali
 ```
 
 - Setup .zshrc profile
@@ -140,7 +140,7 @@ echo "kali" >>$PREFIX/etc/bash.bashrc
 
 - Install
 ```
-apt update && apt install bsdtar proot-distro wget -y && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Proot/kali-minimal | sh && kali
+apt update && apt install axel bsdtar proot-distro wget -y && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Proot/kali-minimal | sh && kali
 ```
 
 - Setup .zshrc profile
@@ -179,7 +179,7 @@ echo "backbox" >>$PREFIX/etc/bash.bashrc
 
 - Install
 ```
-apt update && apt install bsdtar proot-distro wget -y && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/BackBox/install | sh && backbox
+apt update && apt install axel bsdtar proot-distro wget -y && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/BackBox/install | sh && backbox
 ```
 
 - Update and Upgrade
@@ -214,7 +214,7 @@ echo "blackarch" >>$PREFIX/etc/bash.bashrc
 
 - Install 
 ```
-apt update && apt install bsdtar proot-distro wget -y && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/BlackArch/install | sh && blackarch
+apt update && apt install axel bsdtar proot-distro wget -y && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/BlackArch/install | sh && blackarch
 ```
 
 - Update and Upgrade
@@ -271,7 +271,7 @@ echo "debkali" >>$PREFIX/etc/bash.bashrc
 
 - Install
 ```
-apt update && apt install bsdtar proot-distro wget -y && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliDeb/install | sh && debkali
+apt update && apt install axel bsdtar proot-distro wget -y && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliDeb/install | sh && debkali
 ```
 
 - Update and Upgrade
@@ -305,7 +305,7 @@ echo "parrot" >>$PREFIX/etc/bash.bashrc
 
 - Install
 ```
-apt update && apt install bsdtar proot-distro wget -y && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/ParrotSec/install | sh && parrot
+apt update && apt install axel bsdtar proot-distro wget -y && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/ParrotSec/install | sh && parrot
 ```
 
 - Update and Upgrade
