@@ -1,8 +1,10 @@
 #!/data/data/com.termux/files/usr/bin/bash -e
 
 
-printf "\n${blue}[*] Extracting rootfs... ${reset}\n\n"
-proot --link2symlink tar -xf "$IMAGE_NAME" >/dev/null 2>&1
+echo "
+[*] Extracting rootfs...
+"
+proot --link2symlink tar -xJf "$IMAGE_NAME" >/dev/null 2>&1
 
 ###
 cat > ${PREFIX}/bin/nethunter <<- EOF
