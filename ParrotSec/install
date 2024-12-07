@@ -10,17 +10,9 @@ mkdir -p $PREFIX/var/lib/proot-distro/installed-rootfs
 ###
 cd $PREFIX/var/lib/proot-distro/installed-rootfs
 ###
-axel -a -n 6 https://github.com/xiv3r/Termux-Pentesting-Distro/releases/download/rootfs/parrot.tar.xz
-###
-echo "
-[*] Extracting rootfs...
-"
+wget https://github.com/xiv3r/Termux-Pentesting-Distro/releases/download/rootfs/parrot.tar.xz
 ###
 bsdtar -xpJf parrot.tar.xz &>/dev/null
-###
-echo "
-[*] Done!
-"
 ###
 echo "
 To login Parrot Sec: parrot
