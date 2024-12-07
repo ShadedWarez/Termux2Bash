@@ -18,12 +18,12 @@
 
 - Autologin
 ```
-echo "kali -r kex &" >>$PREFIX/etc/bash.bashrc
+echo "kali -r && vnc start" >>$PREFIX/etc/bash.bashrc
 ```
 
 - Install
 ```
-apt update && apt install bsdtar proot wget -y && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Chroot/kali-full | sh && kali -r
+apt update && apt install axel proot wget -y && wget https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Chroot/kali-full && chmod +x kali-full && ./kali-full
 ```
 
 - Configure profile
@@ -31,12 +31,9 @@ apt update && apt install bsdtar proot wget -y && wget -qO- https://raw.githubus
 apt update && apt install wget -y && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/rcfiles/install.sh | sh
 ```
 
-- Configure VNC
+- VNC
 ```
-kali kex password
-```
-```
-klai kex &
+vnc start
 ```
 
 - Update and Upgrade
