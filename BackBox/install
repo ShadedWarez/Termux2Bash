@@ -12,7 +12,7 @@ cd $PREFIX/var/lib/proot-distro/installed-rootfs
 ###
 wget https://github.com/xiv3r/Termux-Pentesting-Distro/releases/download/rootfs/backbox.tar.xz
 ###
-bsdtar -xpJf backbox.tar.xz
+bsdtar -xpJf backbox.tar.xz > /dev/null 2>&1
 ###
 echo "
 To login BackBox: backbox
