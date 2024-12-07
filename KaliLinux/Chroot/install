@@ -48,10 +48,10 @@ cmdline="proot \\
         -b /dev \\
         -b /proc \\
         -b /sdcard \\
-        -b chroot/kali-arm64\/kali:/dev/shm \\
-        -w \/kali \\
+        -b chroot/kali-arm64\/\kali:/dev/shm \\
+        -w \/\kali \\
            /usr/bin/env -i \\
-           HOME=\/kali \\
+           HOME=\/\kali \\
            PATH=/usr/local/sbin:/usr/local/bin:/bin:/usr/bin:/sbin:/usr/sbin \\
            TERM=\$TERM \\
            LANG=C.UTF-8 \\
