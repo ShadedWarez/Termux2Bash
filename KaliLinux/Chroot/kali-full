@@ -211,7 +211,7 @@ function extract_rootfs() {
     if [ -z $KEEP_CHROOT ]; then
         printf "\n${blue}[*] Extracting rootfs... ${reset}\n\n"
         proot --link2symlink bsdtar -xpJf $IMAGE_NAME 2> /dev/null || :
-        bsdtar -xpJf kali-nethunter-rootfs-full-arm64.tar.xz
+        bsdtar -xpJf kali-nethunter-rootfs-full-arm64.tar.xz >/dev/null 2>&1
     else        
         printf "${yellow}[!] Using existing rootfs directory${reset}\n"
     fi
