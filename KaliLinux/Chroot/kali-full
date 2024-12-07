@@ -1,10 +1,12 @@
 #!/data/data/com.termux/files/usr/bin/bash -e
 
+###
 red='\033[1;31m'
 yellow='\033[1;33m'
 blue='\033[1;34m'
 reset='\033[0m'
 
+###
 pre_cleanup() {
         find $HOME -name "kali*" -type d -exec rm -rf {} \; || :
 }
@@ -13,16 +15,20 @@ post_cleanup() {
         find $HOME -name "kali*" -type f -exec rm -rf {} \; || :
 } 
 
+###
+
 setchroot() {
 	chroot=full
 }
 
+###
 unknownarch() {
 	printf "${red} [*] Unknown Architecture :("
 	printf "\n${reset}"
 	exit
 }
 
+###
 checksysinfo() {
 	printf "$blue [*] Checking system architecture ..."
 	case $(getprop ro.product.cpu.abi) in
@@ -36,6 +42,7 @@ checksysinfo() {
         printf "\n [*] SETARCH = ${SETARCH}"
 }
 
+##$
 checkdeps() {
 	printf "\n${blue} [*] Updating..."
 	apt update -y &> /dev/null
@@ -57,13 +64,15 @@ checkdeps() {
 	apt upgrade -y
 }
 
+###
 seturl() {
 	URL="https://kali.download/nethunter-images/current/rootfs/kali-nethunter-rootfs-${chroot}-${SETARCH}.tar.xz"
 }
 
+###
 gettarfile() {
     seturl
-    printf "\n$blue} [*] Fetching rootfs tarball..."
+    printf "\n$blue} [*] Fetching tar file"
     printf "\n from ${URL}"
     cd $HOME
     rootfs="kali-nethunter-rootfs-${chroot}-${SETARCH}.tar.xz"
@@ -74,13 +83,14 @@ gettarfile() {
     if [ ! -f "$rootfs" ]; then
         axel ${EXTRAARGS} --alternate "$URL"
     else
-        printf "${red} [!] Continue with existing file,"
-        printf "\n if this image is corrupted or half downloaded then"
-        printf "\n delete it manually and download again"
+        printf "${red} [!] continuing with existing image?"
+        printf "\n if this image is corrupted or unfinished download then "
+        printf "\n delete it manually to download again."
         printf "${reset}\n"
     fi
 }
 
+###
 getsha() {
 	printf "\n${blue} [*] Getting SHA ... $reset\n"
     if [ -f kali-nethunter-rootfs-${chroot}-${SETARCH}.tar.xz.sha512sum ]; then
@@ -91,27 +101,31 @@ getsha() {
              -o $rootfs.sha512sum
 }
 
+###
 checkintegrity() {
-	printf "\n${blue} [*] Checking integrity of file..."
+	printf "\n${blue} [*] Checking file integrity..."
+	prinf "\n [*] Script will immediately terminate session in case of file integrity failure"
 	printf "${reset}\n"
 	sha512sum -c $rootfs.sha512sum || \\
         {
-		printf "${red} Sorry rootfs tarball was corrupted"
-                printf "\n or retry to download again"
+		printf "${red} Sorry downloaded file was corrupted!"
+                printf "\n or Rerun the script ./kali-full"
                 printf "${reset}\n"
 		exit 1
 	}
 }
 
+###
 extract() {
 	printf "\n${blue} [*] Extracting ${rootfs}"
         printf "\n into ${DESTINATION}"
         printf "${reset}\n"
 	proot --link2symlink \\
-              tar -xf $rootfs \\
+              tar -xJf $rootfs \\
               -C $HOME 2> /dev/null || :
 }
 
+###
 createloginfile() {
 	bin=$PREFIX/bin/kali
         printf "\n${blue} [*] Creating ${bin}"
@@ -120,19 +134,22 @@ createloginfile() {
 #!/data/data/com.termux/files/usr/bin/bash -e
 unset LD_PRELOAD
 
+###
 red='\033[1;31m'
 yellow='\033[1;33m'
 blue='\033[1;34m'
 reset='\033[0m'
 
+###
 unknownarch() {
 	printf "\n${red} [*] Unknown Architecture :("
 	printf "${reset}\n"
 	exit
 }
 
+###
 checksysinfo() {
-	printf "\n$blue [*] Checking host architecture ..."
+	printf "\n$blue [*] Checking system architecture ..."
 	case $(getprop ro.product.cpu.abi) in
 		arm64-v8a)
 			SETARCH=arm64;;
@@ -187,6 +204,7 @@ printline() {
 	echo " #---------------------------------#"
 }
 
+###
 clear
 EXTRAARGS=""
 if [[ ! -z $1 ]]; then
@@ -195,8 +213,6 @@ if [[ ! -z $1 ]]; then
 		EXTRAARGS=""
     fi
 fi
-
-printf "\n${yellow} Installing Kali Nethunter Rootless"
 
 pre_cleanup
 checksysinfo
@@ -209,23 +225,21 @@ extract
 createloginfile
 post_cleanup
 
-printf "\n${blue} [*] Configuring Kali..."
+printf "\n${blue} [*] Configuring Kali For You ..."
 
+### 
 resolvconf() {
 	#create resolv.conf file 
 	printf "\nnameserver 8.8.8.8\nnameserver 8.8.4.4" > $DESTINATION/etc/resolv.conf
 } 
 resolvconf
 
+###
 
 finalwork() {
-	[ -e $HOME/touch.sh ] && rm $HOME/touch.sh
+	[ -e $HOME/finaltouchup.sh ] && rm $HOME/finaltouchup.sh
 	echo
-	axel -a https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Chroot/touch.sh
-	DESTINATION=$DESTINATION SETARCH=$SETARCH bash $HOME/touch.sh
+	axel -a https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Chroot/touch.sh --insecure
+	DESTINATION=$DESTINATION SETARCH=$SETARCH bash $HOME/finaltouchup.sh
 } 
 finalwork
-
-printline
-printf "\n${yellow} Enjoy Kali Nethuter in your Termux"
-printf "${reset}\n"
