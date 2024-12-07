@@ -10,13 +10,13 @@ mkdir -p $PREFIX/var/lib/proot-distro/installed-rootfs
 ###
 cd $PREFIX/var/lib/proot-distro/installed-rootfs
 ###
-wget https://github.com/xiv3r/Termux-Pentesting-Distro/releases/download/rootfs/debkali.tar.xz
+axel -a -n 6 https://github.com/xiv3r/Termux-Pentesting-Distro/releases/download/rootfs/debkali.tar.xz
 ###
 echo "
 [*] Extracting rootfs...
 "
 ###
-bsdtar -xpJf debkali.tar.xz > /dev/null 2>&1
+bsdtar -xpJf debkali.tar.xz &>/dev/null
 ###
 echo "
 [*] Done!
