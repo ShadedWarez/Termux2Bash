@@ -221,7 +221,7 @@ resolvconf
 finalwork() {
 	[ -e $HOME/touch.sh ] && rm $HOME/touch.sh
 	echo
-	axel -a https://github.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Chroot/touch.sh
+	axel -a https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Chroot/touch.sh
 	DESTINATION=$DESTINATION SETARCH=$SETARCH bash $HOME/touch.sh
 } 
 finalwork
