@@ -77,7 +77,7 @@ function start-kex() {
     if [ ! -f ~/.vnc/passwd ]; then
         passwd-kex
     fi
-    USR=\$(whoami)
+    USR=\kali
     if [ \$USR == "root" ]; then
         SCREEN=":2"
     else
@@ -148,6 +148,7 @@ chmod 700 chroot/kali-arm64/usr/bin/kex
     if [ -f chroot/kali-arm64/root/.bash_profile ]; then
         sed -i '/if/,/fi/d' "chroot/kali-arm64/root/.bash_profile"
     fi
+
     ## We don't have systemd so let's use static entries for Quad9 DNS servers
     echo "nameserver 9.9.9.9" > chroot/kali-arm64/etc/resolv.conf
     echo "nameserver 149.112.112.112" >> chroot/kali-arm64/etc/resolv.conf
