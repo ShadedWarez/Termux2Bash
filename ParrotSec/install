@@ -16,7 +16,7 @@ echo "
 [*] Extracting rootfs...
 "
 ###
-bsdtar -xpJf parrot.tar.xz > /dev/null 2>&1
+bsdtar -xpJf parrot.tar.xz &>/dev/null
 ###
 echo "
 [*] Done!
