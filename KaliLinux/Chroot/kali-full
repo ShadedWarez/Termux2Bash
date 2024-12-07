@@ -42,17 +42,18 @@ checksysinfo() {
         printf "\n [*] SETARCH = ${SETARCH}"
 }
 
-##$
+###
 checkdeps() {
 	printf "\n${blue} [*] Updating..."
 	apt update -y &> /dev/null
-	echo "[*] Checking dependencies..."
+
+        printf "[*] Checking dependencies..."
 
 	for i in proot tar axel; do
 		if [ -e $PREFIX/bin/$i ]; then
-			echo "\n  • ${i} is OK"
+			printf "\n • ${i} is OK"
 		else
-			echo "\nInstalling ${i}..."
+			printf "\nInstalling ${i}..."
 			apt install -y $i || 
                         {
 				printf "\n${red} ERROR: check your internet connection"
