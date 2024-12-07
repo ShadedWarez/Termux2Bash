@@ -12,8 +12,8 @@
 ------------
 # Kali Nethunter Full [chroot]
 > - support vnc service
-> - login:`nethunter` or `nethunter -r` `kali` or `kali -r`
-> - login w/ vnc:`nethunter kex &` or `nethunter -r kex &` or `kali kex &` `kali -r kex &`
+> - login:`kali` or `kali -r`
+> - login w/ vnc:`kali -r && vnc start`
 > - uninstall:`cd && rm -rf chroot`
 
 - Autologin
