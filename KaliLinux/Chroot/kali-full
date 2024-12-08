@@ -24,7 +24,7 @@ wget -O $PREFIX/bin/nethunter https://raw.githubusercontent.com/xiv3r/Termux-Pen
 ###
 chmod 700 $PREFIX/bin/nethunter
 ###
-ln -s $PREFIX/bin/nethunter $PREFIX/bin/nh
+ln -s $PREFIX/bin/nethunter $PREFIX/bin/kali
 ###
 sed -i '/if/,/fi/d' chroot/kali-arm64/root/.bash_profile
 ###
