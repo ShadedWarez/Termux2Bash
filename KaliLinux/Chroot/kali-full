@@ -7,6 +7,7 @@ axel -a -n 1 -o kali-full.tar.xz https://kali.download/nethunter-images/current/
 echo "
 [*] Extracting rootfs...!!!
 "
+###
 proot --link2symlink bsdtar -xpJf kali-full.tar.xz 2> /dev/null
 ###
 sleep 2s
@@ -25,12 +26,16 @@ chmod 700 $PREFIX/bin/nethunter
 ###
 ln -s $PREFIX/bin/nethunter $PREFIX/bin/nh
 ###
-cd $HOME
-###
 sed -i '/if/,/fi/d' chroot/kali-arm64/root/.bash_profile
 ###
 echo "nameserver 9.9.9.9" > chroot/kali-arm64/etc/resolv.conf
 echo "nameserver 8.8.4.4" >> chroot/kali-arm64/etc/resolv.conf
+###
+wget -O chroot/kali-arm64/root/.bashrc https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/rcfiles/rootbash.bashrc
+#
+wget -O chroot/kali-arm64/home/kali/.bashrc https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/rcfiles/homebash.bashrc
+#
+wget -O chroot/kali-arm64/etc/bash.bashrc https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/rcfiles/etcbash.bashrc
 ###
 chmod +s chroot/kali-arm64/usr/bin/sudo
 ###
@@ -42,8 +47,9 @@ USRID=$(id -u)
 GRPID=$(id -g)
 nh -r usermod -u "$USRID" kali 2>/dev/null
 nh -r groupmod -g "$GRPID" kali 2>/dev/null
+###
 echo "
-[*] Installation Done!
+[*] Successful Installation!
 [*] Type:"nh kex passwd" for vnc
 [*] Type:"nh -r kex &" to run vnc
 "
