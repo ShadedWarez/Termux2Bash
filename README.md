@@ -6,6 +6,15 @@
 
 <br>
 <br>
+
+<h1 align="center">
+
+| [Termux 0.119.1](https://github.com/xiv3r/Kali-Linux-Termux/releases/download/Apps/Termux_v0.119.1.apk)
+|
+| [RealVNC App](https://play.google.com/store/apps/details?id=com.realvnc.viewer.android)
+|
+</h1>
+
 <br>
 <br>
 
@@ -48,7 +57,7 @@ sed -i 's/user=kali/user=xiv3r/' /home/kali/.bashrc
 ```
 
 <div align="center">
-<img src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/KaliLinux/Chroot/kali-vnc.png">
+<img src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/KaliLinux/Chroot/vnc.jpg">
 </div>
 
 <br>
