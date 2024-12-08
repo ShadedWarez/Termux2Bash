@@ -23,7 +23,7 @@ echo "nh -r && nh -r kex &" >>$PREFIX/etc/bash.bashrc
 
 - Install
 ```
-apt update && apt install axel proot wget -y &>/dev/null && wget https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Chroot/kali-full && chmod +x kali-full && ./kali-full && nh
+apt update && apt install axel bsdtar proot wget -y &>/dev/null && wget https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Chroot/kali-full && chmod +x kali-full && ./kali-full && nh
 ```
 
 - Start VNC
