@@ -1,6 +1,6 @@
 #!/bin/sh
 
-echo 'DISTRO_NAME="Kali Nethunter Minimal"' >> $PREFIX/etc/proot-distro/kali-minimal.sh
+echo 'DISTRO_NAME="Kali Nethunter Minimal"' > $PREFIX/etc/proot-distro/kali-minimal.sh
 ###
 mkdir -p $PREFIX/var/lib/proot-distro/installed-rootfs/kali-minimal
 ###
@@ -16,7 +16,7 @@ echo "
 [*] Extracting rootfs...
 "
 ###
-prrot --link2symlink bsdtar -xpJf kali-minimal.tar.xz 2> /dev/null
+prrot --link2symlink bsdtar -xpJf kali-minimal.tar.xz 2>/dev/null
 ###
 echo "
 [*] Done!
@@ -28,7 +28,7 @@ rm -rf chroot
 ###
 wget -O kali-minimal/root/.zshrc https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Proot/.zshrc
 ###
-echo "nameserver 9.9.9.9" >/etc/resolv.conf
+echo "nameserver 9.9.9.9" > kali-minimal/etc/resolv.conf
 ###
 echo "
 To login Kali type: kali
