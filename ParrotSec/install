@@ -15,6 +15,7 @@ axel -a -n 1 https://github.com/xiv3r/Termux-Pentesting-Distro/releases/download
 echo "
 [*] Extracting rootfs...
 "
+###
 proot --link2symlink bsdtar -xpJf parrot.tar.xz 2> /dev/null
 ###
 sleep 2
