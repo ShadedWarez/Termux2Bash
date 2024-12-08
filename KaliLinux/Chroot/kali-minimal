@@ -8,7 +8,7 @@ echo "
 [*] Extracting rootfs...
 "
 ###
-proot --link2symlink bsdtar -xpJf kali-minimal.tar.xz 2> /dev/null
+proot --link2symlink bsdtar -xpJf kali-minimal.tar.xz 2>/dev/null
 ###
 echo "
 [*] Done!
@@ -47,8 +47,8 @@ echo "Set disable_coredump false" > chroot/kali-arm64/etc/sudo.conf
 echo "
 [*] Successful Installation!
    To Login 👇
-user type: "kali"
-root type: "kali -r"
+user type: kali
+root type: kali -r
 "
 ###
 USRID=$(id -u)
