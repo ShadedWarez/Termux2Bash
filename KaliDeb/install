@@ -1,6 +1,6 @@
 #!/bin/sh
 
-echo 'DISTRO_NAME="Debian Nethunter"' >> $PREFIX/etc/proot-distro/debkali.sh
+echo 'DISTRO_NAME="Debian Nethunter"' > $PREFIX/etc/proot-distro/debkali.sh
 ###
 echo "pd sh debkali" > $PREFIX/bin/debkali
 ###
@@ -16,13 +16,13 @@ echo "
 [*] Extracting rootfs...
 "
 ###
-proot --link2symlink bsdtar -xpJf debkali.tar.xz 2> /dev/null
+proot --link2symlink bsdtar -xpJf debkali.tar.xz 2>/dev/null
 ###
 echo "
 [*] Done!
 "
 ###
-echo "nameserver 9.9.9.9" >/etc/resolv.conf
+echo "nameserver 9.9.9.9" > debkali/etc/resolv.conf
 ###
 echo "
 To login Kali in Debain: debkali
