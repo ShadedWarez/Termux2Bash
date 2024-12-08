@@ -72,7 +72,7 @@ sed -i 's/user=kali/user=xiv3r/' /home/kali/.bashrc
 
 - Autologin
 ```
-echo "kali -r" >>$PREFIX/etc/bash.bashrc
+echo "kali" >>$PREFIX/etc/bash.bashrc
 ```
 
 - Install
@@ -82,7 +82,7 @@ apt update && apt install axel bsdtar proot wget -y &>/dev/null && wget -qO- htt
 
 - Update and Upgrade
 ```
-apt update && apt full-upgrade -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" -y
+sudo apt update && sudo apt full-upgrade -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" -y
 ```
 
 - Add custom terminal name
