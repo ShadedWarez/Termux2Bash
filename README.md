@@ -12,23 +12,23 @@
 ------------
 # Kali Nethunter Full [chroot]
 > - support vnc service
-> - login:`kali` or `kali -r`
-> - login w/ vnc:`kali -r && vnc start`
+> - login:`nethunter -r` or `nh`
+> - login w/ vnc:`nh kex &`
 > - uninstall:`cd && rm -rf chroot`
 
 - Autologin
 ```
-echo "kali -r && vnc start" >>$PREFIX/etc/bash.bashrc
+echo "nh -r && nh -r kex &" >>$PREFIX/etc/bash.bashrc
 ```
 
 - Install
 ```
-apt update && apt install axel proot wget -y &>/dev/null && wget https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Chroot/kali-full && chmod +x kali-full && ./kali-full && kali -r
+apt update && apt install axel proot wget -y &>/dev/null && wget https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Chroot/kali-full && chmod +x kali-full && ./kali-full && nh
 ```
 
-- start VNC
+- Start VNC
 ```
-vnc start
+nh kex &
 ```
 
 - Configure profile
