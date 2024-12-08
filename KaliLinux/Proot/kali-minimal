@@ -16,7 +16,7 @@ echo "
 [*] Extracting rootfs...
 "
 ###
-prrot --link2symlink bsdtar -xpJf kali-minimal.tar.xz 2>/dev/null
+proot --link2symlink bsdtar -xpJf kali-minimal.tar.xz 2>/dev/null
 ###
 echo "
 [*] Done!
