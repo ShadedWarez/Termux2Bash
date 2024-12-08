@@ -16,7 +16,7 @@ echo "
 [*] Extracting rootfs...
 "
 ###
-bsdtar -xpJf kali-minimal.tar.xz >/dev/null 2>&1
+prrot --link2symlink bsdtar -xpJf kali-minimal.tar.xz 2> /dev/null
 ###
 echo "
 [*] Done!
@@ -25,6 +25,10 @@ echo "
 mv chroot/kali-arm64/* $PREFIX/var/lib/proot-distro/installed-rootfs/kali-minimal
 ###
 rm -rf chroot
+###
+wget -O kali-minimal/root/.zshrc https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Proot/.zshrc
+###
+echo "nameserver 9.9.9.9" >/etc/resolv.conf
 ###
 echo "
 To login Kali type: kali
