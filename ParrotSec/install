@@ -15,8 +15,11 @@ axel -a -n 1 https://github.com/xiv3r/Termux-Pentesting-Distro/releases/download
 echo "
 [*] Extracting rootfs...
 "
-bsdtar -xpJf parrot.tar.xz >/dev/null 2>&1
+proot --link2symlink bsdtar -xpJf parrot.tar.xz 2> /dev/null
 ###
+sleep 2
+###
+echo "nameserver 9.9.9.9" >/etc/resolv.conf
 echo "
 To login Parrot type: parrot
 "
