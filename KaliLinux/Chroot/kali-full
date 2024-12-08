@@ -1,1 +1,12 @@
-#!/
+#!/data/data/com.termux/files/usr/bin/bash -e
+
+axel -a -n 1 -o kali-full.tar.xz https://kali.download/nethunter-images/current/rootfs/kali-nethunter-rootfs-full-arm64.tar.xz
+###
+echo "
+[*] Extracting rootfs...!!!
+"
+proot --link2symlink bsdtar -xpJf kali-full.tar.xz >/dev/null 2>&1
+###
+echo "
+[*]Done 👍
+"
