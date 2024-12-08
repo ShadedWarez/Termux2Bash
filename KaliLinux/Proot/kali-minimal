@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/data/data/com.termux/files/usr/bin/bash -e
 
 echo 'DISTRO_NAME="Kali Nethunter Minimal"' > $PREFIX/etc/proot-distro/kali-minimal.sh
 ###
