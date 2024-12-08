@@ -50,7 +50,6 @@ kali -r groupmod -g "$GRPID" kali 2>/dev/null
 ###
 echo "
 [*] Successful Installation!
-echo "
    To Login 👇
 user type: "kali"
 root type: "kali -r"
