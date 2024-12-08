@@ -29,12 +29,13 @@ ln -s $PREFIX/bin/nethunter $PREFIX/bin/kali
 sed -i '/if/,/fi/d' chroot/kali-arm64/root/.bash_profile
 ###
 echo "nameserver 9.9.9.9" > chroot/kali-arm64/etc/resolv.conf
+###
 echo "nameserver 8.8.4.4" >> chroot/kali-arm64/etc/resolv.conf
 ###
 wget -O chroot/kali-arm64/root/.bashrc https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/rcfiles/rootbash.bashrc
-#
+###
 wget -O chroot/kali-arm64/home/kali/.bashrc https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/rcfiles/homebash.bashrc
-#
+###
 wget -O chroot/kali-arm64/etc/bash.bashrc https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/rcfiles/etcbash.bashrc
 ###
 chmod +s chroot/kali-arm64/usr/bin/sudo
@@ -45,13 +46,14 @@ echo "kali    ALL=(ALL:ALL) ALL" > chroot/kali-arm64/etc/sudoers.d/kali
 ###
 echo "Set disable_coredump false" > chroot/kali-arm64/etc/sudo.conf
 ###
+echo "
+[*] Successful Installation!
+[*] Type:"kali kex passwd"
+[*] Type:"kali -r kex &" to run vnc
+"
+###
 USRID=$(id -u)
 GRPID=$(id -g)
 kali -r usermod -u "$USRID" kali 2>/dev/null
 kali -r groupmod -g "$GRPID" kali 2>/dev/null
-###
-echo "
-[*] Successful Installation!
-[*] Type:"kali kex passwd" for vnc
-[*] Type:"kali -r kex &" to run vnc
-"
+
