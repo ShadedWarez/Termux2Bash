@@ -16,7 +16,9 @@ echo "
 [*] Extracting rootfs...
 "
 ###
-bsdtar -xpJf blackarch.tar.xz >/dev/null 2>&1
+proot --link2symlink bsdtar -xpJf blackarch.tar.xz 2> /dev/null
+###
+echo "nameserver 9.9.9.9" >/etc/resolv.conf
 ###
 echo "
 [*] Done!
