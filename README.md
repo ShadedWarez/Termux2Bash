@@ -83,6 +83,10 @@ apt update && apt full-upgrade -o Dpkg::Options::="--force-confdef" -o Dpkg::Opt
 sed -i 's/user=kali/user=xiv3r/' /root/.bashrc
 sed -i 's/user=kali/user=xiv3r/' /home/kali/.bashrc
 ```
+<div align="center">
+<img src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/KaliLinux/Chroot/kali-chroot.png">
+</div>
+
 <br>
 <br>
 <br>
