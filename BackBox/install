@@ -1,6 +1,6 @@
 #!/bin/sh
 
-echo 'DISTRO_NAME="BackBox Linux"' >> $PREFIX/etc/proot-distro/backbox.sh
+echo 'DISTRO_NAME="BackBox Linux"' > $PREFIX/etc/proot-distro/backbox.sh
 ###
 echo "pd sh backbox" > $PREFIX/bin/backbox
 ###
@@ -16,13 +16,13 @@ echo "
 [*] Extracting rootfs...
 "
 ###
-proot --link2symlink bsdtar -xpJf backbox.tar.xz 2> /dev/null
+proot --link2symlink bsdtar -xpJf backbox.tar.xz 2>/dev/null
 ###
 echo "
 [*] Done!
 "
 ###
-echo "nameserver 9.9.9.9" >/etc/resolv.conf
+echo "nameserver 9.9.9.9" > backbox/etc/resolv.conf
 ###
 echo "
 To login BackBox type: backbox
