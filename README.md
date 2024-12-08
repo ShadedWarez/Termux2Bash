@@ -35,11 +35,6 @@ nh kex password
 nh kex &
 ```
 
-- Configure profile
-```
-apt update && apt install wget -y &>/dev/null && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/rcfiles/install.sh | sh
-```
-
 - Update and Upgrade
 ```
 apt update && apt full-upgrade -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" -y
@@ -74,11 +69,6 @@ echo "kali -r" >>$PREFIX/etc/bash.bashrc
 - Install
 ```
 apt update && apt install axel bsdtar proot wget -y &>/dev/null && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Chroot/kali-minimal | sh && kali -r
-```
-
-- Configure profile
-```
-apt update && apt install wget -y &>/dev/null && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/rcfiles/install.sh | sh
 ```
 
 - Update and Upgrade
