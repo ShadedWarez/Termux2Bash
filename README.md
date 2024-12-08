@@ -12,13 +12,13 @@
 ------------
 # Kali Nethunter Full [chroot]
 > - support vnc service
-> - login:`nethunter -r` or `nh`
-> - login w/ vnc:`nh kex &`
+> - login:`kali -r` or `kali`
+> - login w/ vnc:`kali kex &`
 > - uninstall:`cd && rm -rf chroot`
 
 - Autologin
 ```
-echo "nh -r && nh -r kex &" >>$PREFIX/etc/bash.bashrc
+echo "kali -r && kali -r kex &" >>$PREFIX/etc/bash.bashrc
 ```
 
 - Install
@@ -29,10 +29,10 @@ apt update && apt install axel bsdtar proot wget -y &>/dev/null && wget https://
 - Start VNC
 > 127.0.0.1:5901
 ```
-nh kex password
+kali kex password
 ```
 ```
-nh kex &
+kali kex &
 ```
 
 - Update and Upgrade
