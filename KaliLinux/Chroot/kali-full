@@ -52,6 +52,6 @@ nh -r groupmod -g "$GRPID" kali 2>/dev/null
 ###
 echo "
 [*] Successful Installation!
-[*] Type:"nh kex passwd" for vnc
-[*] Type:"nh -r kex &" to run vnc
+[*] Type:"kali kex passwd" for vnc
+[*] Type:"kali -r kex &" to run vnc
 "
