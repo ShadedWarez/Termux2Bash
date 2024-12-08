@@ -27,6 +27,10 @@ apt update && apt install axel bsdtar proot wget -y &>/dev/null && wget https://
 ```
 
 - Start VNC
+> 127.0.0.1:5901
+```
+nh kex password
+```
 ```
 nh kex &
 ```
