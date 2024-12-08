@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/data/data/com.termux/files/usr/bin/bash -e
 
 echo 'DISTRO_NAME="BackBox Linux"' > $PREFIX/etc/proot-distro/backbox.sh
 ###
