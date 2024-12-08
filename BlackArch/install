@@ -1,6 +1,6 @@
 #!/bin/sh
 
-echo 'DISTRO_NAME="BlackArch Linux"' >> $PREFIX/etc/proot-distro/blackarch.sh
+echo 'DISTRO_NAME="BlackArch Linux"' > $PREFIX/etc/proot-distro/blackarch.sh
 ###
 echo "pd sh blackarch" > $PREFIX/bin/blackarch
 ###
@@ -18,11 +18,11 @@ echo "
 ###
 proot --link2symlink bsdtar -xpJf blackarch.tar.xz 2> /dev/null
 ###
-echo "nameserver 9.9.9.9" >/etc/resolv.conf
-###
 echo "
 [*] Done!
 "
+###
+echo "nameserver 9.9.9.9" > blackarch/etc/resolv.conf
 ###
 echo "
 To login Blackarch type: blackarch
