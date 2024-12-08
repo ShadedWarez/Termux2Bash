@@ -102,11 +102,6 @@ echo "kali" >>$PREFIX/etc/bash.bashrc
 apt update && apt install axel bsdtar proot-distro wget -y &>/dev/null && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Proot/kali-full | sh && kali
 ```
 
-- Setup .zshrc profile
-```
-apt update && apt install wget -y &>/dev/null && wget -O /root/.zshrc https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Proot/.zshrc
-```
-
 - Update and Upgrade
 ```
 apt update && apt full-upgrade -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" -y
@@ -135,11 +130,6 @@ echo "kali" >>$PREFIX/etc/bash.bashrc
 - Install
 ```
 apt update && apt install axel bsdtar proot-distro wget -y &>/dev/null && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Proot/kali-minimal | sh && kali
-```
-
-- Setup .zshrc profile
-```
-apt update && apt install wget -y &>/dev/null && wget -O /root/.zshrc https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Proot/.zshrc && source .zshrc
 ```
 
 - Update and Upgrade
