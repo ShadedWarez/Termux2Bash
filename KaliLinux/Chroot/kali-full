@@ -1,5 +1,7 @@
 #!/data/data/com.termux/files/usr/bin/bash -e
 
+cd $HOME
+###
 axel -a -n 1 -o kali-full.tar.xz https://kali.download/nethunter-images/current/rootfs/kali-nethunter-rootfs-full-arm64.tar.xz
 ###
 echo "
@@ -7,6 +9,24 @@ echo "
 "
 proot --link2symlink bsdtar -xpJf kali-full.tar.xz >/dev/null 2>&1
 ###
+sleep 2s
+###
 echo "
-[*]Done 👍
+[*] Extraction Done!
+"
+###
+wget -O chroot/kali-arm64/bin/kex https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Chroot/kex
+###
+chmod 700 chroot/kali-arm64/bin/kex
+###
+wget -O $PREFIX/bin/nethunter https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Chroot/nethunter
+###
+chmod $PREFIX/bin/nethunter
+###
+ln -s $PREFIX/bin/nethunter $PREFIX/bin/nh
+###
+echo "
+[*] Installation Done!
+[*] Type:"nh kex passwd" for vnc 
+[*] Type:"nh -r kex &" to run vnc
 "
