@@ -13,7 +13,7 @@ proot --link2symlink bsdtar -xpJf kali-full.tar.xz 2> /dev/null
 sleep 2s
 ###
 echo "
-[*] Extraction Done!
+[*] Extracted!
 "
 ###
 wget -O chroot/kali-arm64/bin/kex https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Chroot/kex
