@@ -43,10 +43,6 @@ echo "kali    ALL=(ALL:ALL) ALL" > chroot/kali-arm64/etc/sudoers.d/kali
 ###
 echo "Set disable_coredump false" > chroot/kali-arm64/etc/sudo.conf
 ###
-USRID=$(id -u)
-GRPID=$(id -g)
-kali -r usermod -u "$USRID" kali 2>/dev/null
-kali -r groupmod -g "$GRPID" kali 2>/dev/null
 ###
 echo "
 [*] Successful Installation!
@@ -54,4 +50,10 @@ echo "
 user type: "kali"
 root type: "kali -r"
 "
+###
+USRID=$(id -u)
+GRPID=$(id -g)
+kali -r usermod -u "$USRID" kali 2>/dev/null
+kali -r groupmod -g "$GRPID" kali 2>/dev/null
+
 
