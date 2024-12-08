@@ -16,9 +16,9 @@ echo "
 [*] Done!
 "
 ###
-wget -O chroot/kali-arm64/bin/kex https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Chroot/kex
+wget -O chroot/kali-arm64/bin/vnc https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Chroot/kex
 ###
-chmod 700 chroot/kali-arm64/bin/kex
+chmod 700 chroot/kali-arm64/bin/vnc
 ###
 wget -O $PREFIX/bin/nethunter https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Chroot/nethunter
 ###
