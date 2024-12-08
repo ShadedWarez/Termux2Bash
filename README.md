@@ -20,15 +20,10 @@
 
 ------------
 # Kali Nethunter Full [chroot]
-> - support vnc service
+> - Support vnc service
 > - login:`kali -r` or `kali`
 > - login w/ vnc:`kali vnc &`
 > - uninstall:`cd && rm -rf chroot`
-
-- Autologin
-```
-echo "kali -r && kali -r vnc &" >>$PREFIX/etc/bash.bashrc
-```
 
 - Install
 ```
@@ -42,6 +37,14 @@ kali vnc password
 ```
 ```
 kali vnc &
+```
+
+- Auto login
+```
+echo "kali vnc &" >>$PREFIX/etc/bash.bashrc
+```
+```
+echo "kali" >>$PREFIX/etc/bash.bashrc
 ```
 
 - Update and Upgrade
