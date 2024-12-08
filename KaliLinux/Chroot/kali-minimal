@@ -4,11 +4,9 @@ cd $HOME
 ###
 wget -O $PREFIX/bin/nethunter https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Chroot/nethunter
 ###
-cp -r $PREFIX/bin/nethunter $PREFIX/bin/kali
-###
 chmod 700 $PREFIX/bin/nethunter
 ###
-chmod 700 $PREFIX/bin/kali
+ln -s $PREFIX/bin/nethunter $PREFIX/bin/kali
 ###
 axel -a -n 1 -o kali-minimal.tar.xz https://kali.download/nethunter-images/current/rootfs/kali-nethunter-rootfs-minimal-arm64.tar.xz
 ###
@@ -16,7 +14,7 @@ echo "
 [*] Extracting rootfs...
 "
 ###
-bsdtar -xpJf kali-minimal.tar.xz >/dev/null 2>&1
+proot --link2symlink bsdtar -xpJf kali-minimal.tar.xz >/dev/null 2>&1
 ###
 echo "
 [*] Done!
