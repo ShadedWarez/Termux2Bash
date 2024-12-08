@@ -31,25 +31,21 @@ apt update && apt install axel bsdtar proot wget -y &>/dev/null && wget https://
 ```
 
 - Start VNC
-> 127.0.0.1:5901
+> `127.0.0.1:5901`
 ```
 kali vnc password
-```
-```
 kali vnc &
 ```
 
 - Auto login
 ```
 echo "kali vnc &" >>$PREFIX/etc/bash.bashrc
-```
-```
 echo "kali" >>$PREFIX/etc/bash.bashrc
 ```
 
 - Update and Upgrade
 ```
-apt update && apt full-upgrade -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" -y
+sudo apt update && sudo apt full-upgrade -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" -y
 ```
 
 - Add custom terminal name
