@@ -21,6 +21,7 @@ proot --link2symlink bsdtar -xpJf parrot.tar.xz 2> /dev/null
 sleep 2
 ###
 echo "nameserver 9.9.9.9" >/etc/resolv.conf
+###
 echo "
 To login Parrot type: parrot
 "
