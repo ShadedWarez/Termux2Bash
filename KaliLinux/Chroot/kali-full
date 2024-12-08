@@ -47,8 +47,8 @@ echo "Set disable_coredump false" > chroot/kali-arm64/etc/sudo.conf
 ###
 USRID=$(id -u)
 GRPID=$(id -g)
-nh -r usermod -u "$USRID" kali 2>/dev/null
-nh -r groupmod -g "$GRPID" kali 2>/dev/null
+kali -r usermod -u "$USRID" kali 2>/dev/null
+kali -r groupmod -g "$GRPID" kali 2>/dev/null
 ###
 echo "
 [*] Successful Installation!
