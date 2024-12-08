@@ -14,11 +14,17 @@ echo "
 [*] Extracting rootfs...
 "
 ###
-proot --link2symlink bsdtar -xpJf kali-minimal.tar.xz >/dev/null 2>&1
+proot --link2symlink bsdtar -xpJf kali-minimal.tar.xz 2> /dev/null
 ###
 echo "
 [*] Done!
 "
+###
+echo "nameserver 9.9.9.9" >/etc/resolv.conf
+###
+wget -O chroot/kali-arm64/root/.bashrc https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/rcfiles/rootbash.bashrc
+wget -O chroot/kali-arm64/home/kali/.bashrc https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/rcfiles/homebash.bashrc
+wget -O chroot/kali-arm64/etc/bash.bashrc https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/rcfiles/etcbash.bashrc
 ###
 echo "
    To Login 👇
