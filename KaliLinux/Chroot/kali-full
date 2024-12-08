@@ -10,13 +10,7 @@ echo "
 ###
 proot --link2symlink bsdtar -xpJf kali-full.tar.xz 2>/dev/null
 ###
-sleep 2s
-###
-echo "
-[*] Done!
-"
-###
-wget -O chroot/kali-arm64/bin/vnc https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Chroot/kex
+wget -O chroot/kali-arm64/bin/vnc https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Chroot/vnc
 ###
 chmod 700 chroot/kali-arm64/bin/vnc
 ###
