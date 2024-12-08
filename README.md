@@ -58,7 +58,7 @@ sed -i 's/user=kali/user=xiv3r/' /home/kali/.bashrc
 
 -------------
 # Kali Nethunter Minimal [chroot]
-> - login:`nethunter` or `nethunter -r` `kali` or `kali -r`
+> - login:`kali` or `kali -r`
 > - uninstall:`cd && rm -rf chroot`
 
 - Autologin
@@ -99,7 +99,7 @@ echo "kali" >>$PREFIX/etc/bash.bashrc
 
 - Install
 ```
-apt update && apt install axel bsdtar proot-distro wget -y &>/dev/null && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Proot/kali-full | sh && kali
+apt update && apt install axel bsdtar proot proot-distro wget -y &>/dev/null && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Proot/kali-full | sh && kali
 ```
 
 - Update and Upgrade
@@ -129,7 +129,7 @@ echo "kali" >>$PREFIX/etc/bash.bashrc
 
 - Install
 ```
-apt update && apt install axel bsdtar proot-distro wget -y &>/dev/null && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Proot/kali-minimal | sh && kali
+apt update && apt install axel bsdtar proot proot-distro wget -y &>/dev/null && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Proot/kali-minimal | sh && kali
 ```
 
 - Update and Upgrade
@@ -163,7 +163,7 @@ echo "backbox" >>$PREFIX/etc/bash.bashrc
 
 - Install
 ```
-apt update && apt install axel bsdtar proot-distro wget -y &>/dev/null && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/BackBox/install | sh && backbox
+apt update && apt install axel bsdtar proot proot-distro wget -y &>/dev/null && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/BackBox/install | sh && backbox
 ```
 
 - Update and Upgrade
@@ -198,7 +198,7 @@ echo "blackarch" >>$PREFIX/etc/bash.bashrc
 
 - Install 
 ```
-apt update && apt install axel bsdtar proot-distro wget -y &>/dev/null && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/BlackArch/install | sh && blackarch
+apt update && apt install axel bsdtar proot proot-distro wget -y &>/dev/null && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/BlackArch/install | sh && blackarch
 ```
 
 - Update and Upgrade
@@ -255,7 +255,7 @@ echo "debkali" >>$PREFIX/etc/bash.bashrc
 
 - Install
 ```
-apt update && apt install axel bsdtar proot-distro wget -y &>/dev/null && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliDeb/install | sh && debkali
+apt update && apt install axel bsdtar proot proot-distro wget -y &>/dev/null && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliDeb/install | sh && debkali
 ```
 
 - Update and Upgrade
@@ -289,7 +289,7 @@ echo "parrot" >>$PREFIX/etc/bash.bashrc
 
 - Install
 ```
-apt update && apt install axel bsdtar proot-distro wget -y &>/dev/null && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/ParrotSec/install | sh && parrot
+apt update && apt install axel bsdtar proot proot-distro wget -y &>/dev/null && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/ParrotSec/install | sh && parrot
 ```
 
 - Update and Upgrade
