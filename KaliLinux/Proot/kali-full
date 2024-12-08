@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/data/data/com.termux/files/usr/bin/bash -e
 
 echo 'DISTRO_NAME="Kali Linux Full"' > $PREFIX/etc/proot-distro/kali-full.sh
 ###
