@@ -16,11 +16,13 @@ echo "
 [*] Extracting rootfs...
 "
 ###
-bsdtar -xpJf debkali.tar.xz >/dev/null 2>&1
+proot --link2symlink bsdtar -xpJf debkali.tar.xz 2> /dev/null
 ###
 echo "
 [*] Done!
 "
+###
+echo "nameserver 9.9.9.9" >/etc/resolv.conf
 ###
 echo "
 To login Kali in Debain: debkali
