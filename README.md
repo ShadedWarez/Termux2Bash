@@ -37,12 +37,6 @@ kali vnc password
 kali vnc &
 ```
 
-- Auto login
-```
-echo "kali vnc &" >>$PREFIX/etc/bash.bashrc
-echo "kali" >>$PREFIX/etc/bash.bashrc
-```
-
 - Update and Upgrade
 ```
 sudo apt update && sudo apt full-upgrade -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" -y
