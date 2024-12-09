@@ -21,10 +21,44 @@ proot --link2symlink bsdtar -xpJf kali.tar.xz 2>/dev/null
 ###
 mv chroot/kali-arm64/* $PREFIX/var/lib/proot-distro/installed-rootfs/kali/
 ###
+wget -O chroot/kali-arm64/bin/vnc https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Chroot/vnc
+###
+chmod 700 chroot/kali-arm64/bin/vnc
+###
+wget -O $PREFIX/bin/nethunter https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Chroot/nethunter
+###
+chmod 700 $PREFIX/bin/nethunter
+###
+ln -s $PREFIX/bin/nethunter $PREFIX/bin/kali
+###
 wget -O kali/root/.zshrc https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Proot/.zshrc
 ###
-echo "nameserver 9.9.9.9" > kali/etc/resolv.conf
+sed -i '/if/,/fi/d' chroot/kali-arm64/root/.bash_profile
+###
+echo "nameserver 9.9.9.9" > chroot/kali-arm64/etc/resolv.conf
+###
+echo "nameserver 8.8.4.4" >> chroot/kali-arm64/etc/resolv.conf
+###
+chmod +s chroot/kali-arm64/usr/bin/sudo
+###
+chmod +s chroot/kali-arm64/usr/bin/su
+###
+echo "kali    ALL=(ALL:ALL) ALL" > chroot/kali-arm64/etc/sudoers.d/kali
+###
+echo "Set disable_coredump false" > chroot/kali-arm64/etc/sudo.conf
 ###
 echo "
-To login Kali type: kali
+(kali vnc) &
+kali
+" >> $PREFIX/etc/bash.bashrc
+###
+echo "
+[*] Successful Installation!
+[*] Type: kali vnc passwd
+[*] Type: kali vnc &
 "
+###
+USRID=$(id -u)
+GRPID=$(id -g)
+kali -r usermod -u "$USRID" kali 2>/dev/null
+kali -r groupmod -g "$GRPID" kali 2>/dev/null
