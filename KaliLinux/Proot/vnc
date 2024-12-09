@@ -1,7 +1,7 @@
 #!/bin/bash
 
 function start-kex() {
-    if [ ! -f ~/.vnc/passwd ]; then
+    if [ ! -f $PREFIX/var/lib/proot-distro/installed-rootfs/kali/home/kali/.vnc/passwd ]; then
         passwd-kex
     fi
     USR=$(whoami)
