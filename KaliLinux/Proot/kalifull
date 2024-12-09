@@ -1,9 +1,9 @@
 #!/data/data/com.termux/files/usr/bin/bash -e
 
 
-echo 'DISTRO_NAME="Kali Nethunter"' >>$PREFIX/etc/proot-distro/kali.sh
+echo 'DISTRO_NAME="Kali Nethunter"' >$PREFIX/etc/proot-distro/kali.sh
 ###
-echo "pd sh kali" >> $PREFIX/bin/kali
+echo "pd sh kali" > $PREFIX/bin/kali
 ###
 chmod 700 $PREFIX/bin/kali
 ###
