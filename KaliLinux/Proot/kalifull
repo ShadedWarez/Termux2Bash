@@ -1,23 +1,29 @@
 #!/data/data/com.termux/files/usr/bin/bash -e
 
 
-mkdir -p $PREFIX/var/lib/proot-distro/installed-rootfs/kalifull
+echo '"DISTRO_NAME="Kali Nethunter"' >>$PREFIX/etc/proot-distro/kali.sh
+###
+echo "pd sh kali" >> $PREFIX/bin/kali
+###
+chmod 700 $PREFIX/bin/kali
+###
+mkdir -p $PREFIX/var/lib/proot-distro/installed-rootfs/kali
 ###
 cd $PREFIX/var/lib/proot-distro/installed-rootfs
 ###
-axel -a -n 1 -o kalifull.tar.xz https://kali.download/nethunter-images/current/rootfs/kali-nethunter-rootfs-full-arm64.tar.xz
+axel -a -n 1 -o kali.tar.xz https://kali.download/nethunter-images/current/rootfs/kali-nethunter-rootfs-full-arm64.tar.xz
 ###
 echo "
 [*] Extracting rootfs...!!!
 "
 ###
-proot --link2symlink bsdtar -xpJf kalifull.tar.xz 2>/dev/null
+proot --link2symlink bsdtar -xpJf kali.tar.xz 2>/dev/null
 ###
-mv chroot/kali-arm64/* $PREFIX/var/lib/proot-distro/installed-rootfs/kalifull/
+mv chroot/kali-arm64/* $PREFIX/var/lib/proot-distro/installed-rootfs/kali/
 ###
-wget -O kalifull/root/.zshrc https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Proot/.zshrc
+wget -O kali/root/.zshrc https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Proot/.zshrc
 ###
-echo "nameserver 9.9.9.9" > kalifull/etc/resolv.conf
+echo "nameserver 9.9.9.9" > kali/etc/resolv.conf
 ###
 echo "
 To login Kali type: kali
