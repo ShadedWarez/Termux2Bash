@@ -1,5 +1,16 @@
+#!/data/data/com.termux/files/usr/bin/bash -e
 
-# VNC path
+cd $HOME
+###
+axel -a -n 1 -o kalifull.tar.xz https://kali.download/nethunter-images/current/rootfs/kali-nethunter-rootfs-full-arm64.tar.xz
+###
+echo "
+[*] Extracting rootfs...!!!
+"
+###
+proot --link2symlink bsdtar -xpJf kalifull.tar.xz
+###
+### VNC path
 DIR=chroot/kali-arm64/bin/vnc
 cat <<EOF > $DIR
 #!/bin/bash
@@ -74,7 +85,7 @@ EOF
 
 chmod 700 $DIR
 
-# Nethunter path
+### Nethunter path
 PATH=$PREFIX/bin/nethunter
 cat <<EOF > $PATH
 #!/data/data/com.termux/files/usr/bin/bash -e
@@ -92,7 +103,7 @@ user="kali"
 home="/home/$user"
 start="sudo -u kali /bin/bash"
 
-## NH can be launched as root with the "-r" cmd attribute
+## Kali can be launched as root with the "-r" cmd attribute
 ## Also check if user kali exists, if not start as root
 if grep -q "kali" chroot/kali-arm64/etc/passwd; then
     KALIUSR="1";
@@ -133,7 +144,7 @@ fi
 EOF
 
 chmod 700 $PATH
-
+###
 ln -s $PREFIX/bin/nethunter $PREFIX/bin/kali
 ###
 sed -i '/if/,/fi/d' chroot/kali-arm64/root/.bash_profile
