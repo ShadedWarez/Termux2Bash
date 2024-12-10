@@ -72,6 +72,8 @@ case $1 in
 esac
 EOF
 
+chmod 700 $DIR
+
 # Nethunter path
 PATH=$PREFIX/bin/nethunter
 cat <<EOF > $PATH
@@ -128,3 +130,5 @@ else
     $cmdline -c "$cmd"
 fi
 EOF
+
+chmod 700 $PATH
