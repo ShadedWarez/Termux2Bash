@@ -11,8 +11,7 @@ echo "
 proot --link2symlink bsdtar -xpJf kalifull.tar.xz
 ###
 ### VNC path
-DIR=chroot/kali-arm64/bin/vnc
-cat <<EOF > $DIR
+cat <<EOF > chroot/kali-arm64/bin/vnc
 #!/bin/bash
 
 function start-kex() {
@@ -83,11 +82,10 @@ case $1 in
 esac
 EOF
 
-chmod 700 $DIR
+chmod 700 chroot/kali-arm64/bin/vnc
 
 ### Nethunter path
-PATH=$PREFIX/bin/nethunter
-cat <<EOF > $PATH
+cat <<EOF > $PREFIX/bin/nethunter
 #!/data/data/com.termux/files/usr/bin/bash -e
 
 cd $HOME
@@ -143,7 +141,8 @@ else
 fi
 EOF
 
-chmod 700 $PATH
+chmod 700 $PREFIX/bin/nethunter
+
 ###
 ln -s $PREFIX/bin/nethunter $PREFIX/bin/kali
 ###
