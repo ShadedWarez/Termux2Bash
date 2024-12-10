@@ -11,7 +11,7 @@ echo "
 proot --link2symlink bsdtar -xpJf kalifull.tar.xz
 ###
 ### VNC path
-cat <<EOF > chroot/kali-arm64/bin/vnc
+cat > chroot/kali-arm64/bin/vnc <<EOF
 #!/bin/bash
 
 function start-kex() {
@@ -85,7 +85,7 @@ EOF
 chmod 700 chroot/kali-arm64/bin/vnc
 
 ### Nethunter path
-cat <<EOF > $PREFIX/bin/nethunter
+cat > $PREFIX/bin/nethunter <<EOF
 #!/data/data/com.termux/files/usr/bin/bash -e
 
 cd $HOME
@@ -149,12 +149,6 @@ ln -s $PREFIX/bin/nethunter $PREFIX/bin/kali
 sed -i '/if/,/fi/d' chroot/kali-arm64/root/.bash_profile
 ###
 echo "nameserver 9.9.9.9" > chroot/kali-arm64/etc/resolv.conf
-###
-wget -O chroot/kali-arm64/root/.bashrc https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/rcfiles/rootbash.bashrc
-###
-wget -O chroot/kali-arm64/home/kali/.bashrc https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/rcfiles/homebash.bashrc
-###
-wget -O chroot/kali-arm64/etc/bash.bashrc https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/rcfiles/etcbash.bashrc
 ###
 chmod +s chroot/kali-arm64/usr/bin/sudo
 ###
