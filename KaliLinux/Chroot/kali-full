@@ -10,27 +10,146 @@ echo "
 ###
 proot --link2symlink bsdtar -xpJf kali-full.tar.xz 2>/dev/null
 ###
-wget -O chroot/kali-arm64/bin/vnc https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Chroot/vnc
-###
+### VNC path
+cat > chroot/kali-arm64/bin/vnc <<EOF
+#!/bin/bash
+
+function start-kex() {
+    if [ ! -f ~/.vnc/passwd ]; then
+        passwd-kex
+    fi
+    USR=$(whoami)
+    if [ $USR == "root" ]; then
+        SCREEN=":2"
+    else
+        SCREEN=":1"
+    fi
+    export MOZ_FAKE_NO_SANDBOX=1; export HOME=${HOME}; export USER=${USR}; LD_PRELOAD=/usr/lib/aarch64-linux-gnu/libgcc_s.so.1 nohup vncserver $SCREEN >/dev/null 2>&1 </dev/null
+    starting_kex=1
+    return 0
+}
+
+function stop-kex() {
+    vncserver -kill :1 | sed s/"Xtigervnc"/"NetHunter VNC"/
+    vncserver -kill :2 | sed s/"Xtigervnc"/"NetHunter VNC"/
+    return 0
+}
+
+function passwd-kex() {
+    vncpasswd
+    return 0
+}
+
+function status-kex() {
+    sessions=$(vncserver -list | sed s/"TigerVNC"/"NetHunter VNC"/)
+    if [[ $sessions == *"590"* ]]; then
+        printf "\n${sessions}\n"
+        printf "\nOpen RealVNC client and to connect to 127.0.0.1:5901.\n\n"
+    else
+        if [ ! -z $starting_kex ]; then
+            printf '\nError starting the VNC server.\nPlease try "kali vnc kill" or restart your termux session.\n\n'
+        fi
+    fi
+    return 0
+}
+
+function kill-kex() {
+    pkill Xtigervnc
+    return $?
+}
+
+case $1 in
+    start)
+        start-kex
+        ;;
+    stop)
+        stop-kex
+        ;;
+    status)
+        status-kex
+        ;;
+    passwd)
+        passwd-kex
+        ;;
+    kill)
+        kill-kex
+        ;;
+    *)
+        stop-kex
+        start-kex
+        status-kex
+        ;;
+esac
+EOF
+
 chmod 700 chroot/kali-arm64/bin/vnc
-###
-wget -O $PREFIX/bin/nethunter https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Chroot/nethunter
-###
+
+### Nethunter path
+cat > $PREFIX/bin/nethunter <<EOF
+#!/data/data/com.termux/files/usr/bin/bash -e
+
+cd $HOME
+## termux-exec sets LD_PRELOAD so let's unset it before continuing
+unset LD_PRELOAD
+## Workaround for Libreoffice, also needs to bind a fake /proc/version
+if [ ! -f chroot/kali-arm64/root/.version ]; then
+    touch chroot/kali-arm64/root/.version
+fi
+
+## Default user is "kali"
+user="kali"
+home="/home/$user"
+start="sudo -u kali /bin/bash"
+
+## Kali can be launched as root with the "-r" cmd attribute
+## Also check if user kali exists, if not start as root
+if grep -q "kali" chroot/kali-arm64/etc/passwd; then
+    KALIUSR="1";
+else
+    KALIUSR="0";
+fi
+if [[ $KALIUSR == "0" || ("$#" != "0" && ("$1" == "-r" || "$1" == "-R")) ]];then
+    user="root"
+    home="/$user"
+    start="/bin/bash --login"
+    if [[ "$#" != "0" && ("$1" == "-r" || "$1" == "-R") ]];then
+        shift
+    fi
+fi
+
+cmdline="proot \
+        --link2symlink \
+        -0 \
+        -r chroot/kali-arm64 \
+        -b /dev \
+        -b /proc \
+        -b /sdcard \
+        -b chroot/kali-arm64$home:/dev/shm \
+        -w $home \
+           /usr/bin/env -i \
+           HOME=$home \
+           PATH=/usr/local/sbin:/usr/local/bin:/bin:/usr/bin:/sbin:/usr/sbin \
+           TERM=$TERM \
+           LANG=C.UTF-8 \
+           $start"
+
+cmd="$@"
+if [ "$#" == "0" ];then
+    exec $cmdline
+else
+    $cmdline -c "$cmd"
+fi
+
+EOF
+
 chmod 700 $PREFIX/bin/nethunter
+
 ###
 ln -s $PREFIX/bin/nethunter $PREFIX/bin/kali
 ###
 sed -i '/if/,/fi/d' chroot/kali-arm64/root/.bash_profile
 ###
 echo "nameserver 9.9.9.9" > chroot/kali-arm64/etc/resolv.conf
-###
-echo "nameserver 8.8.4.4" >> chroot/kali-arm64/etc/resolv.conf
-###
-wget -O chroot/kali-arm64/root/.bashrc https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/rcfiles/rootbash.bashrc
-###
-wget -O chroot/kali-arm64/home/kali/.bashrc https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/rcfiles/homebash.bashrc
-###
-wget -O chroot/kali-arm64/etc/bash.bashrc https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/rcfiles/etcbash.bashrc
 ###
 chmod +s chroot/kali-arm64/usr/bin/sudo
 ###
