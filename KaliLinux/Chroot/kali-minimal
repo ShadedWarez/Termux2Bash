@@ -28,8 +28,6 @@ sed -i '/if/,/fi/d' chroot/kali-arm64/root/.bash_profile
 ###
 echo "nameserver 9.9.9.9" > chroot/kali-arm64/etc/resolv.conf
 ####
-echo "nameserver 8.8.4.4" >> chroot/kali-arm64/etc/resolv.conf
-###
 wget -O chroot/kali-arm64/root/.bashrc https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/rcfiles/rootbash.bashrc
 ###
 wget -O chroot/kali-arm64/home/kali/.bashrc https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/rcfiles/homebash.bashrc
