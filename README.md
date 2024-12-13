@@ -296,7 +296,7 @@ echo "parrot" >>$PREFIX/etc/bash.bashrc
 
 - Install
 ```
-apt update && apt install axel bsdtar proot proot-distro wget -y &>/dev/null && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/ParrotSec/install | sh && parrot
+apt update && apt install git axel bsdtar proot proot-distro wget -y &>/dev/null && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/ParrotSec/install | sh && parrot
 ```
 
 - Update and Upgrade
