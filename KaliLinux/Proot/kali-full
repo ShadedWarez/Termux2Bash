@@ -30,6 +30,8 @@ wget -O kali-full/root/.zshrc https://raw.githubusercontent.com/xiv3r/Termux-Pen
 ###
 echo "nameserver 9.9.9.9" > kali-full/etc/resolv.conf
 ###
+git clone https://github.com/zsh-users/zsh-autosuggestions kali-full/root/.zsh/zsh-autosuggestions
+###
 echo "
 To login Kali type: kali
 "
