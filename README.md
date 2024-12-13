@@ -106,7 +106,7 @@ echo "kali" >>$PREFIX/etc/bash.bashrc
 
 - Install
 ```
-apt update && apt install unzip axel bsdtar proot proot-distro wget -y &>/dev/null && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Proot/kali-full | sh && kali
+apt update && apt install git axel bsdtar proot proot-distro wget -y &>/dev/null && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Proot/kali-full | sh && kali
 ```
 
 - Update and Upgrade
@@ -136,7 +136,7 @@ echo "kali" >>$PREFIX/etc/bash.bashrc
 
 - Install
 ```
-apt update && apt install unzip axel bsdtar proot proot-distro wget -y &>/dev/null && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Proot/kali-minimal | sh && kali
+apt update && apt install git axel bsdtar proot proot-distro wget -y &>/dev/null && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Proot/kali-minimal | sh && kali
 ```
 
 - Update and Upgrade
