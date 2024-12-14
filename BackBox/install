@@ -2,6 +2,11 @@
 
 echo 'DISTRO_NAME="BackBox Linux"' > $PREFIX/etc/proot-distro/backbox.sh
 ###
+echo "
+clear
+backbox
+" >>$PREFIX/etc/bash.bashrc
+###
 echo "pd sh backbox" > $PREFIX/bin/backbox
 ###
 chmod 700 $PREFIX/bin/backbox
