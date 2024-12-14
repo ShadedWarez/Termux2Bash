@@ -2,6 +2,11 @@
 
 echo 'DISTRO_NAME="Debian Nethunter"' > $PREFIX/etc/proot-distro/debkali.sh
 ###
+echo "
+clear
+debkali
+" >>$PREFIX/etc/bash.bashrc
+###
 echo "pd sh debkali" > $PREFIX/bin/debkali
 ###
 chmod 700 $PREFIX/bin/debkali
