@@ -64,11 +64,6 @@ sed -i 's/user=kali/user=xiv3r/' /home/kali/.bashrc
 > - login:`kali` or `kali -r`
 > - uninstall:`cd && rm -rf chroot`
 
-- Autologin
-```
-echo "kali" >>$PREFIX/etc/bash.bashrc
-```
-
 - Install
 ```
 apt update && apt install axel bsdtar proot wget -y &>/dev/null && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Chroot/kali-minimal | sh && kali
@@ -99,11 +94,6 @@ sed -i 's/user=kali/user=xiv3r/' /home/kali/.bashrc
 > - login:`kali`
 > - uninstall:`pd rm kali-full`
 
-- Autologin
-```
-echo "kali" >>$PREFIX/etc/bash.bashrc
-```
-
 - Install
 ```
 apt update && apt install git axel bsdtar proot proot-distro wget -y &>/dev/null && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Proot/kali-full | sh && kali
@@ -128,11 +118,6 @@ sed -i 's/user=kali/user=xiv3r/' .zshrc && source .zshrc
 # Kali Nethunter Minimal [proot-distro]
 > - login:`kali`
 > - uninstall:`pd rm kali-minimal`
-
-- Autologin
-```
-echo "kali" >>$PREFIX/etc/bash.bashrc
-```
 
 - Install
 ```
@@ -163,11 +148,6 @@ sed -i 's/user=kali/user=xiv3r/' .zshrc && source .zshrc
 > - login:`backbox`
 > - uninstall:`pd rm backbox`
 
-- Autologin
-```
-echo "backbox" >>$PREFIX/etc/bash.bashrc
-```
-
 - Install
 ```
 apt update && apt install axel bsdtar proot proot-distro wget -y &>/dev/null && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/BackBox/install | sh && backbox
@@ -197,11 +177,6 @@ sed -i 's/user=kali/user=xiv3r/' /etc/bash.bashrc && source /etc/bash.bashrc
 > - Custom build rootfs tarball
 > - login:`blackarch`
 > - uninstall:`pd rm blackarch`
-
-- Autologin
-```
-echo "blackarch" >>$PREFIX/etc/bash.bashrc
-```
 
 - Install 
 ```
@@ -255,11 +230,6 @@ pacman -Ss <package_name>
 > - login:`debkali`
 > - uninstall:`pd rm debkali`
 
-- Autologin
-```
-echo "debkali" >>$PREFIX/etc/bash.bashrc
-```
-
 - Install
 ```
 apt update && apt install axel bsdtar proot proot-distro wget -y &>/dev/null && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliDeb/install | sh && debkali
@@ -276,7 +246,7 @@ apt update && apt full-upgrade -o Dpkg::Options::="--force-confdef" -o Dpkg::Opt
 sed -i 's/user=kali/user=xiv3r/' /etc/bash.bashrc && source /etc/bash.bashrc
 ```
 <div align="center">
-<img src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/KaliDeb/debkali.png">
+<img src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/Kalieb/debkali.png">
 </div>
 
 <br>
@@ -288,11 +258,6 @@ sed -i 's/user=kali/user=xiv3r/' /etc/bash.bashrc && source /etc/bash.bashrc
 # ParrotSec [proot-distro]
 > - login:`parrot`
 > - uninstall:`pd rm parrot`
-
-- Autologin
-```
-echo "parrot" >>$PREFIX/etc/bash.bashrc
-```
 
 - Install
 ```
