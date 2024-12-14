@@ -246,7 +246,7 @@ apt update && apt full-upgrade -o Dpkg::Options::="--force-confdef" -o Dpkg::Opt
 sed -i 's/user=kali/user=xiv3r/' /etc/bash.bashrc && source /etc/bash.bashrc
 ```
 <div align="center">
-<img src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/Kalieb/debkali.png">
+<img src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/KaliDeb/debkali.png">
 </div>
 
 <br>
