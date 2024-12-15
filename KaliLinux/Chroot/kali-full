@@ -8,7 +8,7 @@ clear
 kali
 " >>$PREFIX/etc/bash.bashrc
 ###
-axel -a -o kali-full.tar.xz https://kali.download/nethunter-images/current/rootfs/kali-nethunter-rootfs-full-arm64.tar.xz
+axel -a -o kali-full.tar.xz https://kali.download/base-images/current/kali-linux-2024.4-installer-arm64.iso
 ###
 cat <<EOF
 [*] Extracting rootfs...!!!
