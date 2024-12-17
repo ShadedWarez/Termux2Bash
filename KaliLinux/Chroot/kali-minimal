@@ -7,7 +7,7 @@ clear
 kali
 " >>$PREFIX/etc/bash.bashrc
 ###
-axel -a -n 1 -o kali-minimal.tar.xz https://kali.download/nethunter-images/current/rootfs/kali-nethunter-rootfs-minimal-arm64.tar.xz
+axel -a --search -o kali-minimal.tar.xz https://kali.download/nethunter-images/current/rootfs/kali-nethunter-rootfs-minimal-arm64.tar.xz
 ###
 echo "
 [*] Extracting rootfs...
