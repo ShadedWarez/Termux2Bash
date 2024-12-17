@@ -33,7 +33,7 @@ cmdline="proot \
         -b /dev \
         -b /proc \
         -b /sdcard \
-        -b kali-arm64$home:/dev/shm \
+        -b kali-arm64/home/kali:/dev/shm \
         -w /home/kali \
            /usr/bin/env -i \
            HOME=/home/kali \
