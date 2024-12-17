@@ -9,7 +9,7 @@ if [ ! -f kali-arm64/root/.version ]; then
 fi
 
 ## Default user is "kali"
-start="sudo -u kali /bin/bash
+start="sudo -u kali /bin/bash"
 
 ## Also check if user kali exists, if not start as root
 if grep -q "kali" kali-arm64/etc/passwd; then
