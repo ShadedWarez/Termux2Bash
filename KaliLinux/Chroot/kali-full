@@ -17,9 +17,9 @@ EOF
 ###
 proot --link2symlink bsdtar -xpJf kali-full.tar.xz 2>/dev/null
 ###
-wget -O chroot/kali-arm64/bin/vnc https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Chroot/vnc
+wget -O kali-arm64/bin/vnc https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Chroot/vnc
 ###
-chmod 700 chroot/kali-arm64/bin/vnc
+chmod 700 kali-arm64/bin/vnc
 ###
 wget -O $PREFIX/bin/nethunter https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Chroot/nethunter
 ###
@@ -27,23 +27,23 @@ chmod 700 $PREFIX/bin/nethunter
 ###
 ln -s $PREFIX/bin/nethunter $PREFIX/bin/kali
 ###
-sed -i '/if/,/fi/d' chroot/kali-arm64/root/.bash_profile
+sed -i '/if/,/fi/d' kali-arm64/root/.bash_profile
 ###
-echo "nameserver 9.9.9.9" > chroot/kali-arm64/etc/resolv.conf
+echo "nameserver 9.9.9.9" > kali-arm64/etc/resolv.conf
 ###
-wget -O chroot/kali-arm64/root/.bashrc https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/rcfiles/rootbash.bashrc
+wget -O kali-arm64/root/.bashrc https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/rcfiles/rootbash.bashrc
 ###
-wget -O chroot/kali-arm64/home/kali/.bashrc https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/rcfiles/homebash.bashrc
+wget -O kali-arm64/home/kali/.bashrc https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/rcfiles/homebash.bashrc
 ###
-wget -O chroot/kali-arm64/etc/bash.bashrc https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/rcfiles/etcbash.bashrc
+wget -O kali-arm64/etc/bash.bashrc https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/rcfiles/etcbash.bashrc
 ###
-chmod +s chroot/kali-arm64/usr/bin/sudo
+chmod +s kali-arm64/usr/bin/sudo
 ###
-chmod +s chroot/kali-arm64/usr/bin/su
+chmod +s kali-arm64/usr/bin/su
 ###
-echo "kali    ALL=(ALL:ALL) ALL" > chroot/kali-arm64/etc/sudoers.d/kali
+echo "kali    ALL=(ALL:ALL) ALL" > kali-arm64/etc/sudoers.d/kali
 ###
-echo "Set disable_coredump false" > chroot/kali-arm64/etc/sudo.conf
+echo "Set disable_coredump false" > kali-arm64/etc/sudo.conf
 ###
 cat <<EOF
 [*] Successful Installation!
