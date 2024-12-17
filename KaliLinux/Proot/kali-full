@@ -15,7 +15,7 @@ mkdir -p $PREFIX/var/lib/proot-distro/installed-rootfs/kali-full
 ###
 cd $PREFIX/var/lib/proot-distro/installed-rootfs
 ###
-axel -a --search -o kali-full.tar.xz https://kali.download/nethunter-images/kali-2024.3/rootfs/kali-nethunter-rootfs-full-arm64.tar.xz
+axel -a --search -o kali-full.tar.xz https://kali.download/nethunter-images/current/rootfs/kali-nethunter-rootfs-full-arm64.tar.xz
 ###
 echo "
 [*] Extracting rootfs...
