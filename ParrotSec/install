@@ -15,7 +15,7 @@ echo "pd sh parrot" > $PREFIX/bin/parrot
 ###
 chmod 700 $PREFIX/bin/parrot
 ###
-axel -a -n 1 https://github.com/xiv3r/Termux-Pentesting-Distro/releases/download/rootfs/parrot.tar.xz
+axel -a --search https://github.com/xiv3r/Termux-Pentesting-Distro/releases/download/rootfs/parrot.tar.xz
 ###
 echo "
 [*] Extracting rootfs...
