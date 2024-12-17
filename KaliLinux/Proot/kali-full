@@ -27,7 +27,7 @@ echo "
 [*] Done!
 "
 ###
-mv chroot/kali-arm64/* $PREFIX/var/lib/proot-distro/installed-rootfs/kali-full
+mv kali-arm64/* $PREFIX/var/lib/proot-distro/installed-rootfs/kali-full
 ###
 rm -rf chroot
 ###
