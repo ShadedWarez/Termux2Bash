@@ -2,11 +2,6 @@
 
 cd $HOME
 ###
-echo "
-clear
-kali
-" >>$PREFIX/etc/bash.bashrc
-###
 axel -a --search -o kali-minimal.tar.xz https://kali.download/nethunter-images/current/rootfs/kali-nethunter-rootfs-minimal-arm64.tar.xz
 ###
 echo "
@@ -16,8 +11,9 @@ echo "
 proot --link2symlink bsdtar -xpJf kali-minimal.tar.xz 2>/dev/null
 ###
 echo "
-[*] Done!
-"
+clear
+kali
+" >>$PREFIX/etc/bash.bashrc
 ###
 wget -O kali-arm64/bin/vnc https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Chroot/vnc
 ###
@@ -50,8 +46,8 @@ echo "Set disable_coredump false" > kali-arm64/etc/sudo.conf
 echo "
 [*] Successful Installation!
    To Login 👇
-user type: kali
-root type: kali -r
+user: kali
+root: kali -r
 "
 ###
 USRID=$(id -u)
