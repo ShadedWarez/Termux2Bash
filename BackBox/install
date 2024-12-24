@@ -1,16 +1,5 @@
 #!/data/data/com.termux/files/usr/bin/bash -e
 
-echo 'DISTRO_NAME="BackBox Linux"' > $PREFIX/etc/proot-distro/backbox.sh
-###
-echo "
-clear
-backbox
-" >>$PREFIX/etc/bash.bashrc
-###
-echo "pd sh backbox" > $PREFIX/bin/backbox
-###
-chmod 700 $PREFIX/bin/backbox
-###
 mkdir -p $PREFIX/var/lib/proot-distro/installed-rootfs
 ###
 cd $PREFIX/var/lib/proot-distro/installed-rootfs
@@ -23,9 +12,18 @@ echo "
 ###
 proot --link2symlink bsdtar -xpJf backbox.tar.xz 2>/dev/null
 ###
+cat >$PREFIX/etc/proot-distro/backbox.sh << EOF
+DISTRO_NAME="BackBox Linux"
+EOF
+###
 echo "
-[*] Done!
-"
+clear
+backbox
+" >>$PREFIX/etc/bash.bashrc
+###
+echo "pd sh backbox" >$PREFIX/bin/backbox
+###
+chmod 700 $PREFIX/bin/backbox
 ###
 echo "nameserver 9.9.9.9" > backbox/etc/resolv.conf
 ###
