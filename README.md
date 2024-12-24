@@ -23,7 +23,7 @@
 > - Support vnc service
 > - login:`kali -r` or `kali`
 > - login w/ vnc:`kali vnc &`
-> - uninstall:`cd && rm -rf chroot`
+> - uninstall:`cd && rm -rf kali-arm64`
 
 - Install
 ```
@@ -34,6 +34,8 @@ apt update && apt install axel bsdtar proot wget -y && clear && wget -qO- https:
 > `127.0.0.1:5901`
 ```
 kali vnc password
+```
+```
 kali vnc &
 ```
 
@@ -57,7 +59,7 @@ sed -i 's/user=kali/user=xiv3r/' /home/kali/.bashrc
 # Kali Nethunter Minimal [chroot]
 > - pre-build vnc
 > - login:`kali` or `kali -r`
-> - uninstall:`cd && rm -rf chroot`
+> - uninstall:`cd && rm -rf kali-arm64`
 
 - Install
 ```
