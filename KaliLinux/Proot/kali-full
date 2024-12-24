@@ -1,16 +1,5 @@
 #!/data/data/com.termux/files/usr/bin/bash -e
 
-echo 'DISTRO_NAME="Kali Linux Full"' > $PREFIX/etc/proot-distro/kali-full.sh
-###
-echo "
-clear
-kali
-" >>$PREFIX/etc/bash.bashrc
-###
-echo "pd sh kali-full" > $PREFIX/bin/kali
-###
-chmod 700 $PREFIX/bin/kali
-###
 mkdir -p $PREFIX/var/lib/proot-distro/installed-rootfs/kali-full
 ###
 cd $PREFIX/var/lib/proot-distro/installed-rootfs
@@ -23,9 +12,18 @@ echo "
 ###
 proot --link2symlink bsdtar -xpJf kali-full.tar.xz 2>/dev/null
 ###
+echo 'DISTRO_NAME="Kali Linux Full"' > $PREFIX/etc/proot-distro/kali-full.sh
+###
+echo "pd sh kali-full" > $PREFIX/bin/kali
+###
+chmod 700 $PREFIX/bin/kali
+###
+sed -i 's/kali//g' $PREFIX/etc/bash.bashrc
+###
 echo "
-[*] Done!
-"
+clear
+kali
+" >>$PREFIX/etc/bash.bashrc
 ###
 mv kali-arm64/* $PREFIX/var/lib/proot-distro/installed-rootfs/kali-full
 ###
