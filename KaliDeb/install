@@ -1,16 +1,5 @@
 #!/data/data/com.termux/files/usr/bin/bash -e
 
-echo 'DISTRO_NAME="Debian Nethunter"' > $PREFIX/etc/proot-distro/debkali.sh
-###
-echo "
-clear
-debkali
-" >>$PREFIX/etc/bash.bashrc
-###
-echo "pd sh debkali" > $PREFIX/bin/debkali
-###
-chmod 700 $PREFIX/bin/debkali
-###
 mkdir -p $PREFIX/var/lib/proot-distro/installed-rootfs
 ###
 cd $PREFIX/var/lib/proot-distro/installed-rootfs
@@ -23,9 +12,18 @@ echo "
 ###
 proot --link2symlink bsdtar -xpJf debkali.tar.xz 2>/dev/null
 ###
+cat >$PREFIX/etc/proot-distro/debkali.sh << EOF
+DISTRO_NAME="Debian Nethunter"
+EOF
+###
 echo "
-[*] Done!
-"
+clear
+debkali
+" >>$PREFIX/etc/bash.bashrc
+###
+echo "pd sh debkali" > $PREFIX/bin/debkali
+###
+chmod 700 $PREFIX/bin/debkali
 ###
 echo "nameserver 9.9.9.9" > debkali/etc/resolv.conf
 ###
