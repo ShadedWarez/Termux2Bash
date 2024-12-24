@@ -1,16 +1,5 @@
 #!/data/data/com.termux/files/usr/bin/bash -e
 
-echo 'DISTRO_NAME="BlackArch Linux"' > $PREFIX/etc/proot-distro/blackarch.sh
-###
-echo "
-clear
-blackarch
-" >>$PREFIX/etc/bash.bashrc
-###
-echo "pd sh blackarch" > $PREFIX/bin/blackarch
-###
-chmod 700 $PREFIX/bin/blackarch
-###
 mkdir -p $PREFIX/var/lib/proot-distro/installed-rootfs
 ###
 cd $PREFIX/var/lib/proot-distro/installed-rootfs
@@ -23,9 +12,19 @@ echo "
 ###
 proot --link2symlink bsdtar -xpJf blackarch.tar.xz 2> /dev/null
 ###
+cat >$PREFIX/etc/proot-distro/blackarch.sh << EOF
+DISTRO_NAME="BlackArch Linux"
+EOF
+###
 echo "
-[*] Done!
-"
+clear
+blackarch
+" >>$PREFIX/etc/bash.bashrc
+###
+echo "pd sh blackarch" > $PREFIX/bin/blackarch
+###
+chmod 700 $PREFIX/bin/blackarch
+###
 ###
 echo "nameserver 9.9.9.9" > blackarch/etc/resolv.conf
 ###
