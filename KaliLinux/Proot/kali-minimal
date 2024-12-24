@@ -1,13 +1,5 @@
 #!/data/data/com.termux/files/usr/bin/bash -e
 
-echo 'DISTRO_NAME="Kali Nethunter Minimal"' > $PREFIX/etc/proot-distro/kali-minimal.sh
-###
-mkdir -p $PREFIX/var/lib/proot-distro/installed-rootfs/kali-minimal
-###
-echo "pd sh kali-minimal" > $PREFIX/bin/kali
-###
-chmod 700 $PREFIX/bin/kali
-###
 cd $PREFIX/var/lib/proot-distro/installed-rootfs
 ###
 axel -a --search -o kali-minimal.tar.xz https://kali.download/nethunter-images/current/rootfs/kali-nethunter-rootfs-minimal-arm64.tar.xz
@@ -21,6 +13,16 @@ proot --link2symlink bsdtar -xpJf kali-minimal.tar.xz 2>/dev/null
 echo "
 [*] Done!
 "
+###
+echo "kali" >>$PREFIX/etc/bash.bashrc
+###
+echo 'DISTRO_NAME="Kali Nethunter Minimal"' > $PREFIX/etc/proot-distro/kali-minimal.sh
+###
+mkdir -p $PREFIX/var/lib/proot-distro/installed-rootfs/kali-minimal
+###
+echo "pd sh kali-minimal" > $PREFIX/bin/kali
+###
+chmod 700 $PREFIX/bin/kali
 ###
 mv kali-arm64/* $PREFIX/var/lib/proot-distro/installed-rootfs/kali-minimal
 ###
