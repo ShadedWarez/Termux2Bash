@@ -22,7 +22,10 @@ chmod 700 $PREFIX/bin/kali
 ###
 sed -i 's/kali//g' $PREFIX/etc/bash.bashrc
 ###
-echo "kali" >>$PREFIX/etc/bash.bashrc
+echo "
+clear
+kali
+" >>$PREFIX/etc/bash.bashrc
 ###
 mv kali-arm64/* $PREFIX/var/lib/proot-distro/installed-rootfs/kali-minimal
 ###
