@@ -12,7 +12,9 @@ echo "
 ###
 proot --link2symlink bsdtar -xpJf kali-full.tar.xz 2>/dev/null
 ###
-echo 'DISTRO_NAME="Kali Linux Full"' > $PREFIX/etc/proot-distro/kali-full.sh
+cat >$PREFIX/etc/proot-distro/kali-full.sh << EOF
+DISTRO_NAME="Kali Linux Full"
+EOF
 ###
 echo "pd sh kali-full" > $PREFIX/bin/kali
 ###
