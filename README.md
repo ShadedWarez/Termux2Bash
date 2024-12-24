@@ -27,7 +27,7 @@
 
 - Install
 ```
-apt update && apt install axel bsdtar proot wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Chroot/kali-full | sh && clear && kali
+apt update && apt install axel bsdtar proot wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Chroot/kali-full | sh && clear && kali vnc passwd && (kali vnc) & && kali
 ```
 
 - Start VNC
