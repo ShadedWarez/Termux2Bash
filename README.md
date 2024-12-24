@@ -27,7 +27,7 @@
 
 - Install
 ```
-apt update && apt install axel bsdtar proot wget -y &>/dev/null && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Chroot/kali-full | sh && kali
+apt update && apt install axel bsdtar proot wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Chroot/kali-full | sh && clear && kali
 ```
 
 - Start VNC
@@ -35,11 +35,6 @@ apt update && apt install axel bsdtar proot wget -y &>/dev/null && wget -qO- htt
 ```
 kali vnc password
 kali vnc &
-```
-
-- Update and Upgrade
-```
-sudo apt update && sudo apt full-upgrade -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" -y
 ```
 
 - Add custom terminal name
@@ -66,12 +61,7 @@ sed -i 's/user=kali/user=xiv3r/' /home/kali/.bashrc
 
 - Install
 ```
-apt update && apt install axel bsdtar proot wget -y &>/dev/null && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Chroot/kali-minimal | sh && kali
-```
-
-- Update and Upgrade
-```
-sudo apt update && sudo apt full-upgrade -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" -y
+apt update && apt install axel bsdtar proot wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Chroot/kali-minimal | sh && clear && kali
 ```
 
 - Add custom terminal name
@@ -96,12 +86,7 @@ sed -i 's/user=kali/user=xiv3r/' /home/kali/.bashrc
 
 - Install
 ```
-apt update && apt install git axel bsdtar proot proot-distro wget -y &>/dev/null && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Proot/kali-full | sh && kali
-```
-
-- Update and Upgrade
-```
-apt update && apt full-upgrade -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" -y
+apt update && apt install git axel bsdtar proot proot-distro wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Proot/kali-full | sh && clear && kali
 ```
 
 - Add custom terminal name
@@ -121,12 +106,7 @@ sed -i 's/user=kali/user=xiv3r/' .zshrc && source .zshrc
 
 - Install
 ```
-apt update && apt install git axel bsdtar proot proot-distro wget -y &>/dev/null && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Proot/kali-minimal | sh && kali
-```
-
-- Update and Upgrade
-```
-apt update && apt full-upgrade -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" -y
+apt update && apt install git axel bsdtar proot proot-distro wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Proot/kali-minimal | sh && clear && kali
 ```
 
 - Add custom terminal name
@@ -150,12 +130,7 @@ sed -i 's/user=kali/user=xiv3r/' .zshrc && source .zshrc
 
 - Install
 ```
-apt update && apt install axel bsdtar proot proot-distro wget -y &>/dev/null && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/BackBox/install | sh && backbox
-```
-
-- Update and Upgrade
-```
-apt update && apt full-upgrade -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" -y
+apt update && apt install axel bsdtar proot proot-distro wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/BackBox/install | sh && clear && backbox
 ```
 
 - Add custom terminal name
@@ -180,7 +155,7 @@ sed -i 's/user=kali/user=xiv3r/' /etc/bash.bashrc && source /etc/bash.bashrc
 
 - Install 
 ```
-apt update && apt install axel bsdtar proot proot-distro wget -y &>/dev/null && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/BlackArch/install | sh && blackarch
+apt update && apt install axel bsdtar proot proot-distro wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/BlackArch/install | sh && clear && blackarch
 ```
 
 - Update and Upgrade
@@ -232,12 +207,7 @@ pacman -Ss <package_name>
 
 - Install
 ```
-apt update && apt install axel bsdtar proot proot-distro wget -y &>/dev/null && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliDeb/install | sh && debkali
-```
-
-- Update and Upgrade
-```
-apt update && apt full-upgrade -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" -y
+apt update && apt install axel bsdtar proot proot-distro wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliDeb/install | sh && clear && debkali
 ```
 
 - Add custom terminal name
@@ -261,12 +231,7 @@ sed -i 's/user=kali/user=xiv3r/' /etc/bash.bashrc && source /etc/bash.bashrc
 
 - Install
 ```
-apt update && apt install git axel bsdtar proot proot-distro wget -y &>/dev/null && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/ParrotSec/install | sh && parrot
-```
-
-- Update and Upgrade
-```
-apt update && apt full-upgrade -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" -y
+apt update && apt install git axel bsdtar proot proot-distro wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/ParrotSec/install | sh && clear && parrot
 ```
 
 - Add custom terminal name
