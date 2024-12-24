@@ -12,7 +12,9 @@ echo "
 ###
 proot --link2symlink bsdtar -xpJf kali-minimal.tar.xz 2>/dev/null
 ###
-echo 'DISTRO_NAME="Kali Nethunter Minimal"' > $PREFIX/etc/proot-distro/kali-minimal.sh
+cat >$PREFIX/etc/proot-distro/kali-minimal.sh << EOF
+DISTRO_NAME="Kali Nethunter Minimal"
+EOF
 ###
 echo "pd sh kali-minimal" > $PREFIX/bin/kali
 ###
