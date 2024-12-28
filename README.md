@@ -22,7 +22,7 @@
 # Kali Nethunter Full [chroot]
 > - Support vnc service
 > - login:`kali -r` or `kali`
-> - login w/ vnc:`kali vnc &`
+> - vnc:`(kali vnc) &`
 > - uninstall:`cd && rm -rf kali-arm64`
 
 - Install
