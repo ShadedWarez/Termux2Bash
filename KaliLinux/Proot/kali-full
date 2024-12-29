@@ -22,8 +22,11 @@ chmod 700 $PREFIX/bin/kali
 ###
 sed -i 's/kali//g' $PREFIX/etc/bash.bashrc
 ###
+git clone https://github.com/zsh-users/zsh-autosuggestions kali-full/root/.zsh/zsh-autosuggestions
+###
 echo "
 clear
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 kali
 " >>$PREFIX/etc/bash.bashrc
 ###
@@ -34,8 +37,6 @@ rm -rf chroot
 wget -O kali-full/root/.zshrc https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Proot/.zshrc
 ###
 echo "nameserver 9.9.9.9" > kali-full/etc/resolv.conf
-###
-git clone https://github.com/zsh-users/zsh-autosuggestions kali-full/root/.zsh/zsh-autosuggestions
 ###
 echo "
 To login Kali type: kali
