@@ -43,7 +43,9 @@ kali vnc &
 > replace `xiv3r` to your name
 ```
 sed -i 's/user=kali/user=xiv3r/' /root/.bashrc
+sed -i 's/user=kali/user=xiv3r/' /root/.zshrc
 sed -i 's/user=kali/user=xiv3r/' /home/kali/.bashrc
+sed -i 's/user=kali/user=xiv3r/' /home/kali/.zshrc
 ```
 
 <div align="center">
@@ -70,7 +72,9 @@ apt update && apt install axel bsdtar proot wget -y && clear && wget -qO- https:
 > replace `xiv3r` to your name
 ```
 sed -i 's/user=kali/user=xiv3r/' /root/.bashrc
+sed -i 's/user=kali/user=xiv3r/' /root/.zshrc
 sed -i 's/user=kali/user=xiv3r/' /home/kali/.bashrc
+sed -i 's/user=kali/user=xiv3r/' /home/kali/.zshrc
 ```
 <div align="center">
 <img src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/KaliLinux/Chroot/kali-chroot.png">
