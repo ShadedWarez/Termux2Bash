@@ -29,7 +29,10 @@ ln -s $PREFIX/bin/nethunter $PREFIX/bin/kali
 ###
 sed -i '/if/,/fi/d' kali-arm64/root/.bash_profile
 ###
-echo "nameserver 9.9.9.9" > kali-arm64/etc/resolv.conf
+cat >kali-arm64/etc/resolv.conf << EOF
+nameserver 9.9.9.9
+nameserver 8.8.8.8
+EOF
 ###
 wget -O kali-arm64/root/.bashrc https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/rcfiles/rootbash.bashrc
 ###
