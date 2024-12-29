@@ -4,16 +4,16 @@ cd $HOME
 ###
 axel -a --search -o kali-minimal.tar.xz https://kali.download/nethunter-images/current/rootfs/kali-nethunter-rootfs-minimal-arm64.tar.xz
 ###
-echo "
-[*] Extracting rootfs...
-"
+cat << EOF
+[*] Extracting rootfs...!!!
+EOF
 ###
 proot --link2symlink bsdtar -xpJf kali-minimal.tar.xz 2>/dev/null
 ###
-echo "
+cat >>$PREFIX/etc/bash.bashrc << EOF
 clear
 kali
-" >>$PREFIX/etc/bash.bashrc
+EOF
 ###
 wget -O kali-arm64/bin/vnc https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Chroot/vnc
 ###
@@ -37,7 +37,6 @@ wget -O kali-arm64/home/kali/.bashrc https://raw.githubusercontent.com/xiv3r/Ter
 ###
 wget -O kali-arm64/home/kali/.zshrc https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/rcfiles/home.zshrc
 ###
-###
 wget -O kali-arm64/etc/bash.bashrc https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/rcfiles/etcbash.bashrc
 ###
 chmod +s kali-arm64/usr/bin/sudo
@@ -48,12 +47,12 @@ echo "kali    ALL=(ALL:ALL) ALL" > kali-arm64/etc/sudoers.d/kali
 ###
 echo "Set disable_coredump false" > kali-arm64/etc/sudo.conf
 ###
-echo "
+cat << EOF
 [*] Successful Installation!
    To Login 👇
 user: kali
 root: kali -r
-"
+EOF
 ###
 USRID=$(id -u)
 GRPID=$(id -g)
