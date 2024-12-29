@@ -33,7 +33,11 @@ echo "nameserver 9.9.9.9" > kali-arm64/etc/resolv.conf
 ###
 wget -O kali-arm64/root/.bashrc https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/rcfiles/rootbash.bashrc
 ###
+wget -O kali-arm64/root/.zshrc
+###
 wget -O kali-arm64/home/kali/.bashrc https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/rcfiles/homebash.bashrc
+###
+wget -O kali-arm64/home/kali.zshrc
 ###
 wget -O kali-arm64/etc/bash.bashrc https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/rcfiles/etcbash.bashrc
 ###
