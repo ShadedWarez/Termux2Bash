@@ -1,4 +1,4 @@
-#!/data/data/com.termux/files/usr/bin/bash -e
+#!/data/data/com.termux/files/usr/bin/sh
 
 cd $HOME
 ###
@@ -11,11 +11,11 @@ EOF
 ###
 proot --link2symlink bsdtar -xpJf kali-full.tar.xz 2>/dev/null
 ###
-echo "
+cat >>$PREFIX/etc/bash.bashrc << EOF
 clear
 (kali vnc) &
 kali
-" >>$PREFIX/etc/bash.bashrc
+EOF
 ###
 wget -O kali-arm64/bin/vnc https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Chroot/vnc
 ###
@@ -45,9 +45,9 @@ chmod +s kali-arm64/usr/bin/sudo
 ###
 chmod +s kali-arm64/usr/bin/su
 ###
-echo "kali    ALL=(ALL:ALL) ALL" > kali-arm64/etc/sudoers.d/kali
+echo "kali    ALL=(ALL:ALL) ALL" >kali-arm64/etc/sudoers.d/kali
 ###
-echo "Set disable_coredump false" > kali-arm64/etc/sudo.conf
+echo "Set disable_coredump false" >kali-arm64/etc/sudo.conf
 ###
 cat <<EOF
 [*] To configure VNC
