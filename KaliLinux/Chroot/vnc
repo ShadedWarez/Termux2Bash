@@ -30,7 +30,7 @@ function status-kex() {
     sessions=$(vncserver -list | sed s/"TigerVNC"/"NetHunter VNC"/)
     if [[ $sessions == *"590"* ]]; then
         printf "\n${sessions}\n"
-        printf "\nOpen RealVNC client and to connect to 127.0.0.1:5901.\n\n"
+        printf "\nOpen the RealVNC client and connect to 127.0.0.1:5901.\n\n"
     else
         if [ ! -z $starting_kex ]; then
             printf '\nError starting the VNC server.\nPlease try "kali vnc kill" or restart your termux session.\n\n'
