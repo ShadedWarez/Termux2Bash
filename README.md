@@ -27,7 +27,7 @@
 
 - Install
 ```
-apt update && apt install axel bsdtar proot wget pulseaudio -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Chroot/kali-full | sh && clear && kali
+apt update && apt install neofetch axel bsdtar proot wget pulseaudio -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Chroot/kali-full | sh && clear && kali
 ```
 
 - Start VNC
