@@ -2,6 +2,8 @@
 
 cd $HOME
 ###
+neofetch --ascii_distro Kali -L
+###
 axel -a --search -o kali-minimal.tar.xz https://kali.download/nethunter-images/current/rootfs/kali-nethunter-rootfs-minimal-arm64.tar.xz
 ###
 cat << EOF
@@ -12,6 +14,7 @@ proot --link2symlink bsdtar -xpJf kali-minimal.tar.xz 2>/dev/null
 ###
 cat >>$PREFIX/etc/bash.bashrc << EOF
 clear
+neofetch --ascii_distro Kali -L
 kali
 EOF
 ###
