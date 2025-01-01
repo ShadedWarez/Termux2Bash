@@ -67,7 +67,7 @@ sed -i 's/user=kali/user=xiv3r/' /home/kali/.zshrc
 
 - Install
 ```
-apt update && apt install axel bsdtar proot wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Chroot/kali-minimal | sh && clear && kali
+apt update && apt install neofetch axel bsdtar proot wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Chroot/kali-minimal | sh && clear && kali
 ```
 
 - Add custom terminal name
