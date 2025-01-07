@@ -25,7 +25,7 @@ clear
 alpine
 " >>$PREFIX/etc/bash.bashrc
 ###
-echo "pd sh alpine" > $PREFIX/bin/$FS
+echo "pd sh $FS" > $PREFIX/bin/$FS
 termux-fix-shebang $PREFIX/bin/$FS
 chmod 700 $PREFIX/bin/$FS
 ###
