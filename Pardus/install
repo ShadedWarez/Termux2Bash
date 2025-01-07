@@ -1,1 +1,36 @@
-#!/$PREFI/bin/bash
+#!/data/data/com.termux/files/usr/bin/bash -e
+
+
+apt install proot proot-distro bsdtar xz-utils axel -y
+###
+FS=pardus
+NM=Pardus 
+###
+mkdir -p $PREFIX/var/lib/proot-distro/installed-rootfs
+###
+cd $PREFIX/var/lib/proot-distro/installed-rootfs/
+###
+axel -a --search https://github.com/xiv3r/Termux-Pentesting-Distro/releases/download/rootfs/${FS}.tar.xz
+###
+echo "
+[*] Extracting rootfs...!!!
+"
+###
+proot --link2symlink bsdtar -xpJf ${FS}.tar.xz 2>/dev/null
+###
+cat >$PREFIX/etc/proot-distro/${FS}.sh << EOF
+DISTRO_NAME="${NM} Linux"
+EOF
+###
+echo "
+clear
+${FS}
+" >>$PREFIX/etc/bash.bashrc
+###
+echo "pd sh ${FS}" > $PREFIX/bin/${FS}
+termux-fix-shebang $PREFIX/bin/${FS}
+chmod 700 $PREFIX/bin/${FS}
+###
+echo "
+To login ${NM} Linux type: ${FS}
+"
