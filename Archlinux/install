@@ -17,7 +17,7 @@ echo "[*] Extracting rootfs...!!!"
 ###
 proot --link2symlink bsdtar -xpJf ${FS}.tar.xz 2>/dev/null
 ###
-cat 'DISTRO_NAME="Arch Linux"' >$PREFIX/etc/proot-distro/${FS}.sh
+cat 'DISTRO_NAME="${NM} Linux"' >$PREFIX/etc/proot-distro/${FS}.sh
 ###
 echo "
 clear
