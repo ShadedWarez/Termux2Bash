@@ -21,7 +21,7 @@ Download
 <br>
 
 ------------
-# Kali Nethunter Full [chroot]
+# Kali Nethunter Full [proot]
 > - Support vnc service
 > - login:`kali -r` or `kali`
 > - vnc:`(kali vnc) &`
@@ -58,7 +58,7 @@ sed -i 's/user=kali/user=xiv3r/' /home/kali/.zshrc
 <br>
 
 -------------
-# Kali Nethunter Minimal [chroot]
+# Kali Nethunter Minimal [proot]
 > - pre-build vnc
 > - login:`kali` or `kali -r`
 > - uninstall:`cd && rm -rf kali-arm64`
@@ -129,7 +129,7 @@ sed -i 's/user=kali/user=xiv3r/' .zshrc && source .zshrc
 <br>
 
 ----------
-# BackBox Linux [proot-distro]
+# BackBox Linux
 > - login:`backbox`
 > - uninstall:`pd rm backbox`
 
@@ -152,7 +152,7 @@ sed -i 's/user=kali/user=xiv3r/' /etc/bash.bashrc && source /etc/bash.bashrc
 <br>
 
 -----------
-# BlackArch Linux [proot-distro]
+# BlackArch
 > - Custom build rootfs tarball
 > - login:`blackarch`
 > - uninstall:`pd rm blackarch`
@@ -204,7 +204,7 @@ pacman -Ss <package_name>
 <br>
 
 ------------
-# Kali in Debian [proot-distro]
+# Debian2Kali
 > - login:`debkali`
 > - uninstall:`pd rm debkali`
 
@@ -227,7 +227,7 @@ sed -i 's/user=kali/user=xiv3r/' /etc/bash.bashrc && source /etc/bash.bashrc
 <br>
 
 -----------
-# ParrotSec [proot-distro]
+# ParrotSec
 > - login:`parrot`
 > - uninstall:`pd rm parrot`
 
@@ -242,7 +242,7 @@ apt update && apt install git axel bsdtar proot proot-distro wget -y && clear &&
 sed -i 's/user=kali/user=xiv3r/' .zshrc && source .zshrc
 ```
 
-<img width="700" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/ParrotSec/parrot.png">
+<img width="700" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/ParrotSec/Parrot.png">
 
 <br>
 <br>
@@ -253,7 +253,7 @@ sed -i 's/user=kali/user=xiv3r/' .zshrc && source .zshrc
 # Alpine
 - Install
 ```
-wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Alpine/install | sh && alpine
+apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Alpine/install | sh && alpine
 ```
 
 <img width="700" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/Alpine/alpine.png">
@@ -267,10 +267,25 @@ wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/
 # Archlinux
 - Install
 ```
-wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Archlinux/install | sh && archlinux
+apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Archlinux/install | sh && archlinux
 ```
 
 <img width="700" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/Archlinux/archlinux.png">
+
+<br>
+<br>
+<br>
+<br>
+
+
+-------------
+# Artix
+- Install
+```
+apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/artix/install | sh && artix
+```
+
+<img width="700" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/artix/artix.png">
 
 <br>
 <br>
