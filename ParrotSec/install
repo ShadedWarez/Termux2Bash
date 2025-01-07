@@ -10,7 +10,7 @@ mkdir -p $PREFIX/var/lib/proot-distro/installed-rootfs
 ###
 cd $PREFIX/var/lib/proot-distro/installed-rootfs/
 ###
-axel -a --search -o ${FS}.tar.xz https://github.com/xiv3r/Termux-Pentesting-Distro/releases/download/rootfs/${FS}.tar.xz
+axel -a --search https://github.com/xiv3r/Termux-Pentesting-Distro/releases/download/rootfs/${FS}.tar.xz
 ###
 echo "
 [*] Extracting rootfs...!!!
