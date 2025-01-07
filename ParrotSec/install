@@ -1,32 +1,36 @@
 #!/data/data/com.termux/files/usr/bin/bash -e
 
+
+apt install proot proot-distro bsdtar xz-utils axel -y
+###
+FS=parrot
+NM=Parrot OS
+###
 mkdir -p $PREFIX/var/lib/proot-distro/installed-rootfs
 ###
-cd $PREFIX/var/lib/proot-distro/installed-rootfs
+cd $PREFIX/var/lib/proot-distro/installed-rootfs/
 ###
-axel -a --search https://github.com/xiv3r/Termux-Pentesting-Distro/releases/download/rootfs/parrot.tar.xz
+axel -a --search https://github.com/xiv3r/Termux-Pentesting-Distro/releases/download/rootfs/${FS}.tar.xz
 ###
 echo "
-[*] Extracting rootfs...
+[*] Extracting rootfs...!!!
 "
 ###
-proot --link2symlink bsdtar -xpJf parrot.tar.xz 2>/dev/null
+proot --link2symlink bsdtar -xpJf ${FS}.tar.xz 2>/dev/null
 ###
-cat >$PREFIX/etc/proot-distro/parrot.sh << EOF
-DISTRO_NAME="Parrot Sec"
+cat >$PREFIX/etc/proot-distro/${FS}.sh << EOF
+DISTRO_NAME="${NM} Linux"
 EOF
 ###
 echo "
 clear
-parrot
+${FS}
 " >>$PREFIX/etc/bash.bashrc
 ###
-echo "pd sh parrot" > $PREFIX/bin/parrot
-###
-chmod 700 $PREFIX/bin/parrot
-###
-echo "nameserver 9.9.9.9" > parrot/etc/resolv.conf
+echo "pd sh ${FS}" > $PREFIX/bin/${FS}
+termux-fix-shebang $PREFIX/bin/${FS}
+chmod 700 $PREFIX/bin/${FS}
 ###
 echo "
-To login Parrot type: parrot
+To login ${NM} Linux type: ${FS}
 "
