@@ -1,5 +1,9 @@
 #!/data/data/com.termux/files/usr/bin/bash -e
 
+apt install axel bsdtar proot-distro proot neofetch -y
+### Ascii
+neofetch --ascii_distro Kali -L
+###
 mkdir -p $PREFIX/var/lib/proot-distro/installed-rootfs/kali-minimal
 ###
 cd $PREFIX/var/lib/proot-distro/installed-rootfs
