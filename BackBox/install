@@ -1,32 +1,29 @@
 #!/data/data/com.termux/files/usr/bin/bash -e
 
+apt install proot proot-distro bsdtar xz-utils axel -y
+###
 mkdir -p $PREFIX/var/lib/proot-distro/installed-rootfs
 ###
-cd $PREFIX/var/lib/proot-distro/installed-rootfs
+cd $PREFIX/var/lib/proot-distro/installed-rootfs/
 ###
-axel -a --search https://github.com/xiv3r/Termux-Pentesting-Distro/releases/download/rootfs/backbox.tar.xz
+FS=backbox
+NM=BackBox
 ###
-echo "
-[*] Extracting rootfs...
-"
+axel -a --search https://github.com/xiv3r/Termux-Pentesting-Distro/releases/download/rootfs/${FS}.tar.xz
 ###
-proot --link2symlink bsdtar -xpJf backbox.tar.xz 2>/dev/null
+echo "[*] Extracting rootfs...!!!"
 ###
-cat >$PREFIX/etc/proot-distro/backbox.sh << EOF
-DISTRO_NAME="BackBox Linux"
-EOF
+proot --link2symlink bsdtar -xpJf ${FS}.tar.xz 2>/dev/null
+###
+echo 'DISTRO_NAME="${NM} Linux"' >$PREFIX/etc/proot-distro/${FS}.sh
 ###
 echo "
 clear
-backbox
+${FS}
 " >>$PREFIX/etc/bash.bashrc
 ###
-echo "pd sh backbox" >$PREFIX/bin/backbox
+echo "pd sh ${FS}" > $PREFIX/bin/${FS}
+termux-fix-shebang $PREFIX/bin/${FS}
+chmod 700 $PREFIX/bin/${FS}
 ###
-chmod 700 $PREFIX/bin/backbox
-###
-echo "nameserver 9.9.9.9" > backbox/etc/resolv.conf
-###
-echo "
-To login BackBox type: backbox
-"
+echo "To login ${NM} Linux type: ${FS}"
