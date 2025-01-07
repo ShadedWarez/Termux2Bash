@@ -21,21 +21,12 @@ kali
 EOF
 ###
 wget -O kali-arm64/bin/vnc https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Chroot/vnc
-###
-chmod 700 kali-arm64/bin/vnc
-###
+chmod 700 kali-arm64/bin/vnc 
 wget -O $PREFIX/bin/kali https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Chroot/nethunter
-###
+termux-fix-shebang $PREFIX/bin/kali
 chmod 700 $PREFIX/bin/kali
 ###
 sed -i '/if/,/fi/d' kali-arm64/root/.bash_profile
-###
-echo "export PULSE_SERVER=127.0.0.1" >> kali-arm64/home/kali/.vnc/xstartup
-###
-cat >kali-arm64/etc/resolv.conf << EOF
-nameserver 9.9.9.9
-nameserver 8.8.8.8
-EOF
 ###
 wget -O kali-arm64/root/.bashrc https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/rcfiles/rootbash.bashrc
 ###
@@ -48,11 +39,9 @@ wget -O kali-arm64/home/kali.zshrc https://raw.githubusercontent.com/xiv3r/Termu
 wget -O kali-arm64/etc/bash.bashrc https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/rcfiles/etcbash.bashrc
 ###
 chmod +s kali-arm64/usr/bin/sudo
-###
 chmod +s kali-arm64/usr/bin/su
 ###
 echo "kali    ALL=(ALL:ALL) ALL" >kali-arm64/etc/sudoers.d/kali
-###
 echo "Set disable_coredump false" >kali-arm64/etc/sudo.conf
 ###
 cat <<EOF
