@@ -1,1 +1,32 @@
-#!/bin/bash
+#!/data/data/com.termux/files/usr/bin/bash -e
+
+apt install proot proot-distro bsdtar xz-utils axel -y
+###
+mkdir -p $PREFIX/var/lib/proot-distro/installed-rootfs
+###
+cd $PREFIX/var/lib/proot-distro/installed-rootfs
+###
+axel -a --search https://github.com/xiv3r/Termux-Pentesting-Distro/releases/download/rootfs/alpine.tar.xz
+###
+echo "
+[*] Extracting rootfs...!!!
+"
+###
+proot --link2symlink bsdtar -xpJf alpine.tar.xz 2>/dev/null
+###
+cat >$PREFIX/etc/proot-distro/alpine.sh << EOF
+DISTRO_NAME="Alpine Linux"
+EOF
+###
+echo "
+clear
+alpine
+" >>$PREFIX/etc/bash.bashrc
+###
+echo "pd sh alpine" > $PREFIX/bin/alpine
+termux-fix-shebang $PREFIX/bin/alpine
+chmod 700 $PREFIX/bin/alpine 
+###
+echo "
+To login Alpine Linux type: alpine
+"
