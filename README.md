@@ -382,11 +382,82 @@ apt update && apt install wget -y && clear && wget -qO- https://raw.githubuserco
 <br>
 
 -------------
+# Openkylin 
+- Install
+```
+apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Openkylin/install | sh && openkylin 
+```
+
+<img width="700" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/Openkylin/openkylin.png">
+
+<br>
+<br>
+<br>
+<br>
+
+-------------
+# Opensuse 
+- Install
+```
+apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Opensuse/install | sh && opensuse 
+```
+
+<img width="700" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/Opensuse/opensuse.png">
+
+<br>
+<br>
+<br>
+<br>
+
+-------------
+# Pardus 
+- Install
+```
+apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Pardus/install | sh && pardus 
+```
+
+<img width="700" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/Pardus/pardus.png">
+
+<br>
+<br>
+<br>
+<br>
+
+-------------
+# Ubuntu 
+- Install
+```
+apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Ubuntu/install | sh && ubuntu 
+```
+
+<img width="700" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/Ubuntu/ubuntu.png">
+
+<br>
+<br>
+<br>
+<br>
+
+
+-------------
+# Void 
+- Install
+```
+apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Void/install | sh && void
+```
+
+<img width="700" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/Void/void.png">
+
+<br>
+<br>
+<br>
+<br>
+
+-------------
 # Termux
 - Install
 ```
 wget -O $PREFIX/etc/bash.bashrc https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Termux/bash.bashrc && source $PREFIX/etc/bash.bashrc
 ```
 
-<img width="700" height="500" src="https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Termux/termux.png">
+<img width="700" height="500" src="https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Termux/Termux.png">
 
