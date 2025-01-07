@@ -1,32 +1,29 @@
 #!/data/data/com.termux/files/usr/bin/bash -e
 
+apt install proot proot-distro bsdtar xz-utils axel -y
+###
 mkdir -p $PREFIX/var/lib/proot-distro/installed-rootfs
 ###
-cd $PREFIX/var/lib/proot-distro/installed-rootfs
+cd $PREFIX/var/lib/proot-distro/installed-rootfs/
 ###
-axel -a --search https://github.com/xiv3r/Termux-Pentesting-Distro/releases/download/rootfs/debkali.tar.xz
+FS=debkali
+NM=Debian-Kali
 ###
-echo "
-[*] Extracting rootfs...
-"
+axel -a --search https://github.com/xiv3r/Termux-Pentesting-Distro/releases/download/rootfs/${FS}.tar.xz
 ###
-proot --link2symlink bsdtar -xpJf debkali.tar.xz 2>/dev/null
+echo "[*] Extracting rootfs...!!!"
 ###
-cat >$PREFIX/etc/proot-distro/debkali.sh << EOF
-DISTRO_NAME="Debian Nethunter"
-EOF
+proot --link2symlink bsdtar -xpJf ${FS}.tar.xz 2>/dev/null
+###
+echo 'DISTRO_NAME="${NM} Linux"' >$PREFIX/etc/proot-distro/${FS}.sh
 ###
 echo "
 clear
-debkali
+${FS}
 " >>$PREFIX/etc/bash.bashrc
 ###
-echo "pd sh debkali" > $PREFIX/bin/debkali
+echo "pd sh ${FS}" > $PREFIX/bin/${FS}
+termux-fix-shebang $PREFIX/bin/${FS}
+chmod 700 $PREFIX/bin/${FS}
 ###
-chmod 700 $PREFIX/bin/debkali
-###
-echo "nameserver 9.9.9.9" > debkali/etc/resolv.conf
-###
-echo "
-To login Kali in Debain: debkali
-"
+echo "To login ${NM} Linux type: ${FS}"
