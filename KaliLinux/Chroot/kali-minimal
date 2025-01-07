@@ -19,22 +19,15 @@ kali
 EOF
 ###
 wget -O kali-arm64/bin/vnc https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Chroot/vnc
-###
 chmod 700 kali-arm64/bin/vnc
 ###
 wget -O $PREFIX/bin/nethunter https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Chroot/nethunter
-###
+termux-fix-shebang $PREFIX/bin/nethunter
 chmod 700 $PREFIX/bin/nethunter
-###
 ln -s $PREFIX/bin/nethunter $PREFIX/bin/kali
 ###
 sed -i '/if/,/fi/d' kali-arm64/root/.bash_profile
 ###
-cat >kali-arm64/etc/resolv.conf << EOF
-nameserver 9.9.9.9
-nameserver 8.8.8.8
-EOF
-####
 wget -O kali-arm64/root/.bashrc https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/rcfiles/rootbash.bashrc
 ###
 wget -O kali-arm64/root/.zshrc https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/rcfiles/root.zshrc
