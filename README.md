@@ -1,7 +1,7 @@
 <div align="center">
   
-# Termux Penetration Testing Distros
-| Kali Linux | BlackArch Linux | BackBox Linux | Parrot Sec Linux | Kali Debian |
+# Termux Proot Distros
+
 </div>
 
 <br>
@@ -50,9 +50,7 @@ sed -i 's/user=kali/user=xiv3r/' /home/kali/.bashrc
 sed -i 's/user=kali/user=xiv3r/' /home/kali/.zshrc
 ```
 
-<div align="center">
-<img src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/KaliLinux/Chroot/vnc.jpg">
-</div>
+<img width="700" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/KaliLinux/Chroot/vnc.jpg">
 
 <br>
 <br>
@@ -78,9 +76,9 @@ sed -i 's/user=kali/user=xiv3r/' /root/.zshrc
 sed -i 's/user=kali/user=xiv3r/' /home/kali/.bashrc
 sed -i 's/user=kali/user=xiv3r/' /home/kali/.zshrc
 ```
-<div align="center">
-<img src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/KaliLinux/Chroot/kali-chroot.png">
-</div>
+
+<img width="700" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/KaliLinux/Chroot/kali-chroot.png">
+
 
 <br>
 <br>
@@ -122,9 +120,8 @@ apt update && apt install git axel bsdtar proot proot-distro wget -y && clear &&
 ```
 sed -i 's/user=kali/user=xiv3r/' .zshrc && source .zshrc
 ```
-<div align="center">
-<img src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/KaliLinux/Proot/kali-proot.png">
-</div>
+
+<img width="700" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/KaliLinux/Proot/kali-proot.png">
 
 <br>
 <br>
@@ -146,9 +143,8 @@ apt update && apt install axel bsdtar proot proot-distro wget -y && clear && wge
 ```
 sed -i 's/user=kali/user=xiv3r/' /etc/bash.bashrc && source /etc/bash.bashrc
 ```
-<div align="center">
-<img src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/BackBox/backbox.png">
-</div>
+
+<img width="700" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/BackBox/backbox.png">
 
 <br>
 <br>
@@ -199,9 +195,8 @@ pacman -Ss <package_name>
 
 </details>
 
-<div align="center">
-<img src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/BlackArch/bl4ckarch.png">
-</div>
+
+<img width="700" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/BlackArch/bl4ckarch.png">
 
 <br>
 <br>
@@ -223,9 +218,8 @@ apt update && apt install axel bsdtar proot proot-distro wget -y && clear && wge
 ```
 sed -i 's/user=kali/user=xiv3r/' /etc/bash.bashrc && source /etc/bash.bashrc
 ```
-<div align="center">
-<img src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/KaliDeb/debkali.png">
-</div>
+
+<img width="700" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/KaliDeb/debkali.png">
 
 <br>
 <br>
@@ -247,9 +241,36 @@ apt update && apt install git axel bsdtar proot proot-distro wget -y && clear &&
 ```
 sed -i 's/user=kali/user=xiv3r/' .zshrc && source .zshrc
 ```
-<div align="center">
-<img src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/ParrotSec/parrot.png">
-</div>
+
+<img width="700" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/ParrotSec/parrot.png">
+
+<br>
+<br>
+<br>
+<br>
+
+-------------
+# Alpine
+- Install
+```
+wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Alpine/install | sh && alpine
+```
+
+<img width="700" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/Alpine/alpine.png">
+
+<br>
+<br>
+<br>
+<br>
+
+-------------
+# Archlinux
+- Install
+```
+wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Archlinux/install | sh && archlinux
+```
+
+<img width="700" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/Archlinux/archlinux.png">
 
 <br>
 <br>
@@ -263,6 +284,5 @@ sed -i 's/user=kali/user=xiv3r/' .zshrc && source .zshrc
 wget -O $PREFIX/etc/bash.bashrc https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Termux/bash.bashrc && source $PREFIX/etc/bash.bashrc
 ```
 
-<div align="center">
-<img src="https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Termux/termux.png">
-</div>
+<img width="700" height="500" src="https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Termux/termux.png">
+
