@@ -321,6 +321,66 @@ apt update && apt install wget -y && clear && wget -qO- https://raw.githubuserco
 <br>
 <br>
 
+
+-------------
+# Debian 
+- Install
+```
+apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Debian/install | sh && debian 
+```
+
+<img width="700" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/Debian/debian.png">
+
+<br>
+<br>
+<br>
+<br>
+
+
+-------------
+# Deepin 
+- Install
+```
+apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Deepin/install | sh && deepin
+```
+
+<img width="700" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/Deepin/deepin.png">
+
+<br>
+<br>
+<br>
+<br>
+
+
+-------------
+# Fedora 
+- Install
+```
+apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/Fedora/artix/install | sh && fedora 
+```
+
+<img width="700" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/Fedora/fedora.png">
+
+<br>
+<br>
+<br>
+<br>
+
+
+-------------
+# Manjaro 
+- Install
+```
+apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Manjaro/install | sh && manjaro
+```
+
+<img width="700" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/Manjaro/manjaro.png">
+
+<br>
+<br>
+<br>
+<br>
+
 -------------
 # Termux
 - Install
