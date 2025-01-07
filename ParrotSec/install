@@ -3,27 +3,38 @@
 
 apt install proot proot-distro bsdtar axel neofetch -y
 clear
-neofetch --ascii_distro ${NM} -L
 ###
 FS=parrot
 NM=Parrot
+neofetch --ascii_distro ${NM} -L
 ###
 mkdir -p $PREFIX/var/lib/proot-distro/installed-rootfs
 ###
 cd $PREFIX/var/lib/proot-distro/installed-rootfs/
 ###
-axel -a --search https://github.com/xiv3r/Termux-Pentesting-Distro/releases/download/rootfs/${FS}.tar.xz
+axel -a https://github.com/xiv3r/Termux-Pentesting-Distro/releases/download/rootfs/${FS}.tar.xz
 ###
-echo "[*] Extracting rootfs...!!!"
+cat << EOF 
+[*] Extracting ${NM} Rootfs...!!!
+EOF
 ###
 proot --link2symlink bsdtar -xpJf ${FS}.tar.xz 2>/dev/null
 ###
-echo 'DISTRO_NAME="${NM} Linux"' >$PREFIX/etc/proot-distro/${FS}.sh
+cat >$PREFIX/etc/proot-distro/${FS}.sh << EOF
+DISTRO_NAME="${NM} Linux"
+EOF
 ###
-echo "${FS}" >>$PREFIX/etc/bash.bashrc
+cat >>$PREFIX/etc/bash.bashrc << EOF
+echo "To Login ${NM} Linux: ${FS}
+EOF
 ###
-echo "pd sh ${FS}" > $PREFIX/bin/${FS}
+cat >$PREFIX/bin/${FS} << EOF
+pd sh ${FS}
+EOF
+###
 termux-fix-shebang $PREFIX/bin/${FS}
 chmod 700 $PREFIX/bin/${FS}
 ###
-echo "To login ${NM} Linux type: ${FS}"
+cat << EOF
+To login ${NM} Linux type: ${FS}
+EOF
