@@ -25,7 +25,7 @@ DISTRO_NAME="${NM} Linux"
 EOF
 ###
 cat >>$PREFIX/etc/bash.bashrc << EOF
-echo "To Login ${NM} Linux: ${FS}
+echo "To Login ${NM} Linux: ${FS}"
 EOF
 ###
 cat >$PREFIX/bin/${FS} << EOF
