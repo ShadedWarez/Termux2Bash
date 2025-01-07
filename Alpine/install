@@ -1,6 +1,8 @@
 #!/data/data/com.termux/files/usr/bin/bash -e
 
 apt install proot proot-distro bsdtar xz-utils axel -y
+clear
+neofetch --ascii_distro Alpine -L
 ###
 mkdir -p $PREFIX/var/lib/proot-distro/installed-rootfs
 ###
