@@ -282,10 +282,39 @@ apt update && apt install wget -y && clear && wget -qO- https://raw.githubuserco
 # Artix
 - Install
 ```
-apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/artix/install | sh && artix
+apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Artix/install | sh && artix
 ```
 
-<img width="700" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/artix/artix.png">
+<img width="700" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/Artix/artix.png">
+
+<br>
+<br>
+<br>
+<br>
+
+-------------
+# Centos
+- Install
+```
+apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Centos/install | sh && centos
+```
+
+<img width="700" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/Centos/centos.png">
+
+<br>
+<br>
+<br>
+<br>
+
+
+-------------
+# Chimera
+- Install
+```
+apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Chimera/install | sh && chimera
+```
+
+<img width="700" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/Chimera/chimera.png">
 
 <br>
 <br>
