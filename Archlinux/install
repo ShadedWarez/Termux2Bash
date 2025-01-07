@@ -22,7 +22,7 @@ EOF
 ###
 echo "
 clear
-alpine
+$FS
 " >>$PREFIX/etc/bash.bashrc
 ###
 echo "pd sh $FS" > $PREFIX/bin/$FS
