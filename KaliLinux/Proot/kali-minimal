@@ -4,40 +4,32 @@ mkdir -p $PREFIX/var/lib/proot-distro/installed-rootfs/kali-minimal
 ###
 cd $PREFIX/var/lib/proot-distro/installed-rootfs
 ###
-axel -a --search -o kali-minimal.tar.xz https://kali.download/nethunter-images/current/rootfs/kali-nethunter-rootfs-minimal-arm64.tar.xz
+RFS=kali-arm64
+FS=kali-minimal
+NM=Kali
+axel -a --search -o ${FS}.tar.xz https://kali.download/nethunter-images/current/rootfs/kali-nethunter-rootfs-minimal-arm64.tar.xz
 ###
-echo "
-[*] Extracting rootfs...
-"
+echo "[*] Extracting rootfs...!!!"
 ###
-proot --link2symlink bsdtar -xpJf kali-minimal.tar.xz 2>/dev/null
+proot --link2symlink bsdtar -xpJf ${FS}.tar.xz 2>/dev/null
 ###
-cat >$PREFIX/etc/proot-distro/kali-minimal.sh << EOF
-DISTRO_NAME="Kali Nethunter Minimal"
+cat >$PREFIX/etc/proot-distro/${FS}.sh << EOF
+DISTRO_NAME="${NM} Nethunter Minimal"
 EOF
 ###
-echo "pd sh kali-minimal" > $PREFIX/bin/kali
-###
+echo "pd sh ${FS}" > $PREFIX/bin/kali
+termux-fix-shebang $PREFIX/bin/kali
 chmod 700 $PREFIX/bin/kali
 ###
-sed -i 's/kali//g' $PREFIX/etc/bash.bashrc
-###
 echo "
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 clear
 kali
 " >>$PREFIX/etc/bash.bashrc
 ###
-mv kali-arm64/* $PREFIX/var/lib/proot-distro/installed-rootfs/kali-minimal
+mv ${RFS}/* $PREFIX/var/lib/proot-distro/installed-rootfs/${FS}
 ###
-rm -rf kali-arm64
+rm -rf ${RFS}
 ###
-wget -O kali-minimal/root/.zshrc https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Proot/.zshrc
+wget -O ${FS}/root/.zshrc https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Proot/.zshrc
 ###
-git clone https://github.com/zsh-users/zsh-autosuggestions kali-minimal/root/.zsh/zsh-autosuggestions
-###
-echo "nameserver 9.9.9.9" >kali-minimal/etc/resolv.conf
-###
-echo "
-To login Kali type: kali
-"
+echo "To login ${NM} Linux type: kali"
