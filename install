@@ -19,9 +19,8 @@ EOF
 echo "Enter Distro Name:"
 read FS
 
-# Prompt the user to input text for NM
-echo "Verify Distro Name:"
-read NM
+# Forward the value of FS to NM
+NM="$FS"
 
 # Capitalize the first letter of NM
 NM=$(echo "$NM" | awk '{print toupper(substr($0,1,1)) substr($0,2)}')
