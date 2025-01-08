@@ -24,17 +24,21 @@ Download
 ```
 apt update && apt upgrade -y && apt install wget -y && wget https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/install && chmod +x install && bash install
 ```
-
+# General options
+```
+proot-distro --help
+```
 ------------
+
 # Kali Nethunter Full [proot]
 > - Support vnc service
-> - login:`kali -r` or `kali`
+> - login:`kali`
 > - vnc:`(kali vnc) &`
 > - uninstall:`cd && rm -rf kali-arm64`
 
 - Install
 ```
-apt update && apt install neofetch axel bsdtar proot wget pulseaudio -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Chroot/kali-full | sh && clear && kali
+apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Chroot/kali-full | sh && clear && kali
 ```
 
 - Start VNC
@@ -65,12 +69,12 @@ sed -i 's/user=kali/user=xiv3r/' /home/kali/.zshrc
 -------------
 # Kali Nethunter Minimal [proot]
 > - pre-build vnc
-> - login:`kali` or `kali -r`
+> - login:`kali`
 > - uninstall:`cd && rm -rf kali-arm64`
 
 - Install
 ```
-apt update && apt install neofetch pulseaudio axel bsdtar proot wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Chroot/kali-minimal | sh && clear && kali
+apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Chroot/kali-minimal | sh && clear && kali
 ```
 
 - Add custom terminal name
@@ -92,12 +96,12 @@ sed -i 's/user=kali/user=xiv3r/' /home/kali/.zshrc
 
 ---------------
 # Kali Nethunter Full [proot-distro]
-> - login:`kali`
+> - login:`kali-full`
 > - uninstall:`pd rm kali-full`
 
 - Install
 ```
-apt update && apt install git axel bsdtar proot proot-distro wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Proot/kali-full | sh && clear && kali
+apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Proot/kali-full | sh && clear && kali-full
 ```
 
 - Add custom terminal name
@@ -117,7 +121,7 @@ sed -i 's/user=kali/user=xiv3r/' .zshrc && source .zshrc
 
 - Install
 ```
-apt update && apt install git axel bsdtar proot proot-distro wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Proot/kali-minimal | sh && clear && kali
+apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Proot/kali-minimal | sh && clear && kali
 ```
 
 - Add custom terminal name
@@ -140,7 +144,7 @@ sed -i 's/user=kali/user=xiv3r/' .zshrc && source .zshrc
 
 - Install
 ```
-apt update && apt install axel bsdtar proot proot-distro wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/BackBox/install | sh && clear && backbox
+apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/BackBox/install | sh && clear && backbox
 ```
 
 - Add custom terminal name
@@ -164,7 +168,7 @@ sed -i 's/user=kali/user=xiv3r/' /etc/bash.bashrc && source /etc/bash.bashrc
 
 - Install 
 ```
-apt update && apt install axel bsdtar proot proot-distro wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/BlackArch/install | sh && clear && blackarch
+apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/BlackArch/install | sh && clear && blackarch
 ```
 
 - Update and Upgrade
@@ -215,7 +219,7 @@ pacman -Ss <package_name>
 
 - Install
 ```
-apt update && apt install axel bsdtar proot proot-distro wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliDeb/install | sh && clear && debkali
+apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliDeb/install | sh && clear && debkali
 ```
 
 - Add custom terminal name
