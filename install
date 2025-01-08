@@ -58,7 +58,7 @@ EOF
 
 # Update bash.bashrc to show login instructions
 cat >> "$PREFIX/etc/bash.bashrc" << EOF
-echo "To login to ${NM} Linux, type: ${FS}"
+echo "To login ${NM} Linux: ${FS}"
 EOF
 
 # Create a shortcut command to launch the distro
