@@ -27,12 +27,12 @@ read NM
 NM=$(echo "$NM" | awk '{print toupper(substr($0,1,1)) substr($0,2)}')
 
 # Display the values of FS and NM
-echo "FS is set to: $FS"
-echo "NM is set to: $NM"
+echo "$FS" > /dev/null
+echo "$NM" > /dev/null
 
 # Example usage of the variables
 # You can replace this with any command that uses FS and NM
-echo "$FS $NM" 2>/dev/null
+echo "$FS $NM" > /dev/null
 
 # Display neofetch with custom ASCII art
 neofetch --ascii_distro "${NM}" -L
