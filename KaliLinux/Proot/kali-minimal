@@ -37,18 +37,18 @@ TARBALL_SHA256['aarch64']="$(sha256sum "${FS}.tar.xz" | awk '{print $1}')"
 EOF
 
 # Create a shortcut command to start Kali
-echo "
+cat >$PREFIX/bin/kali << EOF
 #!/bin/bash
 proot-distro login ${FS}
-" > $PREFIX/bin/kali
+EOF
 termux-fix-shebang $PREFIX/bin/kali
 chmod 700 $PREFIX/bin/kali
 
 # Add the Kali command to the bashrc for easy access
-echo "
+cat >>$PREFIX/etc/bash.bashrc << EOF
 clear
 kali
-" >>$PREFIX/etc/bash.bashrc
+EOF
 
 # Clean up the temporary directory
 sleep 5s
