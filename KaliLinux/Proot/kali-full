@@ -1,40 +1,58 @@
 #!/data/data/com.termux/files/usr/bin/bash -e
 
+# Install necessary packages
 apt install axel bsdtar proot-distro proot neofetch -y
-### Ascii
-neofetch --ascii_distro Kali -L
-###
-mkdir -p $PREFIX/var/lib/proot-distro/installed-rootfs/kali-full
-###
-cd $PREFIX/var/lib/proot-distro/installed-rootfs
-###
+
+# Define variables for the rootfs
 RFS=kali-arm64
 FS=kali-full
 NM=Kali
-axel -a --search -o ${FS}.tar.xz https://kali.download/nethunter-images/current/rootfs/kali-nethunter-rootfs-full-arm64.tar.xz
-###
+
+# Create the directory for the Kali minimal rootfs
+mkdir -p $PREFIX/var/lib/proot-distro/installed-rootfs/${FS}
+
+# Change to the rootfs directory
+cd $PREFIX/var/lib/proot-distro/installed-rootfs
+
+# Display Kali Linux ASCII art
+neofetch --ascii_distro ${NM} -L
+
+# Download the Kali minimal rootfs using axel
+axel -a -o "${FS}.tar.xz" "https://kali.download/nethunter-images/current/rootfs/kali-nethunter-rootfs-full-arm64.tar.xz"
+
+# Extract the rootfs
+echo "[*] Extracting rootfs...!!!"
+proot --link2symlink bsdtar -xpJf "${FS}.tar.xz" 2>/dev/null
+
+# Move the extracted files to the correct directory
+mv ${RFS}/* $PREFIX/var/lib/proot-distro/installed-rootfs/${FS}
+
+# Create a proot-distro configuration file for the Kali minimal rootfs
+cat >$PREFIX/etc/proot-distro/${FS}.sh << EOF
+DISTRO_NAME="${NM} Nethunter"
+TARBALL_URL['aarch64']="https://kali.download/nethunter-images/current/rootfs/kali-nethunter-rootfs-minimal-arm64.tar.xz"
+TARBALL_SHA256['aarch64']="$(sha256sum "${FS}.tar.xz" | awk '{print $1}')"
+EOF
+
+# Create a shortcut command to start Kali
 echo "
-[*] Extracting rootfs...!!!
-[*] 20 minutes to extract please wait...!!!
-"
-###
-proot --link2symlink bsdtar -xpJf ${FS}.tar.xz 2>/dev/null
-###
-echo 'DISTRO_NAME="${NM} Linux Full"' >$PREFIX/etc/proot-distro/${FS}.sh
-###
-echo "pd sh ${FS}" > $PREFIX/bin/kali
+#!/bin/bash
+proot-distro login ${FS}
+" > $PREFIX/bin/kali
 termux-fix-shebang $PREFIX/bin/kali
 chmod 700 $PREFIX/bin/kali
-###
+
+# Add the Kali command to the bashrc for easy access
 echo "
 clear
 kali
 " >>$PREFIX/etc/bash.bashrc
-###
-mv ${RFS}/* $PREFIX/var/lib/proot-distro/installed-rootfs/${RF}
-###
-rm -rf ${RFS}
-###
-wget -O ${FS}/root/.zshrc https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Proot/.zshrc
-###
-echo "To login ${NM} Linux type: kali"
+
+# Clean up the temporary directory
+sleep 5s
+rm -rf ${RFS} ${FS}.tar.xz
+
+# Inform the user how to log in to Kali
+echo -e '\e[1;96m'
+echo "To login to ${NM} Linux, type: kali"
+echo -e '\e[0m'
