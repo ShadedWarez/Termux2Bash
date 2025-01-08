@@ -1,11 +1,32 @@
 <div align="center">
   
-# Termux Proot Distros
+  <details><summary>
 
+# Termux Proot-Distro
+  </summary>
+  
+   `Proot Distro is a tool used in environments like Termux (a terminal emulator and Linux environment for Android) to manage and run Linux distributions (distros) in an isolated, containerized environment. It uses PRoot (a user-space implementation of chroot, mount --bind, and binfmt_misc) to run Linux distributions without requiring root access or complex setup.
+
+Key Features of Proot Distro:
+No Root Access Required: Proot Distro allows you to run Linux distributions on devices without root access.
+
+Lightweight: It uses minimal resources compared to full virtualization or emulation.
+
+Easy Management: You can install, remove, and manage multiple Linux distributions easily.
+
+Isolation: Each distro runs in its own isolated environment, preventing conflicts with the host system.
+
+Cross-Platform: Works on Android (via Termux) and other platforms where PRoot is supported.
+
+How Proot Distro Works:
+Rootfs (Root Filesystem): Proot Distro uses pre-built root filesystems (rootfs) of Linux distributions. These are essentially the core files of a Linux OS.
+
+PRoot: PRoot is used to "fake" the root environment, allowing you to run the rootfs as if it were a full Linux system.
+
+Proot-Distro Scripts: Each distro has a configuration script (e.g., kali.sh, ubuntu.sh) that defines how the rootfs is downloaded, installed, and managed.`
+
+</details>
 </div>
-
-<br>
-<br>
 
 <h1 align="center">
   
