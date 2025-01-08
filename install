@@ -3,22 +3,26 @@
 # Install required packages
 apt install proot proot-distro bsdtar axel neofetch -y
 clear
+
 # List of distros
 cat << EOF
-Available Distros Command to install:
+Available Distro to Install:
+
 alpine    archlinux    artix     backbox   blackarch   centos      chimera
 
 debian    deepin       fedora    debkali   kali        manjaro     openkylin
 
 opensuse  pardus       parrot    ubuntu    void
+
 EOF
+echo " "
 # Variables
 # Prompt the user to input text for FS
-echo "Enter a value for FS:"
+echo "Enter Distro Name:"
 read FS
 
 # Prompt the user to input text for NM
-echo "Enter a value for NM:"
+echo "Verify Distro Name:"
 read NM
 
 # Display the values of FS and NM
