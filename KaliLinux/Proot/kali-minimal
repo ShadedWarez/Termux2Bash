@@ -1,39 +1,55 @@
 #!/data/data/com.termux/files/usr/bin/bash -e
 
+# Install necessary packages
 apt install axel bsdtar proot-distro proot neofetch -y
-### Ascii
+
+# Display Kali Linux ASCII art
 neofetch --ascii_distro Kali -L
-###
-mkdir -p $PREFIX/var/lib/proot-distro/installed-rootfs/kali-minimal
-###
+
+# Create the directory for the Kali minimal rootfs
+mkdir -p $PREFIX/var/lib/proot-distro/installed-rootfs/${FS}
+
+# Change to the rootfs directory
 cd $PREFIX/var/lib/proot-distro/installed-rootfs
-###
+
+# Define variables for the rootfs
 RFS=kali-arm64
 FS=kali-minimal
 NM=Kali
+
+# Download the Kali minimal rootfs using axel
 axel -a -o ${FS}.tar.xz https://kali.download/nethunter-images/current/rootfs/kali-nethunter-rootfs-minimal-arm64.tar.xz
-###
+
+# Extract the rootfs
 echo "[*] Extracting rootfs...!!!"
-###
-proot --link2symlink bsdtar -xpJf ${FS}.tar.xz 2>/dev/null
-###
+proot --link2symlink bsdtar -xpJf ${FS}.tar.xz -C $PREFIX/var/lib/proot-distro/installed-rootfs/${FS} 2>/dev/null
+
+# Create a proot-distro configuration file for the Kali minimal rootfs
 cat >$PREFIX/etc/proot-distro/${FS}.sh << EOF
 DISTRO_NAME="${NM} Nethunter Minimal"
+TARBALL_URL['${FS}']="https://kali.download/nethunter-images/current/rootfs/kali-nethunter-rootfs-minimal-arm64.tar.xz"
+TARBALL_SHA256['${FS}']="$(sha256sum ${FS}.tar.xz | awk '{print $1}')"
 EOF
-###
-echo "pd sh ${FS}" > $PREFIX/bin/kali
+
+# Create a shortcut command to start Kali
+echo "proot-distro login ${FS}" > $PREFIX/bin/kali
 termux-fix-shebang $PREFIX/bin/kali
 chmod 700 $PREFIX/bin/kali
-###
+
+# Add the Kali command to the bashrc for easy access
 echo "
 clear
 kali
 " >>$PREFIX/etc/bash.bashrc
-###
+
+# Move the extracted files to the correct directory
 mv ${RFS}/* $PREFIX/var/lib/proot-distro/installed-rootfs/${FS}
-###
+
+# Clean up the temporary directory
 rm -rf ${RFS}
-###
+
+# Download a custom .zshrc for the root user
 wget -O ${FS}/root/.zshrc https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Proot/.zshrc
-###
-echo "To login ${NM} Linux type: kali"
+
+# Inform the user how to log in to Kali
+echo "To login to ${NM} Linux, type: kali"
