@@ -84,7 +84,7 @@ sed -i 's/user=kali/user=xiv3r/' /home/kali/.bashrc
 sed -i 's/user=kali/user=xiv3r/' /home/kali/.zshrc
 ```
 
-<img width="700" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/KaliLinux/Chroot/vnc.jpg">
+<img width="800" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/KaliLinux/Chroot/vnc.jpg">
 
 <br>
 <br>
@@ -110,7 +110,7 @@ sed -i 's/user=kali/user=xiv3r/' /home/kali/.bashrc
 sed -i 's/user=kali/user=xiv3r/' /home/kali/.zshrc
 ```
 
-<img width="700" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/KaliLinux/Chroot/kali-chroot.png">
+<img width="800" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/KaliLinux/Chroot/kali-chroot.png">
 
 
 <br>
@@ -133,7 +133,7 @@ apt update && apt install wget -y && clear && wget -qO- https://raw.githubuserco
 ```
 sed -i 's/user=kali/user=xiv3r/' .zshrc && source .zshrc
 ```
-<img width="700" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/KaliLinux/Proot/NH.png">
+<img width="800" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/KaliLinux/Proot/NH.png">
 
 <br>
 <br>
@@ -156,7 +156,7 @@ apt update && apt install wget -y && clear && wget -qO- https://raw.githubuserco
 sed -i 's/user=kali/user=xiv3r/' .zshrc && source .zshrc
 ```
 
-<img width="700" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/KaliLinux/Proot/NH.png">
+<img width="800" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/KaliLinux/Proot/NH.png">
 
 <br>
 <br>
@@ -179,7 +179,7 @@ apt update && apt install wget -y && clear && wget -qO- https://raw.githubuserco
 sed -i 's/user=kali/user=xiv3r/' /etc/bash.bashrc && source /etc/bash.bashrc
 ```
 
-<img width="700" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/BackBox/backbox.png">
+<img width="800" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/BackBox/backbox.png">
 
 <br>
 <br>
@@ -231,7 +231,7 @@ pacman -Ss <package_name>
 </details>
 
 
-<img width="700" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/BlackArch/bl4ckarch.png">
+<img width="800" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/BlackArch/bl4ckarch.png">
 
 <br>
 <br>
@@ -254,7 +254,7 @@ apt update && apt install wget -y && clear && wget -qO- https://raw.githubuserco
 sed -i 's/user=kali/user=xiv3r/' /etc/bash.bashrc && source /etc/bash.bashrc
 ```
 
-<img width="700" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/KaliDeb/debkali.png">
+<img width="800" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/KaliDeb/debkali.png">
 
 <br>
 <br>
@@ -277,7 +277,7 @@ apt update && apt install wget -y && clear && wget -qO- https://raw.githubuserco
 sed -i 's/user=kali/user=xiv3r/' .zshrc && source .zshrc
 ```
 
-<img width="700" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/ParrotSec/Parrot.png">
+<img width="800" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/ParrotSec/Parrot.png">
 
 <br>
 <br>
@@ -291,7 +291,7 @@ sed -i 's/user=kali/user=xiv3r/' .zshrc && source .zshrc
 apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Alpine/install | sh && alpine
 ```
 
-<img width="700" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/Alpine/alpine.png">
+<img width="800" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/Alpine/alpine.png">
 
 <br>
 <br>
@@ -305,7 +305,7 @@ apt update && apt install wget -y && clear && wget -qO- https://raw.githubuserco
 apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Archlinux/install | sh && archlinux
 ```
 
-<img width="700" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/Archlinux/archlinux.png">
+<img width="800" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/Archlinux/archlinux.png">
 
 <br>
 <br>
@@ -320,7 +320,7 @@ apt update && apt install wget -y && clear && wget -qO- https://raw.githubuserco
 apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Artix/install | sh && artix
 ```
 
-<img width="700" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/Artix/artix.png">
+<img width="800" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/Artix/artix.png">
 
 <br>
 <br>
@@ -334,7 +334,7 @@ apt update && apt install wget -y && clear && wget -qO- https://raw.githubuserco
 apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Centos/install | sh && centos
 ```
 
-<img width="700" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/Centos/centos.png">
+<img width="800" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/Centos/centos.png">
 
 <br>
 <br>
@@ -349,7 +349,7 @@ apt update && apt install wget -y && clear && wget -qO- https://raw.githubuserco
 apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Chimera/install | sh && chimera
 ```
 
-<img width="700" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/Chimera/chimera.png">
+<img width="800" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/Chimera/chimera.png">
 
 <br>
 <br>
@@ -364,7 +364,7 @@ apt update && apt install wget -y && clear && wget -qO- https://raw.githubuserco
 apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Debian/install | sh && debian 
 ```
 
-<img width="700" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/Debian/debian.png">
+<img width="800" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/Debian/debian.png">
 
 <br>
 <br>
@@ -379,7 +379,7 @@ apt update && apt install wget -y && clear && wget -qO- https://raw.githubuserco
 apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Deepin/install | sh && deepin
 ```
 
-<img width="700" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/Deepin/deepin.png">
+<img width="800" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/Deepin/deepin.png">
 
 <br>
 <br>
@@ -394,7 +394,7 @@ apt update && apt install wget -y && clear && wget -qO- https://raw.githubuserco
 apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/Fedora/artix/install | sh && fedora 
 ```
 
-<img width="700" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/Fedora/fedora.png">
+<img width="800" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/Fedora/fedora.png">
 
 <br>
 <br>
@@ -409,7 +409,7 @@ apt update && apt install wget -y && clear && wget -qO- https://raw.githubuserco
 apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Manjaro/install | sh && manjaro
 ```
 
-<img width="700" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/Manjaro/manjaro.png">
+<img width="800" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/Manjaro/manjaro.png">
 
 <br>
 <br>
@@ -423,7 +423,7 @@ apt update && apt install wget -y && clear && wget -qO- https://raw.githubuserco
 apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Openkylin/install | sh && openkylin 
 ```
 
-<img width="700" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/Openkylin/openkylin.png">
+<img width="800" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/Openkylin/openkylin.png">
 
 <br>
 <br>
@@ -437,7 +437,7 @@ apt update && apt install wget -y && clear && wget -qO- https://raw.githubuserco
 apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Opensuse/install | sh && opensuse 
 ```
 
-<img width="700" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/Opensuse/opensuse.png">
+<img width="800" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/Opensuse/opensuse.png">
 
 <br>
 <br>
@@ -451,7 +451,7 @@ apt update && apt install wget -y && clear && wget -qO- https://raw.githubuserco
 apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Pardus/install | sh && pardus 
 ```
 
-<img width="700" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/Pardus/pardus.png">
+<img width="800" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/Pardus/pardus.png">
 
 <br>
 <br>
@@ -465,7 +465,7 @@ apt update && apt install wget -y && clear && wget -qO- https://raw.githubuserco
 apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Ubuntu/install | sh && ubuntu 
 ```
 
-<img width="700" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/Ubuntu/ubuntu.png">
+<img width="800" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/Ubuntu/ubuntu.png">
 
 <br>
 <br>
@@ -480,7 +480,7 @@ apt update && apt install wget -y && clear && wget -qO- https://raw.githubuserco
 apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Void/install | sh && void
 ```
 
-<img width="700" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/Void/void.png">
+<img width="800" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/Void/void.png">
 
 <br>
 <br>
@@ -494,5 +494,5 @@ apt update && apt install wget -y && clear && wget -qO- https://raw.githubuserco
 wget -O $PREFIX/etc/bash.bashrc https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Termux/bash.bashrc && source $PREFIX/etc/bash.bashrc
 ```
 
-<img width="700" height="500" src="https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Termux/Termux.png">
+<img width="800" height="500" src="https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Termux/Termux.png">
 
