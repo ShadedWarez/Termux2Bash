@@ -23,15 +23,4 @@ if [ -x /data/data/com.termux/files/usr/libexec/termux/command-not-found ]; then
                 /data/data/com.termux/files/usr/libexec/termux/command-not-found "$1"
         }
 fi
-
-echo -e '\e[1;96m'
-echo "
-       ████████╗███████╗██████╗ ███╗   ███╗██╗   ██╗██╗  ██╗
-       ╚══██╔══╝██╔════╝██╔══██╗████╗ ████║██║   ██║╚██╗██╔╝
-          ██║   █████╗  ██████╔╝██╔████╔██║██║   ██║ ╚███╔╝
-          ██║   ██╔══╝  ██╔══██╗██║╚██╔╝██║██║   ██║ ██╔██╗
-          ██║   ███████╗██║  ██║██║ ╚═╝ ██║╚██████╔╝██╔╝ ██╗
-          ╚═╝   ╚══════╝╚═╝  ╚═╝╚═╝     ╚═╝ ╚═════╝ ╚═╝  ╚═╝
-"
-
-echo -e '\e[0m'
+neofetch
