@@ -20,6 +20,11 @@ Download
 <br>
 <br>
 
+# General Installer
+```
+wget https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/install && chmod +x install && bash install
+```
+
 ------------
 # Kali Nethunter Full [proot]
 > - Support vnc service
