@@ -11,7 +11,7 @@ cd $PREFIX/var/lib/proot-distro/installed-rootfs
 RFS=kali-arm64
 FS=kali-minimal
 NM=Kali
-axel -a --search -o ${FS}.tar.xz https://kali.download/nethunter-images/current/rootfs/kali-nethunter-rootfs-minimal-arm64.tar.xz
+axel -a -o ${FS}.tar.xz https://kali.download/nethunter-images/current/rootfs/kali-nethunter-rootfs-minimal-arm64.tar.xz
 ###
 echo "[*] Extracting rootfs...!!!"
 ###
