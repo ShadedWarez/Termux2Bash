@@ -22,7 +22,7 @@ axel -a -o ${FS}.tar.xz https://kali.download/nethunter-images/current/rootfs/ka
 
 # Extract the rootfs
 echo "[*] Extracting rootfs...!!!"
-proot --link2symlink bsdtar -xpJf ${FS}.tar.xz -C $PREFIX/var/lib/proot-distro/installed-rootfs/${FS} 2>/dev/null
+proot --link2symlink bsdtar -xpJf ${FS}.tar.xz 2>/dev/null
 
 # Create a proot-distro configuration file for the Kali minimal rootfs
 cat >$PREFIX/etc/proot-distro/${FS}.sh << EOF
