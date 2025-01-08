@@ -423,7 +423,7 @@ apt update && apt install wget -y && clear && wget -qO- https://raw.githubuserco
 apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Openkylin/install | sh && openkylin 
 ```
 
-<img width="800" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/Openkylin/openkylin.png">
+<img width="800" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/OpenKylin/openkylin.png">
 
 <br>
 <br>
