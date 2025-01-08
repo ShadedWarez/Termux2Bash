@@ -1,5 +1,8 @@
 #!/data/data/com.termux/files/usr/bin/bash
 
+apt install proot bsdtar axel neofetch -y
+clear
+
 cd $HOME
 ###
 neofetch --ascii_distro Kali -L
