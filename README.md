@@ -133,7 +133,7 @@ apt update && apt install wget -y && clear && wget -qO- https://raw.githubuserco
 ```
 sed -i 's/user=kali/user=xiv3r/' .zshrc && source .zshrc
 ```
-<img width="700" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/KaliLinux/Proot/KALI.png">
+<img width="700" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/KaliLinux/Proot/NH.png">
 
 <br>
 <br>
@@ -156,7 +156,7 @@ apt update && apt install wget -y && clear && wget -qO- https://raw.githubuserco
 sed -i 's/user=kali/user=xiv3r/' .zshrc && source .zshrc
 ```
 
-<img width="700" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/KaliLinux/Proot/KALI.png">
+<img width="700" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/KaliLinux/Proot/NH.png">
 
 <br>
 <br>
