@@ -16,6 +16,7 @@ debian    deepin       fedora    debkali   kali        manjaro     openkylin
 opensuse  pardus       parrot    ubuntu    void
 "
 echo -e '\e[0m'
+
 # Prompt the user to input text for FS
 echo "Enter Distro Name:"
 read FS
