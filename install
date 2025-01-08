@@ -3,7 +3,15 @@
 # Install required packages
 apt install proot proot-distro bsdtar axel neofetch -y
 clear
+# List of distros
+cat << EOF
+Available Distros Command to install:
+alpine    archlinux    artix     backbox   blackarch   centos      chimera
 
+debian    deepin       fedora    debkali   kali        manjaro     openkylin
+
+opensuse  pardus       parrot    ubuntu    void
+EOF
 # Variables
 # Prompt the user to input text for FS
 echo "Enter a value for FS:"
