@@ -17,7 +17,6 @@ proot --link2symlink bsdtar -xpJf kali-minimal.tar.xz 2>/dev/null
 ###
 cat >>$PREFIX/etc/bash.bashrc << EOF
 clear
-neofetch --ascii_distro Kali -L
 kali
 EOF
 ###
