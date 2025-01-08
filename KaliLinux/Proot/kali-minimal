@@ -50,7 +50,7 @@ kali
 
 # Clean up the temporary directory
 sleep 5s
-rm -rf ${RFS}.tar.xz
+rm -rf ${RFS} ${FS}.tar.xz
 
 # Inform the user how to log in to Kali
 echo -e '\e[1;96m'
