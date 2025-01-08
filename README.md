@@ -93,7 +93,6 @@ sed -i 's/user=kali/user=xiv3r/' /home/kali/.zshrc
 
 -------------
 # Kali Nethunter Minimal [proot]
-> - pre-build vnc
 > - login:`kali`
 > - uninstall:`cd && rm -rf kali-arm64`
 
@@ -120,7 +119,7 @@ sed -i 's/user=kali/user=xiv3r/' /home/kali/.zshrc
 <br>
 
 ---------------
-# Kali Nethunter Full [proot-distro]
+# Kali Nethunter Full
 > - login:`kali-full`
 > - uninstall:`pd rm kali-full`
 
@@ -140,7 +139,7 @@ sed -i 's/user=kali/user=xiv3r/' .zshrc && source .zshrc
 <br>
 
 ----------------
-# Kali Nethunter Minimal [proot-distro]
+# Kali Nethunter Minimal
 > - login:`kali`
 > - uninstall:`pd rm kali-minimal`
 
