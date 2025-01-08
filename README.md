@@ -3,6 +3,10 @@
   <details><summary>
 
 # Termux Proot-Distro
+
+Proot Distro uses pre-built root filesystems (rootfs) of Linux distributions. These are essentially the core files of a Linux OS.
+
+PRoot is used to "fake" the root environment, allowing you to run the rootfs as if it were a full Linux system.
   </summary>
   
    `Proot Distro is a tool used in environments like Termux (a terminal emulator and Linux environment for Android) to manage and run Linux distributions (distros) in an isolated, containerized environment. It uses PRoot (a user-space implementation of chroot, mount --bind, and binfmt_misc) to run Linux distributions without requiring root access or complex setup.
@@ -28,7 +32,7 @@ Proot-Distro Scripts: Each distro has a configuration script (e.g., kali.sh, ubu
 </details>
 </div>
 
-<h1 align="center">
+<h3 align="center">
   
 Download
 
@@ -36,7 +40,7 @@ Download
 |
 | [VNC App](https://play.google.com/store/apps/details?id=com.realvnc.viewer.android)
 |
-</h1>
+</h3>
 
 <br>
 <br>
