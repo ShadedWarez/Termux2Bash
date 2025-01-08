@@ -30,8 +30,8 @@ mv ${RFS}/* $PREFIX/var/lib/proot-distro/installed-rootfs/${FS}
 # Create a proot-distro configuration file for the Kali minimal rootfs
 cat >$PREFIX/etc/proot-distro/${FS}.sh << EOF
 DISTRO_NAME="${NM} Nethunter Minimal"
-TARBALL_URL['${FS}']="https://kali.download/nethunter-images/current/rootfs/kali-nethunter-rootfs-minimal-arm64.tar.xz"
-TARBALL_SHA256['${FS}']="$(sha256sum ${FS}.tar.xz | awk '{print $1}')"
+TARBALL_URL['aarch64']="https://kali.download/nethunter-images/current/rootfs/kali-nethunter-rootfs-minimal-arm64.tar.xz"
+TARBALL_SHA256['aarch64']="$(sha256sum ${FS}.tar.xz | awk '{print $1}')"
 EOF
 
 # Create a shortcut command to start Kali
