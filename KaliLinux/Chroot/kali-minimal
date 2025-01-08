@@ -4,7 +4,7 @@ cd $HOME
 ###
 neofetch --ascii_distro Kali -L
 ###
-axel -a --search -o kali-minimal.tar.xz https://kali.download/nethunter-images/current/rootfs/kali-nethunter-rootfs-minimal-arm64.tar.xz
+axel -a -o kali-minimal.tar.xz https://kali.download/nethunter-images/current/rootfs/kali-nethunter-rootfs-minimal-arm64.tar.xz
 ###
 cat << EOF
 [*] Extracting rootfs...!!!
