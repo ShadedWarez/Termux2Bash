@@ -56,7 +56,7 @@ rm -rf ${RFS} ${FS}.tar.xz
 
 echo "Installed Successfully!"
 
-# Inform the user how to log in to Kali
+# Inform the user how to login
 echo -e '\e[1;96m'
-echo "To login ${NM} Linux, Type: kali"
+echo "To login ${NM} Linux, Type: ${FS}"
 echo -e '\e[0m'
