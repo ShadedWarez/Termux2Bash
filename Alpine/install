@@ -15,7 +15,7 @@ neofetch --ascii_distro "${NM}" -L
 mkdir -p "$PREFIX/var/lib/proot-distro/installed-rootfs"
 
 # Change directory
-cd "$PREFIX/var/lib/proot-distro/installed-rootfs/" || exit
+cd "$PREFIX/var/lib/proot-distro/installed-rootfs/"
 
 # Download the rootfs using axel
 axel -a "https://github.com/xiv3r/Termux-Pentesting-Distro/releases/download/rootfs/${FS}.tar.xz"
@@ -44,5 +44,9 @@ EOF
 termux-fix-shebang "$PREFIX/bin/${FS}"
 chmod 700 "$PREFIX/bin/${FS}"
 
+# Move tarball to cache
+mkdir -p "$PREFIX/var/lib/proot-distro/dlcache"
+mv "${FS}.tar.xz" "$PREFIX/var/lib/proot-distro/dlcache"
+
 # Display final instructions
-echo "To login to ${NM} Linux, type: ${FS}"
+echo "To login ${NM} Linux, Type: ${FS}"
