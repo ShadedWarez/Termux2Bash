@@ -112,173 +112,6 @@ sed -i 's/user=kali/user=xiv3r/' /home/kali/.zshrc
 
 <img width="800" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/KaliLinux/Chroot/kali-chroot.png">
 
-
-<br>
-<br>
-<br>
-<br>
-
----------------
-# Kali Nethunter Full
-> - login:`kali-full`
-> - uninstall:`pd rm kali-full`
-
-- Install
-```
-apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Proot/kali-full | sh && clear && kali-full
-```
-
-- Add custom terminal name
-> replace `xiv3r` to your name
-```
-sed -i 's/user=kali/user=xiv3r/' .zshrc && source .zshrc
-```
-<img width="800" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/KaliLinux/Proot/NH.png">
-
-<br>
-<br>
-<br>
-<br>
-
-----------------
-# Kali Nethunter Minimal
-> - login:`kali`
-> - uninstall:`pd rm kali-minimal`
-
-- Install
-```
-apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Proot/kali-minimal | sh && clear && kali
-```
-
-- Add custom terminal name
-> replace `xiv3r` to your name
-```
-sed -i 's/user=kali/user=xiv3r/' .zshrc && source .zshrc
-```
-
-<img width="800" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/KaliLinux/Proot/NH.png">
-
-<br>
-<br>
-<br>
-<br>
-
-----------
-# BackBox Linux
-> - login:`backbox`
-> - uninstall:`pd rm backbox`
-
-- Install
-```
-apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/BackBox/install | sh && clear && backbox
-```
-
-- Add custom terminal name
-> replace `xiv3r` to your name
-```
-sed -i 's/user=kali/user=xiv3r/' /etc/bash.bashrc && source /etc/bash.bashrc
-```
-
-<img width="800" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/BackBox/backbox.png">
-
-<br>
-<br>
-<br>
-<br>
-
------------
-# BlackArch
-> - Custom build rootfs tarball
-> - login:`blackarch`
-> - uninstall:`pd rm blackarch`
-
-- Install 
-```
-apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/BlackArch/install | sh && clear && blackarch
-```
-
-- Update and Upgrade
-```
-pacman -Syyu
-```
-- Add custom terminal name
-> replace `xiv3r` to your name
-```
-sed -i 's/user=kali/user=xiv3r/' /etc/bash.bashrc && source /etc/bash.bashrc
-```
-
-<details><summary> Blackarch Tools</summary>
-
-- To list all of the available tools, run
-```
-pacman -Sgg | grep blackarch | cut -d' ' -f2 | sort -u
-```
-
-- To install a category of tools, run
-```
-pacman -S blackarch-<category>
-```
-
-- To see the blackarch categories, run
-```
-pacman -Sg | grep blackarch
-````
-- To search for a specific package, run
-```
-pacman -Ss <package_name>
-```
-
-</details>
-
-
-<img width="800" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/BlackArch/bl4ckarch.png">
-
-<br>
-<br>
-<br>
-<br>
-
-------------
-# Debian2Kali
-> - login:`debkali`
-> - uninstall:`pd rm debkali`
-
-- Install
-```
-apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliDeb/install | sh && clear && debkali
-```
-
-- Add custom terminal name
-> replace `xiv3r` to your name
-```
-sed -i 's/user=kali/user=xiv3r/' /etc/bash.bashrc && source /etc/bash.bashrc
-```
-
-<img width="800" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/KaliDeb/debkali.png">
-
-<br>
-<br>
-<br>
-<br>
-
------------
-# ParrotSec
-> - login:`parrot`
-> - uninstall:`pd rm parrot`
-
-- Install
-```
-apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/ParrotSec/install | sh && clear && parrot
-```
-
-- Add custom terminal name
-> replace `xiv3r` to your name
-```
-sed -i 's/user=kali/user=xiv3r/' .zshrc && source .zshrc
-```
-
-<img width="800" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/ParrotSec/Parrot.png">
-
 <br>
 <br>
 <br>
@@ -356,6 +189,82 @@ apt update && apt install wget -y && clear && wget -qO- https://raw.githubuserco
 <br>
 <br>
 
+
+----------
+# BackBox Linux
+> - login:`backbox`
+> - uninstall:`pd rm backbox`
+
+- Install
+```
+apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/BackBox/install | sh && clear && backbox
+```
+
+- Add custom terminal name
+> replace `xiv3r` to your name
+```
+sed -i 's/user=kali/user=xiv3r/' /etc/bash.bashrc && source /etc/bash.bashrc
+```
+
+<img width="800" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/BackBox/backbox.png">
+
+<br>
+<br>
+<br>
+<br>
+
+-----------
+# BlackArch
+> - Custom build rootfs tarball
+> - login:`blackarch`
+> - uninstall:`pd rm blackarch`
+
+- Install 
+```
+apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/BlackArch/install | sh && clear && blackarch
+```
+
+- Update and Upgrade
+```
+pacman -Syyu
+```
+- Add custom terminal name
+> replace `xiv3r` to your name
+```
+sed -i 's/user=kali/user=xiv3r/' /etc/bash.bashrc && source /etc/bash.bashrc
+```
+
+<details><summary> Blackarch Tools</summary>
+
+- To list all of the available tools, run
+```
+pacman -Sgg | grep blackarch | cut -d' ' -f2 | sort -u
+```
+
+- To install a category of tools, run
+```
+pacman -S blackarch-<category>
+```
+
+- To see the blackarch categories, run
+```
+pacman -Sg | grep blackarch
+````
+- To search for a specific package, run
+```
+pacman -Ss <package_name>
+```
+
+</details>
+
+
+<img width="800" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/BlackArch/bl4ckarch.png">
+
+<br>
+<br>
+<br>
+<br>
+
 -------------
 # Centos
 - Install
@@ -401,6 +310,29 @@ apt update && apt install wget -y && clear && wget -qO- https://raw.githubuserco
 <br>
 
 
+------------
+# Debian2Kali
+> - login:`debkali`
+> - uninstall:`pd rm debkali`
+
+- Install
+```
+apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliDeb/install | sh && clear && debkali
+```
+
+- Add custom terminal name
+> replace `xiv3r` to your name
+```
+sed -i 's/user=kali/user=xiv3r/' /etc/bash.bashrc && source /etc/bash.bashrc
+```
+
+<img width="800" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/KaliDeb/debkali.png">
+
+<br>
+<br>
+<br>
+<br>
+
 -------------
 # Deepin 
 - Install
@@ -424,6 +356,52 @@ apt update && apt install wget -y && clear && wget -qO- https://raw.githubuserco
 ```
 
 <img width="800" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/Fedora/fedora.png">
+
+<br>
+<br>
+<br>
+<br>
+
+
+---------------
+# Kali Nethunter Full
+> - login:`kali-full`
+> - uninstall:`pd rm kali-full`
+
+- Install
+```
+apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Proot/kali-full | sh && clear && kali-full
+```
+
+- Add custom terminal name
+> replace `xiv3r` to your name
+```
+sed -i 's/user=kali/user=xiv3r/' .zshrc && source .zshrc
+```
+<img width="800" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/KaliLinux/Proot/NH.png">
+
+<br>
+<br>
+<br>
+<br>
+
+----------------
+# Kali Nethunter Minimal
+> - login:`kali`
+> - uninstall:`pd rm kali-minimal`
+
+- Install
+```
+apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Proot/kali-minimal | sh && clear && kali
+```
+
+- Add custom terminal name
+> replace `xiv3r` to your name
+```
+sed -i 's/user=kali/user=xiv3r/' .zshrc && source .zshrc
+```
+
+<img width="800" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/KaliLinux/Proot/NH.png">
 
 <br>
 <br>
@@ -496,6 +474,29 @@ apt update && apt install wget -y && clear && wget -qO- https://raw.githubuserco
 ```
 
 <img width="800" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/Pardus/pardus.png">
+
+<br>
+<br>
+<br>
+<br>
+
+-----------
+# ParrotSec
+> - login:`parrot`
+> - uninstall:`pd rm parrot`
+
+- Install
+```
+apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/ParrotSec/install | sh && clear && parrot
+```
+
+- Add custom terminal name
+> replace `xiv3r` to your name
+```
+sed -i 's/user=kali/user=xiv3r/' .zshrc && source .zshrc
+```
+
+<img width="800" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/ParrotSec/Parrot.png">
 
 <br>
 <br>
