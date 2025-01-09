@@ -86,3 +86,7 @@ To Login Kali Nethunter
 user: ${NM}
 root: ${NM} -r
 EOF
+
+# Delete tarball
+sleep 5s
+rm -f "${TAR}"
