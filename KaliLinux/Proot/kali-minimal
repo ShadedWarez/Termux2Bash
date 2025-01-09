@@ -1,7 +1,8 @@
-#!/data/data/com.termux/files/usr/bin/bash -e
+#!/data/data/com.termux/files/usr/bin/bash
 
 # Install necessary packages
 apt install axel bsdtar proot-distro proot neofetch -y
+clear
 
 # Define variables for the rootfs
 RFS=kali-arm64
@@ -38,7 +39,7 @@ EOF
 
 # Create a shortcut command to start Kali
 cat >$PREFIX/bin/kali << EOF
-#!/bin/bash
+#!/data/data/com.termux/files/usr/bin/bash
 proot-distro login ${FS}
 EOF
 termux-fix-shebang $PREFIX/bin/kali
@@ -50,13 +51,15 @@ clear
 kali
 EOF
 
-# Clean up the temporary directory
+# Move tarball to cache
 sleep 5s
-rm -rf ${RFS} ${FS}.tar.xz
-
-echo "Installed Successfully!"
+mkdir -p "$PREFIX/var/lib/proot-distro/dlcache"
+mv "${FS}.tar.xz" "$PREFIX/var/lib/proot-distro/dlcache"
 
 # Inform the user how to login
 echo -e '\e[1;96m'
-echo "To login ${NM} Linux, Type: ${FS}"
+cat << EOF 
+Installed Successfully!
+To login ${NM} Linux, Type: ${FS}"
+EOF
 echo -e '\e[0m'
