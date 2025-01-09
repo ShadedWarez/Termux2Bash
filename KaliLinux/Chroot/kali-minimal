@@ -34,10 +34,9 @@ wget -O "${DIR}/bin/vnc" "https://raw.githubusercontent.com/xiv3r/Termux-Pentest
 termux-fix-shebang "${DIR}/bin/vnc"
 chmod 700 "${DIR}/bin/vnc"
 
-wget -O "$PREFIX/bin/nethunter" "https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Chroot/nethunter"
-termux-fix-shebang "$PREFIX/bin/nethunter"
-chmod 700 "$PREFIX/bin/nethunter"
-ln -s "$PREFIX/bin/nethunter" "$PREFIX/bin/${NM}"
+wget -O "$PREFIX/bin/kali" "https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Chroot/nethunter"
+termux-fix-shebang "$PREFIX/bin/kali"
+chmod 700 "$PREFIX/bin/kali"
 
 # Download configuration files
 wget -O "${DIR}/home/kali/.bashrc" "https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/rcfiles/home.bashrc"
