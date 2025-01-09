@@ -56,9 +56,7 @@ EOF
 
 # Update bash.bashrc to show login instructions
 cat >> "$PREFIX/etc/bash.bashrc" << EOF
-echo -e '\e[1;96m'
-echo "To login ${NM} Linux Type: ${FS}"
-echo -e '\e[0m'
+echo -e "\e[1;93mTo login "${NM}" Linux, Type: \e[1;96m"${FS}"\e[00m"
 EOF
 
 # Create a shortcut command to launch the distro
