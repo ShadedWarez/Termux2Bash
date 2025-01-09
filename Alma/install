@@ -15,7 +15,7 @@ neofetch --ascii_distro "${NM}" -L
 mkdir -p "$PREFIX/var/lib/proot-distro/installed-rootfs"
 
 # Change directory
-cd "$PREFIX/var/lib/proot-distro/installed-rootfs/" || exit
+cd "$PREFIX/var/lib/proot-distro/installed-rootfs/"
 
 # Download the rootfs using axel
 axel -a "https://github.com/xiv3r/Termux-Pentesting-Distro/releases/download/rootfs/${FS}.tar.xz"
