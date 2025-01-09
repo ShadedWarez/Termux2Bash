@@ -1,0 +1,48 @@
+#!/data/data/com.termux/files/usr/bin/bash -e
+
+# Install required packages
+apt install proot proot-distro bsdtar axel neofetch -y
+clear
+
+# Variables
+FS="rocky"
+NM="Rocky"
+
+# Display neofetch with custom ASCII art
+neofetch --ascii_distro "${NM}" -L
+
+# Create necessary directories
+mkdir -p "$PREFIX/var/lib/proot-distro/installed-rootfs"
+
+# Change directory
+cd "$PREFIX/var/lib/proot-distro/installed-rootfs/" || exit
+
+# Download the rootfs using axel
+axel -a "https://github.com/xiv3r/Termux-Pentesting-Distro/releases/download/rootfs/${FS}.tar.xz"
+
+# Extract the rootfs
+echo "[*] Extracting ${NM} Rootfs...!!!"
+proot --link2symlink bsdtar -xpJf "${FS}.tar.xz" 2>/dev/null
+
+# Create the distro configuration file
+cat > "$PREFIX/etc/proot-distro/${FS}.sh" << EOF
+DISTRO_NAME="${NM} Linux"
+EOF
+
+# Update bash.bashrc to show login instructions
+cat >> "$PREFIX/etc/bash.bashrc" << EOF
+echo "To login to ${NM} Linux, type: ${FS}"
+EOF
+
+# Create a shortcut command to launch the distro
+cat > "$PREFIX/bin/${FS}" << EOF
+#!/data/data/com.termux/files/usr/bin/bash
+proot-distro login ${FS}
+EOF
+
+# Fix shebang and set executable permissions
+termux-fix-shebang "$PREFIX/bin/${FS}"
+chmod 700 "$PREFIX/bin/${FS}"
+
+# Display final instructions
+echo "To login to ${NM} Linux, type: ${FS}"
