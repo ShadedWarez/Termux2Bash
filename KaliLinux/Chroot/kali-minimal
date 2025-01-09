@@ -34,7 +34,7 @@ wget -O "${DIR}/bin/vnc" "https://raw.githubusercontent.com/xiv3r/Termux-Pentest
 termux-fix-shebang "${DIR}/bin/vnc"
 chmod 700 "${DIR}/bin/vnc"
 
-wget -O "$PREFIX/bin/kali" "https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Chroot/nethunter"
+wget -O "$PREFIX/bin/kali" "https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Chroot/kali"
 termux-fix-shebang "$PREFIX/bin/kali"
 chmod 700 "$PREFIX/bin/kali"
 
