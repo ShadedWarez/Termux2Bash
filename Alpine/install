@@ -8,6 +8,11 @@ clear
 FS="alpine"
 NM="Alpine"
 
+# Prompt
+cat << EOF
+Installing "${NM}" Linux...!!!
+EOF
+
 # Display neofetch with custom ASCII art
 neofetch --ascii_distro "${NM}" -L
 
