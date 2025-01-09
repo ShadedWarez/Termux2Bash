@@ -5,8 +5,8 @@ apt install proot proot-distro bsdtar axel neofetch -y
 clear
 
 # Variables
-FS="centos"
-NM="CentOS"
+FS="oracle"
+NM="Oracle"
 
 # Display neofetch with custom ASCII art
 neofetch --ascii_distro "${NM}" -L
