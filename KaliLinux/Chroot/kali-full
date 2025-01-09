@@ -25,6 +25,7 @@ proot --link2symlink bsdtar -xpJf "${TAR}" 2>/dev/null
 # Update bash.bashrc
 cat >> "$PREFIX/etc/bash.bashrc" << EOF
 clear
+(${NM} vnc) &
 ${NM}
 EOF
 
@@ -82,9 +83,9 @@ sudo apt install neofetch -y
 # Display success message
 cat << EOF
 [*] Successful Installation!
-To Login Kali Nethunter
-user: ${NM}
-root: ${NM} -r
+To configure VNC password
+Type: kali vnc passwd
+Type: kali vnc &
 EOF
 
 # Delete tarball
