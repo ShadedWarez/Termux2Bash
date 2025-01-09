@@ -17,6 +17,7 @@ neofetch --ascii_distro Kali -L
 # Download Kali rootfs
 echo "[*] Downloading Kali Nethunter Rootfs..."
 axel -a -o "${TAR}" "https://kali.download/nethunter-images/current/rootfs/kali-nethunter-rootfs-minimal-arm64.tar.xz"
+
 # Extract rootfs
 echo "[*] Extracting ${TAR} Rootfs..."
 proot --link2symlink bsdtar -xpJf "${TAR}" 2>/dev/null
