@@ -121,7 +121,7 @@ sed -i 's/user=kali/user=xiv3r/' /home/kali/.zshrc
 # Alma
 - Install
 ```
-apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Alma/install | sh && alpine
+apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Alma/install | sh && alma
 ```
 
 <img width="800" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/Alma/alma.png">
@@ -149,7 +149,7 @@ apt update && apt install wget -y && clear && wget -qO- https://raw.githubuserco
 # Amazon
 - Install
 ```
-apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Amazon/install | sh && alpine
+apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Amazon/install | sh && amazon
 ```
 
 <img width="800" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/Amazon/amazon.png">
@@ -455,7 +455,7 @@ apt update && apt install wget -y && clear && wget -qO- https://raw.githubuserco
 # Oracle 
 - Install
 ```
-apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Oracle/install | sh && alpine
+apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Oracle/install | sh && oracle 
 ```
 
 <img width="800" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/Oracle/oracle.png">
@@ -507,7 +507,7 @@ sed -i 's/user=kali/user=xiv3r/' .zshrc && source .zshrc
 # Photon 
 - Install
 ```
-apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Photon/install | sh && alpine
+apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Photon/install | sh && photon 
 ```
 
 <img width="800" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/Photon/photon.png">
@@ -522,7 +522,7 @@ apt update && apt install wget -y && clear && wget -qO- https://raw.githubuserco
 # Rocky 
 - Install
 ```
-apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Rocky/install | sh && alpine
+apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Rocky/install | sh && rocky 
 ```
 
 <img width="800" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/Rocky/rocky.png">
@@ -565,8 +565,4 @@ apt update && apt install wget -y && clear && wget -qO- https://raw.githubuserco
 <img width="800" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/Void/void.png">
 
 <br>
-<br>
-<br>
-<br>
-
 
