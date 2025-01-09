@@ -4,17 +4,17 @@
 apt install axel bsdtar proot-distro proot neofetch -y
 
 # Define variables for the rootfs
-FS=kali
-NM=Kali
+FS="kali"
+NM="Kali"
 
 # Create the directory for the Kali minimal rootfs
-mkdir -p $PREFIX/var/lib/proot-distro/installed-rootfs/${FS}
+mkdir -p "$PREFIX/var/lib/proot-distro/installed-rootfs/${FS}"
 
 # Change to the rootfs directory
-cd $PREFIX/var/lib/proot-distro/installed-rootfs
+cd "$PREFIX/var/lib/proot-distro/installed-rootfs"
 
 # Display Kali Linux ASCII art
-neofetch --ascii_distro ${NM} -L
+neofetch --ascii_distro "${NM}" -L
 
 # Download the Kali minimal rootfs using axel
 axel -a -o "${FS}.tar.xz" "https://kali.download/nethunter-images/current/rootfs/kali-nethunter-rootfs-full-arm64.tar.xz"
@@ -25,28 +25,28 @@ proot --link2symlink bsdtar -xpJf "${FS}.tar.xz" 2>/dev/null
 
 # Move the extracted files to the correct directory
 echo "Migrating..."
-mv kali-arm64/* $PREFIX/var/lib/proot-distro/installed-rootfs/${FS}
+mv "kali-arm64/*" "$PREFIX/var/lib/proot-distro/installed-rootfs/${FS}"
 
 # Create a proot-distro configuration file for the Kali full rootfs
 echo "Creating proot configuration file..."
-cat >$PREFIX/etc/proot-distro/${FS}.sh << EOF
+cat > "$PREFIX/etc/proot-distro/${FS}.sh" << EOF
 DISTRO_NAME="${NM} Nethunter Full"
 TARBALL_URL['aarch64']="https://kali.download/nethunter-images/current/rootfs/kali-nethunter-rootfs-full-arm64.tar.xz"
 TARBALL_SHA256['aarch64']="$(sha256sum "${FS}.tar.xz" | awk '{print $1}')"
 EOF
 
 # Create a shortcut command to start Kali
-cat > $PREFIX/bin/${FS} << EOF
+cat > "$PREFIX/bin/${FS}" << EOF
 #!/data/data/com.termux/files/usr/bin/bash
-proot-distro login ${FS}
+proot-distro login "${FS}"
 EOF
-termux-fix-shebang $PREFIX/bin/${FS}
-chmod 700 $PREFIX/bin/${FS}
+termux-fix-shebang "$PREFIX/bin/${FS}"
+chmod 700 "$PREFIX/bin/${FS}"
 
 # Add the Kali command to the bashrc for easy access
-cat >>$PREFIX/etc/bash.bashrc << EOF
+cat >> "$PREFIX/etc/bash.bashrc" << EOF
 clear
-${FS}
+"${FS}"
 EOF
 
 # Move tarball to cache
