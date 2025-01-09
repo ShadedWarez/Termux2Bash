@@ -326,7 +326,7 @@ apt update && apt install wget -y && clear && wget -qO- https://raw.githubuserco
 sed -i 's/user=kali/user=xiv3r/' /etc/bash.bashrc && source /etc/bash.bashrc
 ```
 
-<img width="800" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/KaliDeb/debkali.png">
+<img width="800" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/KaliDeb/NH.png">
 
 <br>
 <br>
