@@ -285,6 +285,20 @@ sed -i 's/user=kali/user=xiv3r/' .zshrc && source .zshrc
 <br>
 
 -------------
+# Alma
+- Install
+```
+apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Alma/install | sh && alpine
+```
+
+<img width="800" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/Alma/alma.png">
+
+<br>
+<br>
+<br>
+<br>
+
+-------------
 # Alpine
 - Install
 ```
@@ -297,6 +311,21 @@ apt update && apt install wget -y && clear && wget -qO- https://raw.githubuserco
 <br>
 <br>
 <br>
+
+-------------
+# Amazon
+- Install
+```
+apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Amazon/install | sh && alpine
+```
+
+<img width="800" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/Amazon/amazon.png">
+
+<br>
+<br>
+<br>
+<br>
+
 
 -------------
 # Archlinux
@@ -445,6 +474,21 @@ apt update && apt install wget -y && clear && wget -qO- https://raw.githubuserco
 <br>
 
 -------------
+# Oracle 
+- Install
+```
+apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Oracle/install | sh && alpine
+```
+
+<img width="800" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/Oracle/oracle.png">
+
+<br>
+<br>
+<br>
+<br>
+
+
+-------------
 # Pardus 
 - Install
 ```
@@ -457,6 +501,44 @@ apt update && apt install wget -y && clear && wget -qO- https://raw.githubuserco
 <br>
 <br>
 <br>
+
+-------------
+# Photon 
+- Install
+```
+apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Photon/install | sh && alpine
+```
+
+<img width="800" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/Photon/photon.png">
+
+<br>
+<br>
+<br>
+<br>
+
+
+-------------
+# Rocky 
+- Install
+```
+apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Rocky/install | sh && alpine
+```
+
+<img width="800" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/Rocky/rocky.png">
+
+<br>
+<br>
+<br>
+<br>
+
+-------------
+# Termux
+- Install
+```
+apt update && apt install wget neofetch -y && wget -O $PREFIX/etc/bash.bashrc https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Termux/bash.bashrc && source $PREFIX/etc/bash.bashrc
+```
+
+<img width="800" height="500" src="https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Termux/term.png">
 
 -------------
 # Ubuntu 
@@ -472,7 +554,6 @@ apt update && apt install wget -y && clear && wget -qO- https://raw.githubuserco
 <br>
 <br>
 
-
 -------------
 # Void 
 - Install
@@ -487,12 +568,4 @@ apt update && apt install wget -y && clear && wget -qO- https://raw.githubuserco
 <br>
 <br>
 
--------------
-# Termux
-- Install
-```
-apt update && apt install wget neofetch -y && wget -O $PREFIX/etc/bash.bashrc https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Termux/bash.bashrc && source $PREFIX/etc/bash.bashrc
-```
-
-<img width="800" height="500" src="https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Termux/term.png">
 
