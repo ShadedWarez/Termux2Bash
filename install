@@ -15,7 +15,7 @@ debian    deepin       fedora    debkali   kali        manjaro     openkylin
 
 opensuse  pardus       parrot    ubuntu    void        oracle      rocky 
 
-alma
+alma      photon
 "
 echo -e '\e[0m'
 
