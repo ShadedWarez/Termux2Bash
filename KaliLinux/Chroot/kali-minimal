@@ -4,60 +4,67 @@ apt install proot bsdtar axel neofetch -y
 clear
 
 cd $HOME
+
+TAR="kali_minimal.tar.xz"
+DIR="kali-arm64"
+NM="kali"
 ###
 neofetch --ascii_distro Kali -L
 ###
-axel -a -o kali-minimal.tar.xz https://kali.download/nethunter-images/current/rootfs/kali-nethunter-rootfs-minimal-arm64.tar.xz
+axel -a -o ${TAR} https://kali.download/nethunter-images/current/rootfs/kali-nethunter-rootfs-minimal-arm64.tar.xz
 ###
 cat << EOF
-[*] Extracting rootfs...!!!
+[*] Extracting ${TAR} rootfs...!!!
 EOF
 ###
-proot --link2symlink bsdtar -xpJf kali-minimal.tar.xz 2>/dev/null
+proot --link2symlink bsdtar -xpJf ${TAR} 2>/dev/null
 ###
 cat >>$PREFIX/etc/bash.bashrc << EOF
 clear
-kali
+${NM}
 EOF
 ###
-wget -O kali-arm64/bin/vnc https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Chroot/vnc
-chmod 700 kali-arm64/bin/vnc
-###
+wget -O ${DIR}/bin/vnc https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Chroot/vnc
+chmod 700 ${DIR}/bin/vnc
 wget -O $PREFIX/bin/nethunter https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Chroot/nethunter
 termux-fix-shebang $PREFIX/bin/nethunter
 chmod 700 $PREFIX/bin/nethunter
-ln -s $PREFIX/bin/nethunter $PREFIX/bin/kali
+ln -s $PREFIX/bin/nethunter $PREFIX/bin/${NM}
 ###
-sed -i '/if/,/fi/d' kali-arm64/root/.bash_profile
+wget -O ${DIR}/root/.bashrc https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/rcfiles/rootbash.bashrc
+wget -O ${DIR}/root/.zshrc https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/rcfiles/root.zshrc
+wget -O ${DIR}/home/kali/.bashrc https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/rcfiles/homebash.bashrc
+wget -O ${DIR}/home/kali/.zshrc https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/rcfiles/home.zshrc
+wget -O ${DIR}/etc/bash.bashrc https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/rcfiles/etcbash.bashrc
 ###
-wget -O kali-arm64/root/.bashrc https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/rcfiles/rootbash.bashrc
+sed -i '/if/,/fi/d' ${DIR}/root/.bash_profile
+chmod +s ${DIR}/usr/bin/sudo
+chmod +s ${DIR}/usr/bin/su
 ###
-wget -O kali-arm64/root/.zshrc https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/rcfiles/root.zshrc
+cat > ${DIR}/etc/sudoers.d/${NM} << EOF
+${NM}    ALL=(ALL) NOPASSWD: ALL
+EOF
+cat >> ${DIR}/etc/bash.bashrc << EOF
+neofetch
+cat /etc/os-release
+EOF
 ###
-wget -O kali-arm64/home/kali/.bashrc https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/rcfiles/homebash.bashrc
-###
-wget -O kali-arm64/home/kali/.zshrc https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/rcfiles/home.zshrc
-###
-wget -O kali-arm64/etc/bash.bashrc https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/rcfiles/etcbash.bashrc
-###
-chmod +s kali-arm64/usr/bin/sudo
-###
-chmod +s kali-arm64/usr/bin/su
-###
-echo "kali    ALL=(ALL:ALL) ALL" > kali-arm64/etc/sudoers.d/kali
-###
-echo "Set disable_coredump false" > kali-arm64/etc/sudo.conf
-###
-cat << EOF
-[*] Successful Installation!
-   To Login 👇
-user: kali
-root: kali -r
+cat > ${DIR}/etc/sudo.conf << EOF
+Set disable_coredump false
 EOF
 ###
 USRID=$(id -u)
 GRPID=$(id -g)
-kali -r usermod -u "$USRID" kali 2>/dev/null
-kali -r groupmod -g "$GRPID" kali 2>/dev/null
-
-
+${NM} -r usermod -u "$USRID" ${NM} 2>/dev/null
+${NM} -r groupmod -g "$GRPID" ${NM} 2>/dev/null
+###
+bash ${NM}
+sudo apt update
+sudo apt install neofetch -y
+###
+cat << EOF
+[*] Successful Installation!
+To Login Kali Nethunter
+user: ${NM}
+root: ${NM} -r
+EOF
