@@ -110,7 +110,7 @@ sed -i 's/user=kali/user=xiv3r/' /home/kali/.bashrc
 sed -i 's/user=kali/user=xiv3r/' /home/kali/.zshrc
 ```
 
-<img width="800" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/KaliLinux/Chroot/kali-chroot.png">
+<img width="800" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/KaliLinux/Chroot/kali-linux.png">
 
 <br>
 <br>
