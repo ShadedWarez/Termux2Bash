@@ -191,7 +191,7 @@ apt update && apt install wget -y && clear && wget -qO- https://raw.githubuserco
 
 
 ----------
-# BackBox Linux
+# BackBox
 > - login:`backbox`
 > - uninstall:`pd rm backbox`
 
