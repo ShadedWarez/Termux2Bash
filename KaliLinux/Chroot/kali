@@ -1,4 +1,4 @@
-#!/data/data/com.termux/files/usr/bin/bash -e
+#!/data/data/com.termux/files/usr/bin/bash
 
 cd $HOME
 ## termux-exec sets LD_PRELOAD so let's unset it before continuing
