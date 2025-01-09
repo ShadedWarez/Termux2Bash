@@ -13,7 +13,9 @@ alpine    archlinux    artix     backbox   blackarch   centos      chimera
 
 debian    deepin       fedora    debkali   kali        manjaro     openkylin
 
-opensuse  pardus       parrot    ubuntu    void
+opensuse  pardus       parrot    ubuntu    void        oracle      rocky 
+
+alma
 "
 echo -e '\e[0m'
 
