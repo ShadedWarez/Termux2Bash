@@ -50,7 +50,8 @@ Download
 ```
 apt update && apt upgrade -y && apt install wget -y && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Install/install | bash && PROOT-DISTRO
 ```
-# Install 
+# Install Distro
+> Install a specific distro
 ```sh
 PROOT-DISTRO
 ```
