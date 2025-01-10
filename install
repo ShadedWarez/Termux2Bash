@@ -69,6 +69,12 @@ EOF
 termux-fix-shebang "$PREFIX/bin/${FS}"
 chmod 700 "$PREFIX/bin/${FS}"
 
+# Add uninstall option configuration
+cat > "$PREFIX/bin/uninstall-$FS" << EOF
+proot-distro rm "${FS}"
+sed -i 's/${FS}//' $PREFIX/etc/bash.bashrc
+EOF
+
 # Move tarball to cache
 mkdir -p "$PREFIX/var/lib/proot-distro/dlcache"
 mv "${FS}.tar.xz" "$PREFIX/var/lib/proot-distro/dlcache"
