@@ -90,10 +90,10 @@ Example: `pd install ubuntu`
 ------------
 
 # Kali Nethunter Full [proot]
-> - Support vnc service
-> - login:`kali`
-> - vnc:`(kali vnc) &`
-> - uninstall:`cd && rm -rf kali-arm64`
+- Support vnc service
+- login:`kali`
+- vnc:`(kali vnc) &`
+- uninstall:`kali-uninstall`
 
 - Install
 ```
@@ -118,8 +118,8 @@ kali vnc &
 
 -------------
 # Kali Nethunter Minimal [proot]
-> - login:`kali`
-> - uninstall:`cd && rm -rf kali-arm64`
+- login:`kali`
+- uninstall:`kali-uninstall`
 
 - Install
 ```
