@@ -52,12 +52,40 @@ apt update && apt upgrade -y && apt install wget -y && wget https://raw.githubus
 ```
 > Install Multiple Distro
 ```sh
-bash install
+PROOT-DISTRO
 ```
-# General options
+### Login
+> Example: `kali`
 ```
-proot-distro --help
+kali
 ```
+### Logout
+> Back to Termux
+```
+exit
+```
+### Uninstall
+> Example: `uninstall-kali`
+```
+uninstall-kali
+```
+
+# Proot Options
+- List of the available proot-distro commands:
+
+  `pd help`         - Show this help information.
+  `pd backup`       - Backup a specified distribution.
+  `pd list`         - List supported distributions and their installation status.
+  `pd login`        - Start login shell for the specified distribution.
+  `pd remove`       - Delete a specified distribution.
+  `pd rename`       - Rename installed distribution.
+  `pd reset`        - Reinstall from scratch a specified distribution.
+  `restore`         - Restore a specified distribution
+  `clear-cache`     - Clear cache of downloaded files.
+
+Example: `pd install ubuntu`
+
+  
 ------------
 
 # Kali Nethunter Full [proot]
