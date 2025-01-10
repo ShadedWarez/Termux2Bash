@@ -50,6 +50,10 @@ Download
 ```
 apt update && apt upgrade -y && apt install wget -y && wget https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/install && chmod +x install && bash install
 ```
+> Install Multiple Distro
+```sh
+bash install
+```
 # General options
 ```
 proot-distro --help
