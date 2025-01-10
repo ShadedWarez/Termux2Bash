@@ -20,7 +20,7 @@ axel -a -o "${TAR}" "https://kali.download/nethunter-images/current/rootfs/kali-
 
 # Create a proot-distro configuration file
 cat > "$HOME" << EOF
-$(sha256sum "${TAR}" | awk '{print $1}')
+${TAR}_SHA256=$(sha256sum "${TAR}" | awk '{print $1}')
 EOF
 
 # Extract rootfs
