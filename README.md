@@ -226,30 +226,6 @@ apt update && apt install wget -y && clear && wget -qO- https://raw.githubuserco
 apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/BlackArch/install | bash && clear && blackarch
 ```
 
-<details><summary> Blackarch Tools</summary>
-
-- To list all of the available tools, run
-```
-pacman -Sgg | grep blackarch | cut -d' ' -f2 | sort -u
-```
-
-- To install a category of tools, run
-```
-pacman -S blackarch-<category>
-```
-
-- To see the blackarch categories, run
-```
-pacman -Sg | grep blackarch
-````
-- To search for a specific package, run
-```
-pacman -Ss <package_name>
-```
-
-</details>
-
-
 <img width="800" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/BlackArch/Blackarch.png">
 
 <br>
@@ -303,18 +279,9 @@ apt update && apt install wget -y && clear && wget -qO- https://raw.githubuserco
 
 ------------
 # Debian2Kali
-> - login:`debkali`
-> - uninstall:`pd rm debkali`
-
 - Install
 ```
 apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliDeb/install | bash && clear && debkali
-```
-
-- Add custom terminal name
-> replace `xiv3r` to your name
-```
-sed -i 's/user=kali/user=xiv3r/' /etc/bash.bashrc && source /etc/bash.bashrc
 ```
 
 <img width="800" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/KaliDeb/NH.png">
@@ -355,19 +322,11 @@ apt update && apt install wget -y && clear && wget -qO- https://raw.githubuserco
 
 ---------------
 # Kali Nethunter Full
-> - login:`kali-full`
-> - uninstall:`pd rm kali-full`
-
 - Install
 ```
 apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Proot/kali-full | bash && clear && kali-full
 ```
 
-- Add custom terminal name
-> replace `xiv3r` to your name
-```
-sed -i 's/user=kali/user=xiv3r/' .zshrc && source .zshrc
-```
 <img width="800" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/KaliLinux/Proot/NH.png">
 
 <br>
@@ -377,18 +336,9 @@ sed -i 's/user=kali/user=xiv3r/' .zshrc && source .zshrc
 
 ----------------
 # Kali Nethunter Minimal
-> - login:`kali`
-> - uninstall:`pd rm kali-minimal`
-
 - Install
 ```
 apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Proot/kali-minimal | bash && clear && kali
-```
-
-- Add custom terminal name
-> replace `xiv3r` to your name
-```
-sed -i 's/user=kali/user=xiv3r/' .zshrc && source .zshrc
 ```
 
 <img width="800" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/KaliLinux/Proot/NH.png">
@@ -397,7 +347,6 @@ sed -i 's/user=kali/user=xiv3r/' .zshrc && source .zshrc
 <br>
 <br>
 <br>
-
 
 -------------
 # Manjaro 
