@@ -18,8 +18,13 @@ neofetch --ascii_distro Kali -L
 echo "[*] Downloading Kali Nethunter Rootfs..."
 axel -a -o "${TAR}" "https://kali.download/nethunter-images/current/rootfs/kali-nethunter-rootfs-full-arm64.tar.xz"
 
+# Create a proot-distro configuration file
+cat > "$HOME" << EOF
+$(sha256sum "${TAR}" | awk '{print $1}')
+EOF
+
 # Extract rootfs
-echo "[*] Extracting ${TAR} Rootfs..."
+echo "[*] Extracting ${TAR} rootfs..."
 proot --link2symlink bsdtar -xpJf "${TAR}" 2>/dev/null
 
 # Update bash.bashrc
@@ -38,6 +43,13 @@ chmod 700 "${DIR}/bin/vnc"
 wget -O "$PREFIX/bin/kali" "https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Chroot/kali"
 termux-fix-shebang "$PREFIX/bin/kali"
 chmod 700 "$PREFIX/bin/kali"
+
+# Add uninstallation config file 
+cat > "$PREFIX/bin/${NM}-uninstall" << EOF
+rm -rf $HOME/${DIR}
+rm -rf $PREFIX/bin/${NM}
+rm -rf ${DIR}/bin/vnc
+EOF
 
 # Download configuration files
 wget -O "${DIR}/home/kali/.bashrc" "https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/rcfiles/home.bashrc"
@@ -81,6 +93,7 @@ sudo apt update
 sudo apt install neofetch -y
 
 # Display success message
+echo -e '\e[1;93m'
 cat << EOF
 [*] Successful Installation!
 To configure VNC password
@@ -90,4 +103,4 @@ EOF
 
 # Delete tarball
 sleep 5s
-rm -f "${TAR}"
+rm -rf "${TAR}"
