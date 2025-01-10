@@ -46,6 +46,7 @@ Download
 <br>
 
 # General Installer
+> Only `Arm64/Aarch64` is supported
 ```
 apt update && apt upgrade -y && apt install wget -y && wget https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/install && chmod +x install && bash install
 ```
