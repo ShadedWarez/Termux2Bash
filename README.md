@@ -100,15 +100,14 @@ apt update && apt install wget -y && clear && wget -qO- https://raw.githubuserco
 ```
 
 - Start VNC
-> `127.0.0.1:5901`
-`Configure vnc`
+> Configure vnc
 ```
 kali vnc password
 ```
 ```
 kali vnc &
 ```
-
+> 127.0.0.:5901
 <img width="800" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/KaliLinux/Chroot/vnc.jpg">
 
 <br>
