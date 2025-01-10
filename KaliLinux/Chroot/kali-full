@@ -49,6 +49,9 @@ cat > "$PREFIX/bin/${NM}-uninstall" << EOF
 rm -rf $HOME/${DIR}
 rm -rf $PREFIX/bin/${NM}
 rm -rf ${DIR}/bin/vnc
+sed -i 's/(${NM} vnc) &//g' $PREFIX/etc/bash.bashrc
+sed -i 's/${NM}//g' $PREFIX/etc/bash.bashrc
+
 EOF
 
 # Download configuration files
