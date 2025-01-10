@@ -44,7 +44,7 @@ cd "$PREFIX/var/lib/proot-distro/installed-rootfs/"
 axel -a -o "${FS}.tar.xz" "https://github.com/xiv3r/Termux-Pentesting-Distro/releases/download/rootfs/${FS}.tar.xz"
 
 # Extract the rootfs
-echo "[*] Extracting ${NM} Rootfs...!!!"
+echo "[*] Extracting ${NM} Linux Rootfs...!!!"
 proot --link2symlink bsdtar -xpJf "${FS}.tar.xz" 2>/dev/null
 
 # Create a proot-distro configuration file for the Kali minimal rootfs
