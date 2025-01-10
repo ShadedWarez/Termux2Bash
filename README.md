@@ -48,9 +48,9 @@ Download
 # General Installer
 > Only `Arm64/Aarch64` is supported
 ```
-apt update && apt upgrade -y && apt install wget -y && wget https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/install && chmod +x install && bash install
+apt update && apt upgrade -y && apt install wget -y && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Install/install | bash && PROOT-DISTRO
 ```
-> Install Multiple Distro
+# Install 
 ```sh
 PROOT-DISTRO
 ```
@@ -71,17 +71,17 @@ uninstall-kali
 ```
 
 # Proot Options
-- List of the available proot-distro commands:
+## List of the available proot-distro commands:
 
-  `pd help`         - Show this help information.
-  `pd backup`       - Backup a specified distribution.
-  `pd list`         - List supported distributions and their installation status.
-  `pd login`        - Start login shell for the specified distribution.
-  `pd remove`       - Delete a specified distribution.
-  `pd rename`       - Rename installed distribution.
-  `pd reset`        - Reinstall from scratch a specified distribution.
-  `restore`         - Restore a specified distribution
-  `clear-cache`     - Clear cache of downloaded files.
+- `pd help`         - Show this help information.
+- `pd backup`       - Backup a specified distribution.
+- `pd list`         - List supported distributions and their installation status.
+- `pd login`        - Start login shell for the specified distribution.
+- `pd remove`       - Delete a specified distribution.
+- `pd rename`       - Rename installed distribution.
+- `pd reset`        - Reinstall from scratch a specified distribution.
+- `restore`         - Restore a specified distribution
+- `clear-cache`     - Clear cache of downloaded files.
 
 Example: `pd install ubuntu`
 
