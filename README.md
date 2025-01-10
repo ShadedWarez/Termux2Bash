@@ -86,7 +86,6 @@ uninstall-kali
 
 Example: `pd install ubuntu`
 
-  
 ------------
 
 # Kali Nethunter Full [proot]
@@ -102,6 +101,7 @@ apt update && apt install wget -y && clear && wget -qO- https://raw.githubuserco
 
 - Start VNC
 > `127.0.0.1:5901`
+`Configure vnc`
 ```
 kali vnc password
 ```
