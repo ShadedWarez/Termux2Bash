@@ -54,11 +54,6 @@ TARBALL_URL['aarch64']="https://github.com/xiv3r/Termux-Pentesting-Distro/releas
 TARBALL_SHA256['aarch64']="$(sha256sum "${FS}.tar.xz" | awk '{print $1}')"
 EOF
 
-# Update bash.bashrc to show login instructions
-cat >> "$PREFIX/etc/bash.bashrc" << EOF
-echo -e "\e[1;93mTo login "${NM}" Linux, Type: \e[1;96m"${FS}"\e[00m"
-EOF
-
 # Create a shortcut command to launch the distro
 cat > "$PREFIX/bin/${FS}" << EOF
 #!/data/data/com.termux/files/usr/bin/bash
@@ -68,12 +63,6 @@ EOF
 # Fix shebang and set executable permissions
 termux-fix-shebang "$PREFIX/bin/${FS}"
 chmod 700 "$PREFIX/bin/${FS}"
-
-# Add uninstall option configuration
-cat > "$PREFIX/bin/uninstall-$FS" << EOF
-proot-distro rm "${FS}"
-sed -i 's/${FS}//' $PREFIX/etc/bash.bashrc
-EOF
 
 # Move tarball to cache
 mkdir -p "$PREFIX/var/lib/proot-distro/dlcache"
