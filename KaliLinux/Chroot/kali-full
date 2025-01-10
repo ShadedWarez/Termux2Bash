@@ -16,7 +16,7 @@ neofetch --ascii_distro Kali -L
 
 # Download Kali rootfs
 echo "[*] Downloading Kali Nethunter Rootfs..."
-axel -a -o "${TAR}" "http://192.168.1.112:8000/storage/emulated/0/Documents/kali-minimal.tar.xz"
+axel -a -o "${TAR}" "https://kali.download/nethunter-images/current/rootfs/kali-nethunter-rootfs-full-arm64.tar.xz"
 
 # Create a proot-distro configuration file
 echo " "
