@@ -109,15 +109,6 @@ kali vnc password
 kali vnc &
 ```
 
-- Add custom terminal name
-> replace `xiv3r` to your name
-```
-sed -i 's/user=kali/user=xiv3r/' /root/.bashrc
-sed -i 's/user=kali/user=xiv3r/' /root/.zshrc
-sed -i 's/user=kali/user=xiv3r/' /home/kali/.bashrc
-sed -i 's/user=kali/user=xiv3r/' /home/kali/.zshrc
-```
-
 <img width="800" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/KaliLinux/Chroot/vnc.jpg">
 
 <br>
@@ -133,15 +124,6 @@ sed -i 's/user=kali/user=xiv3r/' /home/kali/.zshrc
 - Install
 ```
 apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Chroot/kali-minimal | bash && clear && kali
-```
-
-- Add custom terminal name
-> replace `xiv3r` to your name
-```
-sed -i 's/user=kali/user=xiv3r/' /root/.bashrc
-sed -i 's/user=kali/user=xiv3r/' /root/.zshrc
-sed -i 's/user=kali/user=xiv3r/' /home/kali/.bashrc
-sed -i 's/user=kali/user=xiv3r/' /home/kali/.zshrc
 ```
 
 <img width="800" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/KaliLinux/Chroot/kali-linux.png">
@@ -225,18 +207,9 @@ apt update && apt install wget -y && clear && wget -qO- https://raw.githubuserco
 
 ----------
 # BackBox
-> - login:`backbox`
-> - uninstall:`pd rm backbox`
-
 - Install
 ```
 apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/BackBox/install | bash && clear && backbox
-```
-
-- Add custom terminal name
-> replace `xiv3r` to your name
-```
-sed -i 's/user=kali/user=xiv3r/' /etc/bash.bashrc && source /etc/bash.bashrc
 ```
 
 <img width="800" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/BackBox/backbox.png">
@@ -248,23 +221,9 @@ sed -i 's/user=kali/user=xiv3r/' /etc/bash.bashrc && source /etc/bash.bashrc
 
 -----------
 # BlackArch
-> - Custom build rootfs tarball
-> - login:`blackarch`
-> - uninstall:`pd rm blackarch`
-
 - Install 
 ```
 apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/BlackArch/install | bash && clear && blackarch
-```
-
-- Update and Upgrade
-```
-pacman -Syyu
-```
-- Add custom terminal name
-> replace `xiv3r` to your name
-```
-sed -i 's/user=kali/user=xiv3r/' /etc/bash.bashrc && source /etc/bash.bashrc
 ```
 
 <details><summary> Blackarch Tools</summary>
