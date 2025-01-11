@@ -90,7 +90,8 @@ echo " "
 echo "[*] Starting Chroot Environment..."
 bash "${NM}"
 
-# Update and install neofetch inside chroot
+# Update kali
+echo " "
 echo "[*] Updating Kali Linux..."
 sudo apt update
 sudo apt install neofetch -y
