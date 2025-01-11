@@ -19,10 +19,10 @@ echo "[*] Downloading Kali Nethunter Rootfs..."
 axel -a -o "${TAR}" "https://kali.download/nethunter-images/current/rootfs/kali-nethunter-rootfs-minimal-armhf.tar.xz"
 
 # Create a proot-distro configuration file
-echo " "
 cat << EOF
 Checking ${NM} tarball file integrity...
 EOF
+echo " "
 cat > "$HOME/${TAR}_SHA256" << EOF
 ${TAR}_SHA256=$(sha256sum "${TAR}" | awk '{print $1}')
 EOF
