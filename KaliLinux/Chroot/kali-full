@@ -49,9 +49,9 @@ EOF
 # Download and configure scripts
 echo " "
 echo "[*] Downloading and configuring scripts..."
-wget -O "${DIR}/bin/vnc" "https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Chroot/vnc"
-termux-fix-shebang "${DIR}/bin/vnc"
-chmod 700 "${DIR}/bin/vnc"
+wget -O "${DIR}/usr/bin/vnc" "https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Chroot/vnc"
+termux-fix-shebang "${DIR}/usr/bin/vnc"
+chmod 700 "${DIR}/usr/bin/vnc"
 
 # Adding shortcut file
 wget -O "$PREFIX/bin/kali" "https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Chroot/kali"
@@ -112,7 +112,7 @@ ${NM} -r groupmod -g "$GRPID" ${NM} 2>/dev/null
 # Start chroot environment
 echo " "
 echo "[*] Starting Proot Environment..."
-bash "${NM}"
+bash "${NM}" -r
 
 # Update and install neofetch
 echo " "
