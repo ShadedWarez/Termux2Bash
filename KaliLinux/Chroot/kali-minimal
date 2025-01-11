@@ -28,7 +28,7 @@ EOF
 cat $HOME/${TAR}_SHA256
 
 # Extract rootfs
-echo "[*] Extracting Kali Linux Rootfs..."
+echo "[*] Extracting Kali Nethunter Rootfs..."
 proot --link2symlink bsdtar -xpJf ${TAR} 2>/dev/null
 
 # Update bash.bashrc
