@@ -23,13 +23,14 @@ echo " "
 cat << EOF
 Checking ${NM} tarball file integrity...
 EOF
+echo " "
 cat > "$HOME/${TAR}_SHA256" << EOF
 ${TAR}_SHA256=$(sha256sum "${TAR}" | awk '{print $1}')
 EOF
 cat "$HOME/${TAR}_SHA256"
-echo " "
 
 # Extract rootfs
+echo " "
 echo "[*] Extracting Kali Linux Rootfs..."
 proot --link2symlink bsdtar -xpJf "${TAR}" 2>/dev/null
 
@@ -40,6 +41,7 @@ ${NM}
 EOF
 
 # Download and configure scripts
+echo " "
 echo "[*] Downloading and configuring scripts..."
 wget -O "${DIR}/bin/vnc" "https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Chroot/vnc"
 termux-fix-shebang "${DIR}/bin/vnc"
@@ -71,6 +73,7 @@ chmod +s "${DIR}/usr/bin/sudo"
 chmod +s "${DIR}/usr/bin/su"
 
 # Configure sudoers
+echo " "
 echo "[*] Configuring Sudoers..."
 cat > "${DIR}/etc/sudoers.d/${NM}" << EOF
 ${NM}    ALL=(ALL) NOPASSWD: ALL
@@ -93,10 +96,12 @@ ${NM} usermod -u "$USRID" ${NM} 2>/dev/null
 ${NM} groupmod -g "$GRPID" ${NM} 2>/dev/null
 
 # Start chroot environment
-echo "[*] Starting Chroot Environment..."
+echo " "
+echo "[*] Starting Proot Environment..."
 bash "${NM}"
 
-# Update and install neofetch inside chroot
+# Update and install neofetch
+echo " "
 echo "[*] Updating Kali Linux..."
 sudo apt update
 sudo apt install neofetch -y
@@ -114,3 +119,4 @@ EOF
 # Delete tarball
 sleep 5s
 rm -rf "${TAR}"
+rm -rf "${TAR}_SHA256"
