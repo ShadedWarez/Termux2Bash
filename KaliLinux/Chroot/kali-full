@@ -4,7 +4,7 @@
 apt install proot bsdtar axel neofetch -y
 clear
 
-cd $HOME
+cd ${HOME}
 
 ### Set variables
 TAR="kali-nethunter-rootfs-full-arm64.tar.xz"
@@ -21,8 +21,6 @@ axel -a -o ${TAR} https://kali.download/nethunter-images/current/rootfs/${TAR}
 cat << EOF
 Checking the integrity of ${TAR} file...
 EOF
-
-# Check tarball file integrity 
 cat > $HOME/${TAR}_SHA256 << EOF
 ${TAR}_SHA256= $(sha256sum ${TAR} | awk '{print $1}')
 EOF
@@ -48,7 +46,7 @@ termux-fix-shebang ${DIR}/usr/bin/vnc
 chmod 700 ${DIR}/usr/bin/vnc
 
 # Adding shortcut file
-wget -O $PREFIX/bin/kali https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Chroot/kali
+wget -O $PREFIX/bin/${NM} https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Chroot/kali
 termux-fix-shebang $PREFIX/bin/${NM}
 chmod 700 $PREFIX/bin/${NM}
 
@@ -64,7 +62,7 @@ EOF
 chmod 700 $PREFIX/bin/${NM}-uninstall
 
 # Download configuration files
-wget -O ${DIR}/home/kali/.bashrc https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/rcfiles/home.bashrc
+wget -O ${DIR}/home/${NM}/.bashrc https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/rcfiles/home.bashrc
 
 # Modify .bash_profile
 sed -i '/if/,/fi/d' ${DIR}/root/.bash_profile
