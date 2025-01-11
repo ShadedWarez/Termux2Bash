@@ -5,7 +5,7 @@ apt install proot proot-distro bsdtar axel neofetch -y
 clear
 
 # List of distros
-echo -e '\e[1;95mAvailable Linux Distros:''\e[0m''\e[1;92m'
+echo -e '\e[1;95mAvailable Proot Distros:''\e[0m''\e[1;92m'
 cat << EOF
 1. alma       6. backbox    11. debian   16. openkylin  21. pardus
 2. alpine     7. blackarch  12. deepin   17. opensuse   22. rocky
@@ -17,10 +17,11 @@ cat << EOF
 27. gentoo
 28. openeuler
 29. ujammy
-
+30.
 EOF
-echo -e '\e[0m'
+
 # Prompt the user to input text for FS
+echo -e '\e[0m'
 echo -e '\e[1;96mEnter Distro Name:''\e[0m''\e[1;93m'
 read FS
 
