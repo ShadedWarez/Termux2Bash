@@ -11,7 +11,7 @@ cat << EOF
 2. alpine     7. blackarch  12. deepin   17. opensuse   22. rocky
 3. amazon     8. centos     13. debkali  18. oracle     23. ubuntu
 4. archlinux  9. chimera    14. kali     19. parrot     24. void
-5. artix     10. fedora     15. manjaro  20. photon     25. centos
+5. artix     10. fedora     15. manjaro  20. photon     
 EOF
 echo -e '\e[0m'
 # Prompt the user to input text for FS
