@@ -106,8 +106,8 @@ EOF
 # Modify user and group IDs
 USRID=$(id -u)
 GRPID=$(id -g)
-${NM} usermod -u "$USRID" ${NM} 2>/dev/null
-${NM} groupmod -g "$GRPID" ${NM} 2>/dev/null
+${NM} -r usermod -u "$USRID" ${NM} 2>/dev/null
+${NM} -r groupmod -g "$GRPID" ${NM} 2>/dev/null
 
 # Start chroot environment
 echo " "
