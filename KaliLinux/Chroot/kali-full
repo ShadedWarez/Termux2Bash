@@ -23,9 +23,9 @@ echo " "
 cat << EOF
 Checking ${NM} tarball file integrity...
 EOF
-echo " "
 
 # Check tarball file integrity 
+echo " "
 cat > "$HOME/${TAR}_SHA256" << EOF
 ${TAR}_SHA256=$(sha256sum "${TAR}" | awk '{print $1}')
 EOF
@@ -33,7 +33,11 @@ cat "$HOME/${TAR}_SHA256"
 
 # Extract rootfs
 echo " "
-echo "[*] Extracting Kali Linux Rootfs..."
+echo "[*] Decompressing 14GB of files takes 15 minutes"
+sleep 1s
+echo "[*] Please wait..."
+sleep 1s
+echo "[*] Extracting ${TAR}..."
 proot --link2symlink bsdtar -xpJf "${TAR}" 2>/dev/null
 
 # Update bash.bashrc
@@ -105,13 +109,13 @@ bash "${NM}"
 
 # Update and install neofetch
 echo " "
-echo "[*] Updating Kali Linux..."
+echo "[*] Updating Kali Nethunter..."
 sudo apt update
 sudo apt install neofetch -y
 
 # Configure sudoers
 echo " "
-echo "[*] Configuring Sudoers..."
+echo "[*] Configuring Sudoers Passwd..."
 cat > "${DIR}/etc/sudoers.d/${NM}" << EOF
 ${NM}     ALL=(ALL:ALL) ALL
 EOF
