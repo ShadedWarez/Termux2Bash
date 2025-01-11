@@ -70,6 +70,14 @@ cat >> ${DIR}/etc/bash.bashrc << EOF
 neofetch
 EOF
 
+
+# Fix DNS issue
+cat > ${DIR}/etc/resolv.conf << EOF
+nameserver 9.9.9.9
+nameserver 8.8.8.8
+nameserver 1.1.1.1
+EOF
+
 # Configure sudo.conf
 cat > ${DIR}/etc/sudo.conf << EOF
 Set disable_coredump false
