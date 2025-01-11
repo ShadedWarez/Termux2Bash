@@ -67,7 +67,7 @@ chmod +s "${DIR}/usr/bin/su"
 echo " "
 echo "[*] Configuring Sudoers..."
 cat > "${DIR}/etc/sudoers.d/${NM}" << EOF
-${NM}    ALL=(ALL) NOPASSWD: ALL
+${NM}    ALL=(ALL:ALL) NOPASSWD: ALL
 EOF
 
 # Update bash.bashrc inside chroot
@@ -97,7 +97,15 @@ echo "[*] Updating Kali Linux..."
 sudo apt update
 sudo apt install neofetch -y
 
+# Configure sudoers
+echo " "
+echo "[*] Configuring Sudoers..."
+cat > "${DIR}/etc/sudoers.d/${NM}" << EOF
+${NM}     ALL=(ALL:ALL) ALL
+EOF
+
 # Display success message
+echo " "
 echo -e '\e[1;93m'
 cat << EOF
 [*] Successful Installation!
