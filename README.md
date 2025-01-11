@@ -476,18 +476,9 @@ apt update && apt install wget -y && clear && wget -qO- https://raw.githubuserco
 
 -----------
 # ParrotSec
-> - login:`parrot`
-> - uninstall:`pd rm parrot`
-
 - Install
 ```
 apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/ParrotSec/install | bash && clear && parrot
-```
-
-- Add custom terminal name
-> replace `xiv3r` to your name
-```
-sed -i 's/user=kali/user=xiv3r/' .zshrc && source .zshrc
 ```
 
 <img width="800" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/ParrotSec/Parrot.png">
