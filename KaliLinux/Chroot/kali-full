@@ -139,6 +139,5 @@ Type: kali vnc &
 EOF
 
 # Delete tarball
-sleep 5s
 rm -rf ${TAR}
 rm -rf ${TAR}_SHA256
