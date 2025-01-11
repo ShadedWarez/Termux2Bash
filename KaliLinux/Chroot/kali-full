@@ -61,6 +61,7 @@ rm -rf $PREFIX/bin/${NM}
 rm -rf ${DIR}/bin/vnc
 sed -i 's/(${NM} vnc) &//g' $PREFIX/etc/bash.bashrc
 sed -i 's/${NM}//g' $PREFIX/etc/bash.bashrc
+rm -rf $PREFIX/bin/${NM}-uninstall
 EOF
 chmod 700 "$PREFIX/bin/${NM}-uninstall"
 
