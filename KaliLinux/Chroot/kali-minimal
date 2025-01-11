@@ -7,7 +7,7 @@ clear
 cd "$HOME"
 
 ### Set variables
-TAR="kali_full.tar.xz"
+TAR="kali_minimal.tar.xz"
 DIR="kali-arm64"
 NM="kali"
 
