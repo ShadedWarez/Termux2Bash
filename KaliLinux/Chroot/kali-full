@@ -79,7 +79,7 @@ chmod +s "${DIR}/usr/bin/su"
 echo " "
 echo "[*] Configuring Sudoers..."
 cat > "${DIR}/etc/sudoers.d/${NM}" << EOF
-${NM}    ALL=(ALL:ALL) NOPASSWD: ALL
+${NM}    ALL=(ALL) NOPASSWD: ALL
 EOF
 
 # Update bash.bashrc inside chroot
