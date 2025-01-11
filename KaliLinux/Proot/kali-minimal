@@ -61,7 +61,18 @@ cat >> "$PREFIX/etc/bash.bashrc" << EOF
 ${FS}
 EOF
 
-# Move tarball to cache
+# Add support for uninstallation
+cat > $PREFIX/bin/uninstall-${FS} << EOF
+#!/data/data/com.termux/files/usr/bin/bash
+proot-distro remove ${FS}
+sed -i 's/${FS}//g' $PREFIX/etc/bash.bashrc
+rm -rf $PREFIX/bin/uninstall-${FS}
+rm -rf $PREFIX/bin/${FS}
+rm -rf $PREFIX/var/lib/proot-distro/dlcache/${FS}.tar.xz
+EOF
+chmod 700 "$PREFIX/bin/uninstall-${FS}"
+
+# Move tarball fs to cache
 sleep 5s
 mkdir -p "$PREFIX/var/lib/proot-distro/dlcache"
 mv "${FS}.tar.xz" "$PREFIX/var/lib/proot-distro/dlcache"
@@ -70,6 +81,6 @@ mv "${FS}.tar.xz" "$PREFIX/var/lib/proot-distro/dlcache"
 echo -e '\e[1;96m'
 cat << EOF 
 Installed Successfully!
-To login ${NM} Linux, Type: ${FS}"
+Login ${NM} Linux Type: ${FS}
 EOF
 echo -e '\e[0m'
