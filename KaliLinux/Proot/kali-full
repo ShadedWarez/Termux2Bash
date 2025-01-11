@@ -5,7 +5,16 @@ apt install axel bsdtar proot-distro proot neofetch -y
 
 # Define variables for the rootfs
 FS="kali"
-NM="Kali"
+
+# Forward the value of FS to NM
+NM="$FS"
+
+# Capitalize the first letter of NM
+NM=$(echo "$NM" | awk '{print toupper(substr($0,1,1)) substr($0,2)}')
+
+# Display the values of FS and NM
+echo "$FS" > /dev/null
+echo "$NM" > /dev/null
 
 # Create the directory for the Kali minimal rootfs
 mkdir -p "$PREFIX/var/lib/proot-distro/installed-rootfs/${FS}"
