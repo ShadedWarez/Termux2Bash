@@ -33,6 +33,7 @@ echo "[*] Extracting rootfs takes 15 minutes, Please wait...!!!"
 proot --link2symlink bsdtar -xpJf "${FS}.tar.xz" 2>/dev/null
 
 # Move the extracted files to the correct directory
+echo " "
 echo "Migrating..."
 mv "kali-arm64/*" "$PREFIX/var/lib/proot-distro/installed-rootfs/${FS}"
 
@@ -54,9 +55,19 @@ chmod 700 "$PREFIX/bin/${FS}"
 
 # Add the Kali command to the bashrc for easy access
 cat >> "$PREFIX/etc/bash.bashrc" << EOF
-clear
-"${FS}"
+${FS}
 EOF
+
+# Add support for uninstallation
+cat > $PREFIX/bin/uninstall-${FS} << EOF
+#!/data/data/com.termux/files/usr/bin/bash
+proot-distro remove ${FS}
+sed -i 's/${FS}//g' $PREFIX/etc/bash.bashrc
+rm -rf $PREFIX/bin/uninstall-${FS}
+rm -rf $PREFIX/bin/${FS}
+rm -rf $PREFIX/var/lib/proot-distro/dlcache/${FS}.tar.xz
+EOF
+chmod 700 "$PREFIX/bin/uninstall-${FS}"
 
 # Move tarball to cache
 sleep 5s
@@ -67,7 +78,7 @@ mv "${FS}.tar.xz" "$PREFIX/var/lib/proot-distro/dlcache"
 echo -e '\e[1;96m'
 cat << EOF 
 Installed Successfully!
-To login ${NM} Linux, Type: ${FS}"
+Login ${NM} Linux, Type: ${FS}
 EOF
 echo -e '\e[0m'
 
