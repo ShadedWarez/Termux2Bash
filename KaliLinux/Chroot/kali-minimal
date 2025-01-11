@@ -60,16 +60,10 @@ sed -i '/if/,/fi/d' ${DIR}/root/.bash_profile
 chmod +s ${DIR}/usr/bin/sudo
 chmod +s ${DIR}/usr/bin/su
 
-# Configure sudoers
-cat > ${DIR}/etc/sudoers.d/${NM} << EOF
-${NM}    ALL=(ALL:ALL) NOPASSWD: ALL
-EOF
-
 # Update bash.bashrc inside chroot
 cat >> ${DIR}/etc/bash.bashrc << EOF
 neofetch
 EOF
-
 
 # Fix DNS issue
 cat > ${DIR}/etc/resolv.conf << EOF
@@ -95,17 +89,6 @@ bash ${NM} -r
 # Update kali
 sudo apt update
 sudo apt install neofetch -y
-
-### Set variables
-TAR="kali-nethunter-rootfs-minimal-arm64.tar.xz"
-DIR="kali-arm64"
-NM="kali"
-
-# Configure sudoers
-rm -rf ${DIR}/etc/sudoers.d/${NM}
-cat > ${DIR}/etc/sudoers.d/${NM} << EOF
-${NM}     ALL=(ALL:ALL) ALL
-EOF
 
 # Display success message
 echo -e '\e[1;93m'
