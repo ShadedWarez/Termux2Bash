@@ -160,6 +160,36 @@ apt update && apt install wget -y && clear && wget -qO- https://raw.githubuserco
 <br>
 <br>
 
+
+
+-------------
+# Alpine
+- Install
+```
+apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Alpine/install | bash && alpine
+```
+
+<img width="800" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/Alpine/alpine.png">
+
+<br>
+<br>
+<br>
+<br>
+
+-------------
+# Altlinux 
+- Install
+```
+apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Altlinux/install | bash && altlinux 
+```
+
+<img width="800" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/Altlinux/altlinux.png">
+
+<br>
+<br>
+<br>
+<br>
+
 -------------
 # Amazon
 - Install
@@ -305,6 +335,20 @@ apt update && apt install wget -y && clear && wget -qO- https://raw.githubuserco
 <br>
 
 -------------
+# Devuan 
+- Install
+```
+apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Devuan/install | bash && devuan 
+```
+
+<img width="800" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/Devuan/devuan.png">
+
+<br>
+<br>
+<br>
+<br>
+
+-------------
 # Fedora 
 - Install
 ```
@@ -312,6 +356,20 @@ apt update && apt install wget -y && clear && wget -qO- https://raw.githubuserco
 ```
 
 <img width="800" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/Fedora/fedora.png">
+
+<br>
+<br>
+<br>
+<br>
+
+-------------
+# Gentoo 
+- Install
+```
+apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Gentoo/install | bash && gentoo 
+```
+
+<img width="800" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/Gentoo/gentoo.png">
 
 <br>
 <br>
@@ -403,6 +461,19 @@ apt update && apt install wget -y && clear && wget -qO- https://raw.githubuserco
 <br>
 <br>
 
+-------------
+# Openeuler 
+- Install
+```
+apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/OpenEuler/install | bash && openeuler 
+```
+
+<img width="800" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/OpenEuler/openeuler.png">
+
+<br>
+<br>
+<br>
+<br>
 
 -------------
 # Pardus 
@@ -480,13 +551,27 @@ apt update && apt install wget neofetch -y && wget -O $PREFIX/etc/bash.bashrc ht
 <img width="800" height="500" src="https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Termux/term.png">
 
 -------------
-# Ubuntu 
+# Ubuntu Noble 
 - Install
 ```
 apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Ubuntu/install | bash && ubuntu 
 ```
 
 <img width="800" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/Ubuntu/ubuntu.png">
+
+<br>
+<br>
+<br>
+<br>
+
+-------------
+# Ubuntu Jammy
+- Install
+```
+apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Ubuntu_jammy/install | bash && ujammy 
+```
+
+<img width="800" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/Ubuntu_jammy/ujammy.png">
 
 <br>
 <br>
