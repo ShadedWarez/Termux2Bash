@@ -36,7 +36,6 @@ proot --link2symlink bsdtar -xpJf "${TAR}" 2>/dev/null
 
 # Update bash.bashrc
 cat >> "$PREFIX/etc/bash.bashrc" << EOF
-(${NM} vnc) &
 ${NM}
 EOF
 
