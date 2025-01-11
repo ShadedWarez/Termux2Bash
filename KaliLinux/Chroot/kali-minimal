@@ -7,7 +7,7 @@ clear
 cd "$HOME"
 
 ### Set variables
-TAR="kali_minimal.tar.xz"
+TAR="kali-nethunter-rootfs-minimal-arm64.tar.xz"
 DIR="kali-arm64"
 NM="kali"
 
@@ -16,7 +16,7 @@ neofetch --ascii_distro Kali -L
 
 # Download Kali rootfs
 echo "[*] Downloading Kali Nethunter Rootfs..."
-axel -a -o "${TAR}" "https://kali.download/nethunter-images/current/rootfs/kali-nethunter-rootfs-minimal-armhf.tar.xz"
+axel -a -o "${TAR}" "https://kali.download/nethunter-images/current/rootfs/${TAR}"
 
 # Create a proot-distro configuration file
 echo " "
