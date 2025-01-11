@@ -79,13 +79,6 @@ sed -i '/if/,/fi/d' "${DIR}/root/.bash_profile"
 chmod +s "${DIR}/usr/bin/sudo"
 chmod +s "${DIR}/usr/bin/su"
 
-# Configure sudoers
-echo " "
-echo "[*] Configuring Sudoers..."
-cat > "${DIR}/etc/sudoers.d/${NM}" << EOF
-${NM}    ALL=(ALL:ALL) NOPASSWD: ALL
-EOF
-
 # Fix DNS issue
 cat > ${DIR}/etc/resolv.conf << EOF
 nameserver 9.9.9.9
@@ -119,13 +112,6 @@ echo " "
 echo "[*] Updating Kali Nethunter..."
 sudo apt update
 sudo apt install neofetch -y
-
-# Configure sudoers
-echo " "
-echo "[*] Configuring Sudoers Passwd..."
-cat > "${DIR}/etc/sudoers.d/${NM}" << EOF
-${NM}     ALL=(ALL:ALL) ALL
-EOF
 
 # Display success message
 echo " "
