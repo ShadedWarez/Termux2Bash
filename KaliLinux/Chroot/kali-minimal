@@ -19,6 +19,7 @@ echo "[*] Downloading Kali Nethunter Rootfs..."
 axel -a -o "${TAR}" "https://kali.download/nethunter-images/current/rootfs/kali-nethunter-rootfs-minimal-armhf.tar.xz"
 
 # Create a proot-distro configuration file
+echo " "
 cat << EOF
 Checking ${NM} tarball file integrity...
 EOF
@@ -27,9 +28,9 @@ cat > "$HOME/${TAR}_SHA256" << EOF
 ${TAR}_SHA256=$(sha256sum "${TAR}" | awk '{print $1}')
 EOF
 cat "$HOME/${TAR}_SHA256"
-echo " "
 
 # Extract rootfs
+echo " "
 echo "[*] Extracting Kali Linux Rootfs..."
 proot --link2symlink bsdtar -xpJf "${TAR}" 2>/dev/null
 
@@ -63,6 +64,7 @@ chmod +s "${DIR}/usr/bin/sudo"
 chmod +s "${DIR}/usr/bin/su"
 
 # Configure sudoers
+echo " "
 echo "[*] Configuring Sudoers..."
 cat > "${DIR}/etc/sudoers.d/${NM}" << EOF
 ${NM}    ALL=(ALL) NOPASSWD: ALL
@@ -85,6 +87,7 @@ ${NM} usermod -u "$USRID" ${NM} 2>/dev/null
 ${NM} groupmod -g "$GRPID" ${NM} 2>/dev/null
 
 # Start chroot environment
+echo " "
 echo "[*] Starting Chroot Environment..."
 bash "${NM}"
 
@@ -104,3 +107,4 @@ EOF
 # Delete tarball
 sleep 5s
 rm -rf "${TAR}"
+rm -rf "${TAR}_SHA256"
