@@ -48,8 +48,6 @@ chmod 700 "$PREFIX/bin/${NM}"
 cat > "$PREFIX/bin/${NM}-uninstall" << EOF
 rm -rf $HOME/${DIR}
 rm -rf $PREFIX/bin/${NM}
-rm -rf ${DIR}/bin/vnc
-sed -i 's/(${NM} vnc) &//g' $PREFIX/etc/bash.bashrc
 sed -i 's/${NM}//g' $PREFIX/etc/bash.bashrc
 EOF
 chmod 700 "$PREFIX/bin/${NM}-uninstall"
@@ -100,9 +98,7 @@ echo -e '\e[1;93m'
 cat << EOF
 [*] Successful Installation!
 
-To configure VNC password
-Type: kali vnc passwd
-Type: kali vnc &
+To Login Kali Type: kali
 EOF
 
 # Delete tarball
