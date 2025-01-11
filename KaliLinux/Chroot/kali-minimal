@@ -15,7 +15,6 @@ NM="kali"
 neofetch --ascii_distro Kali -L
 
 # Download Kali rootfs
-echo "[*] Downloading Kali Nethunter Rootfs..."
 axel -a -o ${TAR} https://kali.download/nethunter-images/current/rootfs/${TAR}
 
 # Create a proot-distro configuration file
@@ -28,7 +27,7 @@ EOF
 cat $HOME/${TAR}_SHA256
 
 # Extract rootfs
-echo "[*] Extracting Kali Nethunter Rootfs..."
+echo "[*] Extracting ${TAR} rootfs..."
 proot --link2symlink bsdtar -xpJf ${TAR} 2>/dev/null
 
 # Update bash.bashrc
