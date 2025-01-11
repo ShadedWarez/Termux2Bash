@@ -161,21 +161,6 @@ apt update && apt install wget -y && clear && wget -qO- https://raw.githubuserco
 <br>
 
 
-
--------------
-# Alpine
-- Install
-```
-apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Alpine/install | bash && alpine
-```
-
-<img width="800" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/Alpine/alpine.png">
-
-<br>
-<br>
-<br>
-<br>
-
 -------------
 # Altlinux 
 - Install
