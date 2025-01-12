@@ -32,8 +32,9 @@ fi
 cmdline="proot \
         --link2symlink \
         -0 \
+        -L \
+        -k ${kernel} \
         -r kali-arm64 \
-        -k ${kernel}
         -b /dev \
         -b /proc \
         -b /sdcard \
