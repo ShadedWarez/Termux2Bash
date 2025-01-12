@@ -11,6 +11,7 @@ fi
 user="kali"
 home="/home/$user"
 start="sudo -u kali /bin/bash"
+kernel="(uname -r)"
 
 ## NH can be launched as root with the "-r" cmd attribute
 ## Also check if user kali exists, if not start as root
@@ -32,6 +33,7 @@ cmdline="proot \
         --link2symlink \
         -0 \
         -r kali-arm64 \
+        -k ${kernel}
         -b /dev \
         -b /proc \
         -b /sdcard \
