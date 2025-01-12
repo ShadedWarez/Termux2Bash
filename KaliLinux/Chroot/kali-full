@@ -1,7 +1,7 @@
 #!/data/data/com.termux/files/usr/bin/bash
 
 # Install required packages
-apt install proot bsdtar axel neofetch -y
+apt install proot bsdtar axel -y
 clear
 
 cd $HOME
@@ -27,7 +27,7 @@ EOF
 cat $HOME/SHA512
 
 # Extract rootfs
-echo "[*] Decompressing 14GB of files takes 15 minutes..."
+echo "[*] Decompressing 14GB of files from $TAR takes 15 minutes..."
 echo "[*] Please wait..."
 echo "[*] Extracting $TAR..."
 
