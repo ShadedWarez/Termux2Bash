@@ -71,6 +71,11 @@ nameserver 8.8.8.8
 nameserver 1.1.1.1
 EOF
 
+# Fix sudoer
+cat > ${DIR}/etc/sudoers.d/${NM}
+${NM}    ALL=(ALL:ALL) ALL
+EOF
+
 # Configure sudo.conf
 cat > ${DIR}/etc/sudo.conf << EOF
 Set disable_coredump false
