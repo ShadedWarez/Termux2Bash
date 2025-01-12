@@ -37,6 +37,7 @@ cmdline="proot \
         -r kali-arm64 \
         -b /dev \
         -b /proc \
+        -b /sys \
         -b /sdcard \
         -b kali-arm64$home:/dev/shm \
         -w $home \
