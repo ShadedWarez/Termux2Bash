@@ -32,6 +32,8 @@ cmdline="proot \
         --link2symlink \
         -0 \
         -L \
+        -k 6.11.2-1kali1 \
+        --ashmem-memfd \
         -r kali-arm64 \
         -b /dev \
         -b /proc \
