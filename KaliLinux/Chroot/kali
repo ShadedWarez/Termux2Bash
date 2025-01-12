@@ -44,6 +44,7 @@ cmdline="proot \
            /usr/bin/env -i \
            HOME=$home \
            PATH=/usr/local/sbin:/usr/local/bin:/bin:/usr/bin:/sbin:/usr/sbin \
+           TMP=/tmp \
            TERM=$TERM \
            LANG=C.UTF-8 \
            $start"
