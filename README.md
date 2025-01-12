@@ -461,6 +461,20 @@ apt update && apt install wget -y && clear && wget -qO- https://raw.githubuserco
 <br>
 
 -------------
+# Openwrt
+- Install
+```
+apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Openwrt/install | bash && openwrt
+```
+
+<img width="800" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/Openwrt/openwrt.png">
+
+<br>
+<br>
+<br>
+<br>
+
+-------------
 # Pardus 
 - Install
 ```
