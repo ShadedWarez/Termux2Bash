@@ -17,7 +17,7 @@ cat << EOF
 27. gentoo
 28. openeuler
 29. ujammy
-30.
+30. openwrt
 EOF
 
 # Prompt the user to input text for FS
