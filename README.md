@@ -38,7 +38,7 @@ Download
 
 | [Termux](https://play.google.com/store/apps/details?id=com.termux)
 |
-| [VNC App](https://play.google.com/store/apps/details?id=com.realvnc.viewer.android)
+| [VNC](https://store.nethunter.com/packages/com.offsec.nethunter.kex/)
 |
 </h3>
 
@@ -47,28 +47,28 @@ Download
 
 # General Installer
 > Only `Arm64/Aarch64` is supported
-```
-apt update && apt upgrade -y && apt install wget -y && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Install/install | bash && PROOT-DISTRO
+```diff
+- apt update && apt upgrade -y && apt install wget -y && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Install/install | bash && PROOT-DISTRO
 ```
 # Install Distro
 > Install a specific distro
-```sh
-PROOT-DISTRO
+```diff
+- PROOT-DISTRO
 ```
 ### Login
 > Example: `kali`
-```
-kali
+```diff
+- kali
 ```
 ### Logout
 > Back to Termux
-```
-exit
+```diff
+- exit
 ```
 ### Uninstall
 > Example: `uninstall-kali`
-```
-uninstall-kali
+```diff 
+- uninstall-kali
 ```
 
 # Proot Options
