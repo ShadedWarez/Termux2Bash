@@ -48,27 +48,27 @@ Download
 # General Installer
 > Only `Arm64/Aarch64` is supported
 ```diff
-- apt update && apt upgrade -y && apt install wget -y && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Install/install | bash && PROOT-DISTRO
+- ;apt update && apt upgrade -y && apt install wget -y && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Install/install | bash && PROOT-DISTRO
 ```
 # Install Distro
 > Install a specific distro
 ```diff
-- PROOT-DISTRO
+- ;PROOT-DISTRO
 ```
 ### Login
 > Example: `kali`
 ```diff
-- kali
+- ;kali
 ```
 ### Logout
 > Back to Termux
 ```diff
-- exit
+- ;exit
 ```
 ### Uninstall
 > Example: `uninstall-kali`
 ```diff 
-- uninstall-kali
+- ;uninstall-kali
 ```
 
 # Proot Options
