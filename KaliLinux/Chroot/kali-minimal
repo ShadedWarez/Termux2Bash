@@ -27,7 +27,7 @@ EOF
 cat $HOME/SHA512
 
 # Extract rootfs
-echo "[*] Decompressing 14GB of files takes 15 minutes..."
+echo "[*] Decompressing file..."
 echo "[*] Please wait..."
 echo "[*] Extracting $TAR..."
 
