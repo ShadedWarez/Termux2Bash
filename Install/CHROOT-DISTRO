@@ -41,8 +41,7 @@ echo "$NM" > /dev/null
 neofetch --ascii_distro "${NM}" -L
 
 # Download the rootfs using axel
-# axel -a -o "${FS}.tar.xz" "https://github.com/xiv3r/Termux-Pentesting-Distro/releases/download/rootfs/${FS}.tar.xz"
-cp $HOME/storage/downloads/rootfs/${FS}.tar.xz $HOME/
+axel -a -o "${FS}.tar.xz" "https://github.com/xiv3r/Termux-Pentesting-Distro/releases/download/rootfs/${FS}.tar.xz"
 
 # Create a proot-distro configuration file for the Kali minimal rootfs
 echo "Checking ${NM} integrity...."
