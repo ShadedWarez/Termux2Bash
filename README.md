@@ -45,15 +45,24 @@ Download
 <br>
 <br>
 
-# General Installer
-> Only `Arm64/Aarch64` is supported
+## PROOT-DISTRO
+> recommended 
 ```diff
 - ;apt update && apt upgrade -y && apt install wget -y && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Install/install | bash && PROOT-DISTRO
 ```
+## CHROOT-DISTRO
+> optional
+```diff
+-; apt update && apt install wget -y && wget -O $PREFIX/bin/CHROOT-DISTRO https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Install/CHROOT-DISTRO && chmod 700 $PREFIX/bin/CHROOT-DISTRO && CHROOT-DISTRO
+```
 # Install Distro
-> Install a specific distro
+> For proot
 ```diff
 - ;PROOT-DISTRO
+```
+> For chroot
+```diff
+-; CHROOT-DISTRO
 ```
 ### Login
 > Example: `kali`
