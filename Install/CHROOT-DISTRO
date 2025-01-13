@@ -1,0 +1,117 @@
+#!/data/data/com.termux/files/usr/bin/bash
+
+# Install required packages
+apt install proot proot-distro bsdtar axel neofetch -y
+clear
+
+cd ${HOME}
+
+# List of distros
+echo -e '\e[1;95mAvailable Proot Distros:''\e[0m''\e[1;92m'
+cat << EOF
+1. alma       6. backbox    11. debian   16. openkylin  21. pardus
+2. alpine     7. blackarch  12. deepin   17. opensuse   22. rocky
+3. amazon     8. centos     13. debkali  18. oracle     23. ubuntu
+4. archlinux  9. chimera    14. kali     19. parrot     24. void
+5. artix     10. fedora     15. manjaro  20. photon     25. altlinux
+
+26. devuan 
+27. gentoo
+28. openeuler
+29. ujammy
+30. openwrt
+EOF
+
+# Prompt the user to input text for FS
+echo -e '\e[0m'
+echo -e '\e[1;96mEnter Distro Name:''\e[0m''\e[1;93m'
+read FS
+
+# Forward the value of FS to NM
+NM="$FS"
+
+# Capitalize the first letter of NM
+NM=$(echo "$NM" | awk '{print toupper(substr($0,1,1)) substr($0,2)}')
+
+# Display the values of FS and NM
+echo "$FS" > /dev/null
+echo "$NM" > /dev/null
+
+# Display neofetch with custom ASCII art
+neofetch --ascii_distro "${NM}" -L
+
+# Download the rootfs using axel
+# axel -a -o "${FS}.tar.xz" "https://github.com/xiv3r/Termux-Pentesting-Distro/releases/download/rootfs/${FS}.tar.xz"
+cp $HOME/storage/downloads/rootfs/${FS}.tar.xz $HOME/
+
+# Create a proot-distro configuration file for the Kali minimal rootfs
+echo "Checking ${NM} integrity...."
+echo " "
+cat > "$HOME/${NM}_SHA256" << EOF
+${NM}_SHA256= "$(sha256sum "${FS}.tar.xz" | awk '{print $1}')"
+EOF
+cat "$HOME/${NM}_SHA256"
+
+# Extract the rootfs
+echo " "
+echo "[*] Extracting ${NM} Linux Rootfs...!!!"
+proot --link2symlink bsdtar -xpJf "${FS}.tar.xz" 2>/dev/null
+
+# Create a shortcut command to launch the distro
+cat > $PREFIX/bin/${FS} <<- EOF
+#!/data/data/com.termux/files/usr/bin/bash
+
+cd ${HOME}
+unset LD_PRELOAD
+cmdline="proot \\
+        --link2symlink \\
+        -0 \\
+        -L \\
+        -k 6.1.2 \\
+        -r $FS \\
+        -b /dev \\
+        -b /proc \\
+        -b /sdcard \\
+        -b $FS/root:/dev/shm \\
+        -w /root \\
+           /usr/bin/env -i \\
+           HOME=/root \\
+           PATH=/usr/local/sbin:/usr/local/bin:/bin:/usr/bin:/sbin:/usr/sbin>
+           TERM=\$TERM \\
+           LANG=C.UTF-8 \\
+           /bin/bash --login"
+
+cmd="\$@"
+if [ "\$#" == "0" ];then
+    exec \$cmdline
+else
+    \$cmdline -c "\$cmd"
+fi
+EOF
+chmod 755 $PREFIX/bin/${FS}
+
+# Add start-up login notification
+cat >> $PREFIX/etc/bash.bashrc << EOF
+echo "Login ${NM} Linux: ${FS}"
+EOF
+
+# Add support for uninstallation
+cat > $PREFIX/bin/uninstall-${FS} << EOF
+#!/data/data/com.termux/files/usr/bin/bash
+rm -rf ${FS}
+rm ${NM}_SHA256
+sed -i 's/echo "Login ${NM} Linux: ${FS}"//g' $PREFIX/etc/bash.bashrc
+rm -rf $PREFIX/bin/uninstall-${FS}
+rm -rf $PREFIX/bin/${FS}
+EOF
+chmod 755 "$PREFIX/bin/uninstall-${FS}"
+
+rm -rf ${FS}.tar.xz
+
+# Display final instructions
+echo -e '\e[1;93m'
+cat << EOF
+Successful Installation!
+
+To login ${NM} Linux, Type: ${FS}
+EOF
