@@ -91,7 +91,7 @@ mv "${FS}.tar.xz" "$PREFIX/var/lib/proot-distro/dlcache"
 # Display final instructions
 echo -e '\e[1;93m'
 cat << EOF
-Successful Installation!'
+Successful Installation!
 
 To login ${NM} Linux, Type: ${FS}
 EOF
