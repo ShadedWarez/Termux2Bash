@@ -32,7 +32,7 @@ Proot-Distro Scripts: Each distro has a configuration script (e.g., kali.sh, ubu
 </details>
 </div>
 
-<h3 align="center">
+# Requirements
   
 Download
 
@@ -40,17 +40,17 @@ Download
 |
 | [VNC](https://store.nethunter.com/packages/com.offsec.nethunter.kex/)
 |
-</h3>
 
 <br>
-<br>
 
-## PROOT-DISTRO
+# Installation
+
+### PROOT-DISTRO
 > recommended 
 ```diff
 - ;apt update && apt upgrade -y && apt install wget -y && echo clear >>$PREFIX/etc/bash.bashrc && wget -O $PREFIX/bin/PROOT-DISTRO https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Install/PROOT-DISTRO && chmod 755 $PREFIX/bin/PROOT-DISTRO && PROOT-DISTRO
 ```
-## CHROOT-DISTRO
+### CHROOT-DISTRO
 > optional
 ```diff
 -; apt update && apt install wget -y && echo clear >>$PREFIX/etc/bash.bashrc && wget -O $PREFIX/bin/CHROOT-DISTRO https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Install/CHROOT-DISTRO && chmod 755 $PREFIX/bin/CHROOT-DISTRO && CHROOT-DISTRO
@@ -81,7 +81,7 @@ Download
 ```
 
 # Proot Options
-## List of the available proot-distro commands:
+### List of the available proot-distro commands:
 
 - `pd help`         - Show this help information.
 - `pd backup`       - Backup a specified distribution.
