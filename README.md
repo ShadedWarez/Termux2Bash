@@ -48,7 +48,7 @@ Download
 ### PROOT-DISTRO
 > recommended 
 ```diff
-- ;apt update && apt upgrade -y && apt install wget -y && echo clear >>$PREFIX/etc/bash.bashrc && wget -O $PREFIX/bin/PROOT-DISTRO https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Install/PROOT-DISTRO && chmod 755 $PREFIX/bin/PROOT-DISTRO && PROOT-DISTRO
+-; apt update && apt upgrade -y && apt install wget -y && echo clear >>$PREFIX/etc/bash.bashrc && wget -O $PREFIX/bin/PROOT-DISTRO https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Install/PROOT-DISTRO && chmod 755 $PREFIX/bin/PROOT-DISTRO && PROOT-DISTRO
 ```
 ### CHROOT-DISTRO
 > optional
@@ -58,26 +58,26 @@ Download
 # Install Distro
 > For proot
 ```diff
-- ;PROOT-DISTRO
+PROOT-DISTRO
 ```
 > For chroot
 ```diff
--; CHROOT-DISTRO
+CHROOT-DISTRO
 ```
 ### Login
 > Example: `kali`
 ```diff
-- ;kali
+kali
 ```
 ### Logout
 > Back to Termux
 ```diff
-- ;exit
+exit
 ```
 ### Uninstall
 > Example: `uninstall-kali`
 ```diff 
-- ;uninstall-kali
+uninstall-kali
 ```
 
 # Proot Options
