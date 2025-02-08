@@ -66,7 +66,7 @@ EOF
 chmod 755 $PREFIX/bin/$NM-uninstall
 
 # Download configuration files
-wget -O $DIR/home/kali/.bashrc https://raw.githubusercontent.com/xiv3r/Kali-Linux-Termux/refs/heads/main/kali_nethunter/rcfiles/home.bashrc
+wget -O $DIR/root/.bashrc https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Chroot/root.bashrc
 
 # Modify .bash_profile
 sed -i '/if/,/fi/d' $DIR/root/.bash_profile
