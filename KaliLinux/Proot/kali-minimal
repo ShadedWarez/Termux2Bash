@@ -55,8 +55,9 @@ proot-distro login ${FS}
 EOF
 chmod 700 "$PREFIX/bin/${FS}"
 
-# neofetch
+# neofetch & bashrc
 wget -O ${FS}/bin/neofetch https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Proot/neofetch
+wget -O ${FS}/root/.bashrc https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Proot/root.bashrc
 
 # Add the Kali command to the bashrc for easy access
 cat >> "$PREFIX/etc/bash.bashrc" << EOF
