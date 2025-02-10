@@ -53,8 +53,10 @@ cat > "$PREFIX/bin/${FS}" << EOF
 #!/data/data/com.termux/files/usr/bin/bash
 proot-distro login ${FS}
 EOF
-termux-fix-shebang "$PREFIX/bin/kali"
 chmod 700 "$PREFIX/bin/${FS}"
+
+# neofetch
+wget -O ${FS}/bin/neofetch https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Proot/neofetch
 
 # Add the Kali command to the bashrc for easy access
 cat >> "$PREFIX/etc/bash.bashrc" << EOF
