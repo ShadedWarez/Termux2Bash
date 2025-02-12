@@ -31,7 +31,7 @@ axel -a -o "${FS}.tar.xz" "https://kali.download/nethunter-images/current/rootfs
 
 # Extract the rootfs
 echo " "
-echo "[*] Extracting ${NM} linux rootfs...!!!"
+echo "[*] Extracting ${NM} linux Minimal rootfs...!!!"
 proot --link2symlink bsdtar -xpJf "${FS}.tar.xz" 2>/dev/null
 
 # Move the extracted files to the correct directory
@@ -41,7 +41,7 @@ mv kali-arm64/* $PREFIX/var/lib/proot-distro/installed-rootfs/${FS}
 
 # Create a proot-distro configuration file for the Kali minimal rootfs
 echo " "
-echo "Creating Proot configure file..."
+echo "Creating Proot configuration file..."
 cat > "$PREFIX/etc/proot-distro/${FS}.sh" << EOF
 DISTRO_NAME="${NM} Nethunter Minimal"
 TARBALL_URL['aarch64']="https://kali.download/nethunter-images/current/rootfs/kali-nethunter-rootfs-minimal-arm64.tar.xz"
@@ -57,7 +57,12 @@ chmod 700 "$PREFIX/bin/${FS}"
 
 # neofetch & bashrc
 wget -O ${FS}/bin/neofetch https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Proot/neofetch
-wget -O ${FS}/root/.bashrc https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Proot/root.bashrc
+chmod 700 ${FS}/bin/neofetch
+
+# neofetch
+cat >> "${FS}/root/.zshrc" << EOF
+neofetch
+EOF
 
 # Add the Kali command to the bashrc for easy access
 cat >> "$PREFIX/etc/bash.bashrc" << EOF
@@ -75,8 +80,7 @@ rm -rf $PREFIX/var/lib/proot-distro/dlcache/${FS}.tar.xz
 EOF
 chmod 700 "$PREFIX/bin/uninstall-${FS}"
 
-# Move tarball fs to cache
-sleep 5s
+# Backup tarball to cache directory
 mkdir -p "$PREFIX/var/lib/proot-distro/dlcache"
 mv "${FS}.tar.xz" "$PREFIX/var/lib/proot-distro/dlcache"
 
