@@ -38,7 +38,7 @@ echo "Migrating..."
 mv "kali-arm64/*" "$PREFIX/var/lib/proot-distro/installed-rootfs/${FS}"
 
 # Create a proot-distro configuration file for the Kali full rootfs
-echo "Creating proot configuration file..."
+echo "Creating Proot Configuration file..."
 cat > "$PREFIX/etc/proot-distro/${FS}.sh" << EOF
 DISTRO_NAME="${NM} Nethunter Full"
 TARBALL_URL['aarch64']="https://kali.download/nethunter-images/current/rootfs/kali-nethunter-rootfs-full-arm64.tar.xz"
