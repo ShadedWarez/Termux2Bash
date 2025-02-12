@@ -52,7 +52,7 @@ proot-distro login "${FS}"
 EOF
 chmod 700 "$PREFIX/bin/${FS}"
 
-# neofetch & bashrc
+# neofetch binary 
 wget -O "${FS}/bin/neofetch" https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Proot/neofetch
 chmod 700 "${FS}/bin/neofetch"
 
