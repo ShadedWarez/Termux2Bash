@@ -79,11 +79,11 @@ fi
 cmdline="proot \\
         --link2symlink \\
         -0 \\
-        -r $CHROOT \\
+        -r $DIR \\
         -b /dev \\
         -b /proc \\
         -b /sdcard \\
-        -b $CHROOT\$home:/dev/shm \\
+        -b $DIR\$home:/dev/shm \\
         -w \$home \\
            /usr/bin/env -i \\
            HOME=\$home \\
