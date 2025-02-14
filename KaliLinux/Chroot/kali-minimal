@@ -51,18 +51,18 @@ cd \${HOME}
 ## termux-exec sets LD_PRELOAD so let's unset it before continuing
 unset LD_PRELOAD
 ## Workaround for Libreoffice, also needs to bind a fake /proc/version
-if [ ! -f $CHROOT/root/.version ]; then
-    touch $CHROOT/root/.version
+if [ ! -f $DIR/root/.version ]; then
+    touch $DIR/root/.version
 fi
 
 ## Default user is "kali"
-user="$USERNAME"
+user="$NM"
 home="/home/\$user"
 start="sudo -u kali /bin/bash"
 
 ## NH can be launched as root with the "-r" cmd attribute
 ## Also check if user kali exists, if not start as root
-if grep -q "kali" ${CHROOT}/etc/passwd; then
+if grep -q "kali" ${DIR}/etc/passwd; then
     KALIUSR="1";
 else
     KALIUSR="0";
