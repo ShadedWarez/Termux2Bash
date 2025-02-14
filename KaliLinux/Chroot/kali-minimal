@@ -18,18 +18,21 @@ neofetch --ascii_distro Kali -L
 axel -a -o $TAR https://kali.download/nethunter-images/current/rootfs/$TAR
 
 # Create a proot-distro configuration file
+echo " "
 cat << EOF
 Checking $TAR file integrity...
 EOF
+echo " "
 cat > $HOME/SHA512 << EOF
 $TAR SHA512=$(sha512sum $TAR | awk '{print $1}')
 EOF
 cat $HOME/SHA512
 
 # Extract rootfs
+echo " "
 echo "[*] Decompressing file..."
 echo "[*] Please wait..."
-echo "[*] Extracting $TAR..."
+echo "[*] Extracting $TAR, Please wait..."
 
 proot --link2symlink bsdtar -xpJf $TAR 2>/dev/null
 
@@ -40,8 +43,63 @@ $NM
 EOF
 
 # Adding shortcut file
-wget -O $PREFIX/bin/$NM https://raw.githubusercontent.com/xiv3r/Kali-Linux-Termux/refs/heads/main/kali_nethunter/kali
-termux-fix-shebang $PREFIX/bin/$NM
+# wget -O $PREFIX/bin/$NM https://raw.githubusercontent.com/xiv3r/Kali-Linux-Termux/refs/heads/main/kali_nethunter/kali
+
+cat > "$PREFIX/bin/$NM" <<- EOF
+#!/data/data/com.termux/files/usr/bin/bash -e
+cd \${HOME}
+## termux-exec sets LD_PRELOAD so let's unset it before continuing
+unset LD_PRELOAD
+## Workaround for Libreoffice, also needs to bind a fake /proc/version
+if [ ! -f $CHROOT/root/.version ]; then
+    touch $CHROOT/root/.version
+fi
+
+## Default user is "kali"
+user="$USERNAME"
+home="/home/\$user"
+start="sudo -u kali /bin/bash"
+
+## NH can be launched as root with the "-r" cmd attribute
+## Also check if user kali exists, if not start as root
+if grep -q "kali" ${CHROOT}/etc/passwd; then
+    KALIUSR="1";
+else
+    KALIUSR="0";
+fi
+if [[ \$KALIUSR == "0" || ("\$#" != "0" && ("\$1" == "-r" || "\$1" == "-R")) ]];then
+    user="root"
+    home="/\$user"
+    start="/bin/bash --login"
+    if [[ "\$#" != "0" && ("\$1" == "-r" || "\$1" == "-R") ]];then
+        shift
+    fi
+fi
+
+cmdline="proot \\
+        --link2symlink \\
+        -0 \\
+        -r $CHROOT \\
+        -b /dev \\
+        -b /proc \\
+        -b /sdcard \\
+        -b $CHROOT\$home:/dev/shm \\
+        -w \$home \\
+           /usr/bin/env -i \\
+           HOME=\$home \\
+           PATH=/usr/local/sbin:/usr/local/bin:/bin:/usr/bin:/sbin:/usr/sbin \\
+           TERM=\$TERM \\
+           LANG=C.UTF-8 \\
+           \$start"
+
+cmd="\$@"
+if [ "\$#" == "0" ];then
+    exec \$cmdline
+else
+    \$cmdline -c "\$cmd"
+fi
+EOF
+
 chmod 755 $PREFIX/bin/$NM
 
 # Add neofetch
