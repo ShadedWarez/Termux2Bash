@@ -4,38 +4,153 @@
 apt install proot proot-distro bsdtar axel neofetch -y
 clear
 
-cd ${HOME}
+cd $HOME
 
-# List of distros
-echo -e '\e[1;95mAvailable Proot Distros:''\e[0m''\e[1;92m'
-cat << EOF
-1. alma       6. backbox    11. debian   16. openkylin  21. pardus
-2. alpine     7. blackarch  12. deepin   17. opensuse   22. rocky
-3. amazon     8. centos     13. debkali  18. oracle     23. ubuntu
-4. archlinux  9. chimera    14. kali     19. parrot     24. void
-5. artix     10. fedora     15. manjaro  20. photon     25. altlinux
+# Display the menu
+echo "Please select the Distro:"
+echo "1. alma"
+echo "2. alpine"
+echo "3. altlinux"
+echo "4. amazon"
+echo "5. archlinux"
+echo "6. artix"
+echo "7. backbox"
+echo "8. blackarch"
+echo "9. centos"
+echo "10. chimera"
+echo "11. fedora"
+echo "12. gentoo"
+echo "13. debian"
+echo "14. debkali"
+echo "15. deepin"
+echo "16. devuan"
+echo "17. kali"
+echo "18. manjaro"
+echo "19. openkylin"
+echo "20. openwrt"
+echo "21. openeuler"
+echo "22. opensuse"
+echo "23. oracle"
+echo "24. parrot"
+echo "25. pardus"
+echo "26. photon"
+echo "27. rocky"
+echo "28. ubuntu"
+echo "29. ujammy"
+echo "30. void"
 
-26. devuan 
-27. gentoo
-28. openeuler
-29. ujammy
-30. openwrt
-EOF
+# Read the user's choice
+read -p "Enter the number: " choice
 
-# Prompt the user to input text for FS
-echo -e '\e[0m'
-echo -e '\e[1;96mEnter Distro Name:''\e[0m''\e[1;93m'
-read FS
+# Set the FS variable based on the user's choice
+case $choice in
+    1)
+        FS="alma"
+        ;;
+    2)
+        FS="alpine"
+        ;;
+    3)
+        FS="altlinux"
+        ;;
+    4)
+        FS="amazon"
+        ;;
+    5)
+        FS="archlinux"
+        ;;
+    6)
+        FS="artix"
+        ;;
+    7)
+        FS="backbox"
+        ;;
+    8)
+        FS="blackarch"
+        ;;
+    9)
+        FS="centos"
+        ;;
+    10)
+        FS="chimera"
+        ;;
+    11)
+        FS="fedora"
+        ;;
+    12)
+        FS="gentoo"
+        ;;
+    13)
+        FS="debian"
+        ;;
+    14)
+        FS="debkali"
+        ;;
+    15)
+        FS="deepin"
+        ;;
+    16)
+        FS="devuan"
+        ;;
+    17)
+        FS="kali"
+        ;;
+    18)
+        FS="manjaro"
+        ;;
+    19)
+        FS="openkylin"
+        ;;
+    20)
+        FS="openwrt"
+        ;;
+    21)
+        FS="openeuler"
+        ;;
+    22)
+        FS="opensuse"
+        ;;
+    23)
+        FS="oracle"
+        ;;
+    24)
+        FS="parrot"
+        ;;
+    25)
+        FS="pardus"
+        ;;
+    26)
+        FS="photon"
+        ;;
+    27)
+        FS="rocky"
+        ;;
+    28)
+        FS="ubuntu"
+        ;;
+    29)
+        FS="ujammy"
+        ;;
+    30)
+        FS="void"
+        ;;
+    *)
+        echo "Invalid selection. Exiting."
+        exit 1
+        ;;
+esac
+
+# Output the selected value
+echo "You Selected $FS"
+
+# Read FS value
+FS="$FS"
 
 # Forward the value of FS to NM
 NM="$FS"
 
 # Capitalize the first letter of NM
 NM=$(echo "$NM" | awk '{print toupper(substr($0,1,1)) substr($0,2)}')
-
-# Display the values of FS and NM
-echo "$FS" > /dev/null
-echo "$NM" > /dev/null
 
 # Display neofetch with custom ASCII art
 neofetch --ascii_distro "${NM}" -L
