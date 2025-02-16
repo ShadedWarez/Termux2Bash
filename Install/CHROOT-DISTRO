@@ -140,8 +140,7 @@ case $choice in
         ;;
 esac
 
-# Output the selected value
-echo "You Selected $FS"
+clear
 
 # Read FS value
 FS="$FS"
@@ -154,6 +153,10 @@ NM=$(echo "$NM" | awk '{print toupper(substr($0,1,1)) substr($0,2)}')
 
 # Display neofetch with custom ASCII art
 neofetch --ascii_distro "${NM}" -L
+
+# Output the selected value
+echo "You Selected $NM Linux"
+echo " "
 
 # Download the rootfs using axel
 axel -a -o "${FS}.tar.xz" "https://github.com/xiv3r/Termux-Pentesting-Distro/releases/download/rootfs/${FS}.tar.xz"
