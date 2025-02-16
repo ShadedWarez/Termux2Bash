@@ -44,11 +44,12 @@ neofetch --ascii_distro "${NM}" -L
 axel -a -o "${FS}.tar.xz" "https://github.com/xiv3r/Termux-Pentesting-Distro/releases/download/rootfs/${FS}.tar.xz"
 
 # Create a proot-distro configuration file for the Kali minimal rootfs
-echo "Checking ${NM} integrity...."
 echo " "
+echo "Checking ${NM} integrity...."
 cat > "$HOME/${NM}_SHA256" << EOF
 ${NM}_SHA256= "$(sha256sum "${FS}.tar.xz" | awk '{print $1}')"
 EOF
+echo " "
 cat "$HOME/${NM}_SHA256"
 
 # Extract the rootfs
