@@ -60,13 +60,11 @@ proot --link2symlink bsdtar -xpJf "${FS}.tar.xz" 2>/dev/null
 cat > $PREFIX/bin/${FS} <<- EOF
 #!/data/data/com.termux/files/usr/bin/bash
 
-cd ${HOME}
+cd $HOME
 unset LD_PRELOAD
 cmdline="proot \\
         --link2symlink \\
         -0 \\
-        -L \\
-        -k 6.1.2 \\
         -r $FS \\
         -b /dev \\
         -b /proc \\
@@ -75,7 +73,7 @@ cmdline="proot \\
         -w /root \\
            /usr/bin/env -i \\
            HOME=/root \\
-           PATH=/usr/local/sbin:/usr/local/bin:/bin:/usr/bin:/sbin:/usr/sbin>
+           PATH=/usr/local/sbin:/usr/local/bin:/bin:/usr/bin:/sbin:/usr/sbin \\
            TERM=\$TERM \\
            LANG=C.UTF-8 \\
            /bin/bash --login"
