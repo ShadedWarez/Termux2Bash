@@ -34,14 +34,12 @@ Proot-Distro Scripts: Each distro has a configuration script (e.g., kali.sh, ubu
 
 # Requirements
   
-Download
+## Download
 
 | [Termux](https://play.google.com/store/apps/details?id=com.termux)
 |
 | [VNC](https://store.nethunter.com/packages/com.offsec.nethunter.kex/)
 |
-
-<br>
 
 # Installation
 
