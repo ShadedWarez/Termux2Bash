@@ -216,3 +216,5 @@ Successful Installation!
 
 To login ${NM} Linux, Type: ${FS}
 EOF
+
+$FS
