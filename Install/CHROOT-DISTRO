@@ -96,6 +96,7 @@ EOF
 # Add support for uninstallation
 cat > $PREFIX/bin/uninstall-${FS} << EOF
 #!/data/data/com.termux/files/usr/bin/bash
+
 rm -rf ${FS}
 rm ${NM}_SHA256
 sed -i 's/echo "Login ${NM} Linux: ${FS}"//g' $PREFIX/etc/bash.bashrc
@@ -104,6 +105,7 @@ rm -rf $PREFIX/bin/${FS}
 EOF
 chmod 755 "$PREFIX/bin/uninstall-${FS}"
 
+# Free up space
 rm -rf ${FS}.tar.xz
 
 # Display final instructions
