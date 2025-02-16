@@ -48,7 +48,7 @@ cd "$PREFIX/var/lib/proot-distro/installed-rootfs/"
 axel -a -o "${FS}.tar.xz" "https://github.com/xiv3r/Termux-Pentesting-Distro/releases/download/rootfs/${FS}.tar.xz"
 
 # Extract the rootfs
-echo "[*] Extracting ${NM} Linux Rootfs...!!!"
+echo "[*] Extracting ${NM} Linux Rootfs, Please wait...!!!"
 proot --link2symlink bsdtar -xpJf "${FS}.tar.xz" 2>/dev/null
 
 # Create a proot-distro configuration file for the Kali minimal rootfs
@@ -61,6 +61,7 @@ EOF
 # Create a shortcut command to launch the distro
 cat > "$PREFIX/bin/${FS}" << EOF
 #!/data/data/com.termux/files/usr/bin/bash
+
 proot-distro login ${FS}
 EOF
 
@@ -76,6 +77,7 @@ EOF
 # Add support for uninstallation
 cat > $PREFIX/bin/uninstall-${FS} << EOF
 #!/data/data/com.termux/files/usr/bin/bash
+
 proot-distro remove ${FS}
 sed -i 's/echo "Login ${NM} Linux: ${FS}"//g' $PREFIX/etc/bash.bashrc
 rm -rf $PREFIX/bin/uninstall-${FS}
@@ -84,7 +86,7 @@ rm -rf $PREFIX/var/lib/proot-distro/dlcache/${FS}.tar.xz
 EOF
 chmod 700 "$PREFIX/bin/uninstall-${FS}"
 
-# Move tarball to cache
+# Backup tarball to the cache
 mkdir -p "$PREFIX/var/lib/proot-distro/dlcache"
 mv "${FS}.tar.xz" "$PREFIX/var/lib/proot-distro/dlcache"
 
