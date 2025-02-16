@@ -5,7 +5,7 @@ apt install proot proot-distro bsdtar axel neofetch -y
 clear
 
 # Display the menu
-echo "Please select the Distro:"
+echo "Select your Distro:"
 echo "1. alma"
 echo "2. alpine"
 echo "3. altlinux"
@@ -16,21 +16,21 @@ echo "7. backbox"
 echo "8. blackarch"
 echo "9. centos"
 echo "10. chimera"
-echo "11. fedora"
-echo "12. gentoo"
-echo "13. debian"
-echo "14. debkali"
-echo "15. deepin"
-echo "16. devuan"
+echo "11. debian"
+echo "12. debkali"
+echo "13. deepin"
+echo "14. devuan"
+echo "15. fedora"
+echo "16. gentoo"
 echo "17. kali"
 echo "18. manjaro"
-echo "19. openkylin"
-echo "20. openwrt"
-echo "21. openeuler"
+echo "19. openeuler"
+echo "20. openkylin"
+echo "21. openwrt"
 echo "22. opensuse"
 echo "23. oracle"
-echo "24. parrot"
-echo "25. pardus"
+echo "24. pardus"
+echo "25. parrot"
 echo "26. photon"
 echo "27. rocky"
 echo "28. ubuntu"
@@ -73,22 +73,22 @@ case $choice in
         FS="chimera"
         ;;
     11)
-        FS="fedora"
-        ;;
-    12)
-        FS="gentoo"
-        ;;
-    13)
         FS="debian"
         ;;
-    14)
+    12)
         FS="debkali"
         ;;
-    15)
+    13)
         FS="deepin"
         ;;
-    16)
+    14)
         FS="devuan"
+        ;;
+    15)
+        FS="fedora"
+        ;;
+    16)
+        FS="gentoo"
         ;;
     17)
         FS="kali"
@@ -97,13 +97,13 @@ case $choice in
         FS="manjaro"
         ;;
     19)
-        FS="openkylin"
+        FS="openeuler"
         ;;
     20)
-        FS="openwrt"
+        FS="openkylin"
         ;;
     21)
-        FS="openeuler"
+        FS="openwrt"
         ;;
     22)
         FS="opensuse"
@@ -112,10 +112,10 @@ case $choice in
         FS="oracle"
         ;;
     24)
-        FS="parrot"
+        FS="pardus"
         ;;
     25)
-        FS="pardus"
+        FS="parrot"
         ;;
     26)
         FS="photon"
