@@ -157,6 +157,6 @@ rm $TAR
 # Display success message
 cat << EOF
 [*] Successful Installation...!!!
-echo " "
+
 [*] To Login Kali Nethunter Type: kali 
 EOF
