@@ -143,7 +143,7 @@ apt update && apt install wget -y && clear && wget -qO- https://raw.githubuserco
 # Adelie Linux 
 - Install
 ```
-apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Adelie/install | bash
+apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Adelie/install | bash && adelie
 ```
 
 <img width="800" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/Adelie/adelie.png">
