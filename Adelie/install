@@ -27,7 +27,7 @@ mkdir -p $PREFIX/var/lib/proot-distro/installed-rootfs
 cd $PREFIX/var/lib/proot-distro/installed-rootfs/
 
 # Download the rootfs using axel
-axel -a -o $FS.tar.xz https://github.com/xiv3r/Termux-Pentesting-Distro/releases/download/rootfs/$FS.tar.xz
+axel -a -o $FS.tar.xz https://github.com/xiv3r/Termux-Pentesting-Distro/releases/download/rootfs/$FS.tar.xz || exit 1
 
 # Extract the rootfs
 echo " "
@@ -77,5 +77,3 @@ Successful Installation!
 
 To login $NM Linux, Type: $FS
 EOF
-
-$FS
