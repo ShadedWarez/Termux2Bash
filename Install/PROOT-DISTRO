@@ -4,20 +4,20 @@
 apt install proot proot-distro bsdtar axel neofetch -y
 clear
 
-# Display the menu
+# Display the menuecho 
 echo "Select your Distro:"
-echo "1. alma"
-echo "2. alpine"
-echo "3. altlinux"
-echo "4. amazon"
-echo "5. archlinux"
-echo "6. artix"
-echo "7. backbox"
-echo "8. blackarch"
-echo "9. centos"
-echo "10. chimera"
-echo "11. debian"
-echo "12. debkali"
+echo "1. adelie"
+echo "2. alma"
+echo "3. alpine"
+echo "4. altlinux"
+echo "5. amazon"
+echo "6. archlinux"
+echo "7. artix"
+echo "8. backbox"
+echo "9. blackarch"
+echo "10. centos"
+echo "11. chimera"
+echo "12. debian"
 echo "13. deepin"
 echo "14. devuan"
 echo "15. fedora"
@@ -26,8 +26,8 @@ echo "17. kali"
 echo "18. manjaro"
 echo "19. openeuler"
 echo "20. openkylin"
-echo "21. openwrt"
-echo "22. opensuse"
+echo "21. opensuse"
+echo "22. openwrt"
 echo "23. oracle"
 echo "24. pardus"
 echo "25. parrot"
@@ -43,40 +43,40 @@ read -p "Enter the Number: " choice
 # Set the FS variable based on the user's choice
 case $choice in
     1)
-        FS="alma"
+        FS="adelie"
         ;;
     2)
-        FS="alpine"
+        FS="alma"
         ;;
     3)
-        FS="altlinux"
+        FS="alpine"
         ;;
     4)
-        FS="amazon"
+        FS="altlinux"
         ;;
     5)
-        FS="archlinux"
+        FS="amazon"
         ;;
     6)
-        FS="artix"
+        FS="archlinux"
         ;;
     7)
-        FS="backbox"
+        FS="artix"
         ;;
     8)
-        FS="blackarch"
+        FS="backbox"
         ;;
     9)
-        FS="centos"
+        FS="blackarch"
         ;;
     10)
-        FS="chimera"
+        FS="centos"
         ;;
     11)
-        FS="debian"
+        FS="chimera"
         ;;
     12)
-        FS="debkali"
+        FS="debian"
         ;;
     13)
         FS="deepin"
@@ -103,10 +103,10 @@ case $choice in
         FS="openkylin"
         ;;
     21)
-        FS="openwrt"
+        FS="opensuse"
         ;;
     22)
-        FS="opensuse"
+        FS="openwrt"
         ;;
     23)
         FS="oracle"
