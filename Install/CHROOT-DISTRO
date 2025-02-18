@@ -159,7 +159,7 @@ echo "You Selected $NM Linux"
 echo " "
 
 # Download the rootfs using axel
-axel -a -o "${FS}.tar.xz" "https://github.com/xiv3r/Termux-Pentesting-Distro/releases/download/rootfs/${FS}.tar.xz"
+axel -a -o "${FS}.tar.xz" "https://github.com/xiv3r/Termux-Pentesting-Distro/releases/download/rootfs/${FS}.tar.xz" || exit 1
 
 # Create a proot-distro configuration file for the Kali minimal rootfs
 echo " "
