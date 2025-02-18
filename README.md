@@ -95,7 +95,7 @@ Example: `pd install ubuntu`
 
 ------------
 
-# Kali Nethunter Full [proot]
+# Kali Nethunter Full
 - Support vnc service
 - login:`kali`
 - vnc:`(kali vnc) &`
@@ -123,7 +123,7 @@ kali vnc &
 <br>
 
 -------------
-# Kali Nethunter Minimal [proot]
+# Kali Nethunter Minimal
 - login:`kali`
 - uninstall:`kali-uninstall`
 
@@ -140,7 +140,21 @@ apt update && apt install wget -y && clear && wget -qO- https://raw.githubuserco
 <br>
 
 -------------
-# Alma
+# Adelie Linux 
+- Install
+```
+apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Adelie/install | bash
+```
+
+<img width="800" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/Adelie/adelie.png">
+
+<br>
+<br>
+<br>
+<br>
+
+-------------
+# Alma Linux
 - Install
 ```
 apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Alma/install | bash && alma
@@ -154,7 +168,7 @@ apt update && apt install wget -y && clear && wget -qO- https://raw.githubuserco
 <br>
 
 -------------
-# Alpine
+# Alpine Linux
 - Install
 ```
 apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Alpine/install | bash && alpine
@@ -169,7 +183,7 @@ apt update && apt install wget -y && clear && wget -qO- https://raw.githubuserco
 
 
 -------------
-# Altlinux 
+# Alt Linux
 - Install
 ```
 apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Altlinux/install | bash && altlinux 
@@ -183,7 +197,7 @@ apt update && apt install wget -y && clear && wget -qO- https://raw.githubuserco
 <br>
 
 -------------
-# Amazon
+# Amazon Linux
 - Install
 ```
 apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Amazon/install | bash && amazon
@@ -197,7 +211,7 @@ apt update && apt install wget -y && clear && wget -qO- https://raw.githubuserco
 <br>
 
 -------------
-# Archlinux
+# Arch Linux
 - Install
 ```
 apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Archlinux/install | bash && archlinux
@@ -210,9 +224,8 @@ apt update && apt install wget -y && clear && wget -qO- https://raw.githubuserco
 <br>
 <br>
 
-
 -------------
-# Artix
+# Artix Linux
 - Install
 ```
 apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Artix/install | bash && artix
@@ -227,7 +240,7 @@ apt update && apt install wget -y && clear && wget -qO- https://raw.githubuserco
 
 
 ----------
-# BackBox
+# BackBox Linux
 - Install
 ```
 apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/BackBox/install | bash && clear && backbox
@@ -241,7 +254,7 @@ apt update && apt install wget -y && clear && wget -qO- https://raw.githubuserco
 <br>
 
 -----------
-# BlackArch
+# BlackArch Linux
 - Install 
 ```
 apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/BlackArch/install | bash && clear && blackarch
@@ -255,7 +268,7 @@ apt update && apt install wget -y && clear && wget -qO- https://raw.githubuserco
 <br>
 
 -------------
-# Centos
+# Centos Linux 
 - Install
 ```
 apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Centos/install | bash && centos
@@ -269,7 +282,7 @@ apt update && apt install wget -y && clear && wget -qO- https://raw.githubuserco
 <br>
 
 -------------
-# Chimera
+# Chimera Linux 
 - Install
 ```
 apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Chimera/install | bash && chimera
@@ -284,7 +297,7 @@ apt update && apt install wget -y && clear && wget -qO- https://raw.githubuserco
 
 
 -------------
-# Debian 
+# Debian Linux 
 - Install
 ```
 apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Debian/install | bash && debian 
@@ -297,23 +310,8 @@ apt update && apt install wget -y && clear && wget -qO- https://raw.githubuserco
 <br>
 <br>
 
-
-------------
-# Debian2Kali
-- Install
-```
-apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliDeb/install | bash && clear && debkali
-```
-
-<img width="800" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/KaliDeb/NH.png">
-
-<br>
-<br>
-<br>
-<br>
-
 -------------
-# Deepin 
+# Deepin Linux 
 - Install
 ```
 apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Deepin/install | bash && deepin
@@ -327,7 +325,7 @@ apt update && apt install wget -y && clear && wget -qO- https://raw.githubuserco
 <br>
 
 -------------
-# Devuan 
+# Devuan Linux 
 - Install
 ```
 apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Devuan/install | bash && devuan 
@@ -341,7 +339,7 @@ apt update && apt install wget -y && clear && wget -qO- https://raw.githubuserco
 <br>
 
 -------------
-# Fedora 
+# Fedora Linux 
 - Install
 ```
 apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/Fedora/artix/install | bash && fedora 
@@ -355,7 +353,7 @@ apt update && apt install wget -y && clear && wget -qO- https://raw.githubuserco
 <br>
 
 -------------
-# Gentoo 
+# Gentoo Linux 
 - Install
 ```
 apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Gentoo/install | bash && gentoo 
@@ -398,7 +396,7 @@ apt update && apt install wget -y && clear && wget -qO- https://raw.githubuserco
 <br>
 
 -------------
-# Manjaro 
+# Manjaro Linux 
 - Install
 ```
 apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Manjaro/install | bash && manjaro
@@ -412,7 +410,7 @@ apt update && apt install wget -y && clear && wget -qO- https://raw.githubuserco
 <br>
 
 -------------
-# Openkylin 
+# Openkylin Linux 
 - Install
 ```
 apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Openkylin/install | bash && openkylin 
@@ -426,7 +424,7 @@ apt update && apt install wget -y && clear && wget -qO- https://raw.githubuserco
 <br>
 
 -------------
-# Opensuse 
+# Opensuse Linux 
 - Install
 ```
 apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Opensuse/install | bash && opensuse 
@@ -440,7 +438,7 @@ apt update && apt install wget -y && clear && wget -qO- https://raw.githubuserco
 <br>
 
 -------------
-# Oracle 
+# Oracle Linux 
 - Install
 ```
 apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Oracle/install | bash && oracle 
@@ -454,7 +452,7 @@ apt update && apt install wget -y && clear && wget -qO- https://raw.githubuserco
 <br>
 
 -------------
-# Openeuler 
+# Openeuler Linux 
 - Install
 ```
 apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/OpenEuler/install | bash && openeuler 
@@ -468,7 +466,7 @@ apt update && apt install wget -y && clear && wget -qO- https://raw.githubuserco
 <br>
 
 -------------
-# Openwrt
+# Openwrt Linux 
 - Install
 ```
 apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Openwrt/install | bash && openwrt
@@ -482,7 +480,7 @@ apt update && apt install wget -y && clear && wget -qO- https://raw.githubuserco
 <br>
 
 -------------
-# Pardus 
+# Pardus Linux 
 - Install
 ```
 apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Pardus/install | bash && pardus 
@@ -496,7 +494,7 @@ apt update && apt install wget -y && clear && wget -qO- https://raw.githubuserco
 <br>
 
 -----------
-# ParrotSec
+# Parrot Linux 
 - Install
 ```
 apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/ParrotSec/install | bash && clear && parrot
@@ -510,7 +508,7 @@ apt update && apt install wget -y && clear && wget -qO- https://raw.githubuserco
 <br>
 
 -------------
-# Photon 
+# Photon Linux 
 - Install
 ```
 apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Photon/install | bash && photon 
@@ -523,9 +521,8 @@ apt update && apt install wget -y && clear && wget -qO- https://raw.githubuserco
 <br>
 <br>
 
-
 -------------
-# Rocky 
+# Rocky Linux 
 - Install
 ```
 apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Rocky/install | bash && rocky 
@@ -539,7 +536,7 @@ apt update && apt install wget -y && clear && wget -qO- https://raw.githubuserco
 <br>
 
 -------------
-# Termux
+# Termux Linux
 - Install
 ```
 apt update && apt install wget neofetch -y && wget -O $PREFIX/etc/bash.bashrc https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Termux/bash.bashrc && source $PREFIX/etc/bash.bashrc
@@ -548,7 +545,7 @@ apt update && apt install wget neofetch -y && wget -O $PREFIX/etc/bash.bashrc ht
 <img width="800" height="500" src="https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Termux/term.png">
 
 -------------
-# Ubuntu Noble 
+# Ubuntu Linux Noble
 - Install
 ```
 apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Ubuntu/install | bash && ubuntu 
@@ -562,7 +559,7 @@ apt update && apt install wget -y && clear && wget -qO- https://raw.githubuserco
 <br>
 
 -------------
-# Ubuntu Jammy
+# Ubuntu Linux Jammy
 - Install
 ```
 apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Ubuntu_jammy/install | bash && ujammy 
@@ -576,7 +573,7 @@ apt update && apt install wget -y && clear && wget -qO- https://raw.githubuserco
 <br>
 
 -------------
-# Void 
+# Void Linux 
 - Install
 ```
 apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Void/install | bash && void
