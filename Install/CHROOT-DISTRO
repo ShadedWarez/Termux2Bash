@@ -177,6 +177,7 @@ sleep 3s
 echo " "
 echo "SHA512"
 sha512sum $FS.tar.xz
+sleep 3s
 
 # Extract the rootfs
 echo " "
@@ -237,7 +238,9 @@ rm -rf $FS.tar.xz
 echo " "
 echo -e '\e[1;96mSuccessful Installation!'
 echo " "
-echo -e '\e[1;93mTo login $NM Linux, Type: $FS'
+cat <<- EOF
+To login $NM Linux, Type: $FS
+EOF
 
 sleep 15s
 clear
