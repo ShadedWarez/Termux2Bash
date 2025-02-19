@@ -237,6 +237,7 @@ rm -rf $FS.tar.xz
 # Display final instructions
 echo " "
 echo -e '\e[1;96mSuccessful Installation!'
+echo -e '\e[0m'
 echo " "
 cat <<- EOF
 To login $NM Linux, Type: $FS
