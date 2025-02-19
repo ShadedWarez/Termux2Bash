@@ -7,7 +7,7 @@ clear
 cd $HOME
 
 # Display the menu
-echo "Select your Distro:"
+echo "Select your Distro:"                                                 
 echo "1. adelie"
 echo "2. alma"
 echo "3. alpine"
@@ -159,16 +159,24 @@ echo "You Selected $NM Linux"
 echo " "
 
 # Download the rootfs using axel
-axel -a -o $FS.tar.xz https://github.com/xiv3r/Termux-Pentesting-Distro/releases/download/rootfs/$FS.tar.xz || exit 1
+axel -a -o $FS.tar.xz https://github.com/xiv3r/Termux-Pentesting-Distro/releases/download/rootfs/$FS.tar.xz
 
 # Create a proot-distro configuration file for the Kali minimal rootfs
 echo " "
-echo "Checking $NM integrity...."
-cat > $HOME/$NM_SHA256 << EOF
-$NM_SHA256=$(sha256sum $FS.tar.xz | awk '{print $1}')
-EOF
+# cat > ${NM}_Linux << EOF
+echo "Checking $NM Linux File Integrity...!!!"
 echo " "
-cat $HOME/$NM_SHA256
+sleep 3s
+echo "MD5"
+md5sum $FS.tar.xz
+sleep 3s
+echo " "
+echo "SHA256"
+sha256sum $FS.tar.xz
+sleep 3s
+echo " "
+echo "SHA512"
+sha512sum $FS.tar.xz
 
 # Extract the rootfs
 echo " "
@@ -216,7 +224,6 @@ cat > $PREFIX/bin/uninstall-$FS << EOF
 #!/data/data/com.termux/files/usr/bin/bash
 
 rm -rf $FS
-rm $NM_SHA256
 sed -i 's/echo "Login $NM Linux: $FS"//g' $PREFIX/etc/bash.bashrc
 rm -rf $PREFIX/bin/uninstall-$FS
 rm -rf $PREFIX/bin/$FS
@@ -227,11 +234,12 @@ chmod 755 $PREFIX/bin/uninstall-$FS
 rm -rf $FS.tar.xz
 
 # Display final instructions
-echo -e '\e[1;93m'
-cat << EOF
-Successful Installation!
+echo " "
+echo -e '\e[1;96mSuccessful Installation!'
+echo " "
+echo -e '\e[1;93mTo login $NM Linux, Type: $FS'
 
-To login $NM Linux, Type: $FS
-EOF
+sleep 15s
+clear
 
 $FS
