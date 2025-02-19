@@ -161,9 +161,8 @@ echo " "
 # Download the rootfs using axel
 axel -a -o $FS.tar.xz https://github.com/xiv3r/Termux-Pentesting-Distro/releases/download/rootfs/$FS.tar.xz
 
-# Create a proot-distro configuration file for the Kali minimal rootfs
+# Create a proot-distro configuration file
 echo " "
-# cat > ${NM}_Linux << EOF
 echo "Checking $NM Linux File Integrity...!!!"
 echo " "
 sleep 3s
