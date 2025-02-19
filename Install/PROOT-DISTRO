@@ -231,4 +231,7 @@ cat <<- EOF
 To login $NM Linux, Type: $FS
 EOF
 
+sleep 15s
+clear
+
 $FS
