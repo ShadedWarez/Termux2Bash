@@ -5,7 +5,7 @@ apt install proot proot-distro bsdtar axel neofetch -y
 clear
 
 # Read FS value
-FS=kali
+FS=kali-nethunter-rootfs-minimal-arm64
 
 # Forward the value of FS to NM
 NM=$FS
@@ -27,7 +27,7 @@ mkdir -p $PREFIX/var/lib/proot-distro/installed-rootfs
 cd $PREFIX/var/lib/proot-distro/installed-rootfs/
 
 # Download the rootfs using axel
-axel -a -o $FS.tar.xz https://github.com/xiv3r/Termux-Pentesting-Distro/releases/download/rootfs/$FS.tar.xz
+axel -a -o $FS.tar.xz https://kali.download/nethunter-images/current/rootfs/$FS.tar.xz
 
 # Check file integrity
 echo " "
