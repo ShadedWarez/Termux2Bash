@@ -17,16 +17,22 @@ neofetch --ascii_distro Kali -L
 # Download Kali rootfs
 axel -a -o $TAR https://kali.download/nethunter-images/current/rootfs/$TAR
 
-# Create a proot-distro configuration file
+# Check file integrity
 echo " "
-cat << EOF
-Checking $TAR file integrity...
-EOF
+echo "Checking $NM Linux File Integrity...!!!"
 echo " "
-cat > $HOME/SHA512 << EOF
-$TAR SHA512=$(sha512sum $TAR | awk '{print $1}')
-EOF
-cat $HOME/SHA512
+sleep 3s
+echo "MD5"
+md5sum $FS.tar.xz
+sleep 3s
+echo " "
+echo "SHA256"
+sha256sum $FS.tar.xz
+sleep 3s
+echo " "
+echo "SHA512"
+sha512sum $FS.tar.xz
+sleep 3s
 
 # Extract rootfs
 echo " "
