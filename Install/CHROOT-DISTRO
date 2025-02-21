@@ -5,7 +5,6 @@ apt install proot proot-distro bsdtar axel neofetch -y
 clear
 
 cd $HOME
-termux-chroot
 
 # Display the menu
 echo "Select your Distro:"                                                 
