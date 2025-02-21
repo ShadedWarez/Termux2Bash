@@ -17,21 +17,26 @@ neofetch --ascii_distro Kali -L
 # Download Kali rootfs
 axel -a -o $TAR https://kali.download/nethunter-images/current/rootfs/$TAR
 
-# Create a proot-distro configuration file
+# Check file integrity
 echo " "
-cat << EOF
-Checking $TAR file integrity...
-EOF
+echo "Checking $NM Linux File Integrity...!!!"
 echo " "
-cat > $HOME/SHA512 << EOF
-$TAR SHA512=$(sha512sum $TAR | awk '{print $1}')
-EOF
-cat $HOME/SHA512
+sleep 3s
+echo "MD5"
+md5sum $TAR
+sleep 3s
+echo " "
+echo "SHA256"
+sha256sum $TAR
+sleep 3s
+echo " "
+echo "SHA512"
+sha512sum $TAR
+sleep 3s
 
 # Extract rootfs
 echo " "
 echo "[*] Extracting $TAR, Please wait..."
-
 proot --link2symlink bsdtar -xpJf $TAR 2>/dev/null
 
 # Update bash.bashrc
@@ -95,14 +100,9 @@ else
     \$cmdline -c "\$cmd"
 fi
 EOF
-
 chmod 755 $PREFIX/bin/$NM
 
-# vnc
-wget -O $DIR/usr/bin/vnc https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Chroot/vnc
-chmod 755 $DIR/usr/bin/vnc
-
-# neofetch
+# Add neofetch
 wget -O $DIR/bin/neofetch https://raw.githubusercontent.com/xiv3r/Kali-Linux-Termux/refs/heads/main/kali_nethunter/neofetch
 chmod 700 $DIR/bin/neofetch
 
@@ -125,7 +125,7 @@ chmod +s $DIR/usr/bin/su
 
 # Fix DNS issue
 cat > $DIR/etc/resolv.conf << EOF
-nameserver 9.9.9.9
+nameserver 9.9.9.10
 nameserver 8.8.8.8
 nameserver 1.1.1.1
 EOF
@@ -156,7 +156,7 @@ rm $TAR
 
 # Display success message
 cat << EOF
-[*] Successful Installation...!!!
+[*] Successful Installation...!
 
-[*] To Login Kali Nethunter Type: kali 
+[*] To Login Kali Nethunter Minimal Type: $NM
 EOF
