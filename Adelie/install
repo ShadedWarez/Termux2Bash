@@ -94,5 +94,5 @@ echo -e '\e[0m'
 cat <<- EOF
 To login $NM Linux, Type: $FS
 EOF
-
 sleep 15s
+echo " "
