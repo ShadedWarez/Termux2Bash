@@ -50,7 +50,7 @@ sleep 3s
 echo " "
 echo "[*] Extracting ${NM} Linux Rootfs, Please wait...!!!"
 proot --link2symlink bsdtar -xpJf $FS.tar.xz 2>/dev/null
-mv kali-arm64 $PREFIX/var/lib/proot-distro/installed-rootfs/$FS
+mv kali-arm64/* $FS
 
 # Create a proot-distro configuration file for the Kali minimal rootfs
 cat > $PREFIX/etc/proot-distro/$FS.sh << EOF
