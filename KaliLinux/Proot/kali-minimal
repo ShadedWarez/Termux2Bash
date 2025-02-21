@@ -17,7 +17,7 @@ NM=$(echo $NM | awk '{print toupper(substr($0,1,1)) substr($0,2)}')
 neofetch --ascii_distro $NM
 
 # Output the selected value
-echo "You selected $NM Linux"
+echo "You selected $NM Linux Minimal"
 echo " "
 
 # Create necessary directories
