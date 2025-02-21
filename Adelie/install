@@ -27,7 +27,24 @@ mkdir -p $PREFIX/var/lib/proot-distro/installed-rootfs
 cd $PREFIX/var/lib/proot-distro/installed-rootfs/
 
 # Download the rootfs using axel
-axel -a -o $FS.tar.xz https://github.com/xiv3r/Termux-Pentesting-Distro/releases/download/rootfs/$FS.tar.xz || exit 1
+axel -a -o $FS.tar.xz https://github.com/xiv3r/Termux-Pentesting-Distro/releases/download/rootfs/$FS.tar.xz
+
+# Check file integrity
+echo " "
+echo "Checking $NM Linux File Integrity...!!!"
+echo " "
+sleep 3s
+echo "MD5"
+md5sum $FS.tar.xz
+sleep 3s
+echo " "
+echo "SHA256"
+sha256sum $FS.tar.xz
+sleep 3s
+echo " "
+echo "SHA512"
+sha512sum $FS.tar.xz
+sleep 3s
 
 # Extract the rootfs
 echo " "
@@ -71,9 +88,14 @@ mkdir -p $PREFIX/var/lib/proot-distro/dlcache
 mv $FS.tar.xz $PREFIX/var/lib/proot-distro/dlcache
 
 # Display final instructions
-echo -e '\e[1;93m'
-cat << EOF
-Successful Installation!
-
+echo " "
+echo -e '\e[1;96mSuccessful Installation!'
+echo -e '\e[0m'
+cat <<- EOF
 To login $NM Linux, Type: $FS
 EOF
+
+sleep 15s
+clear
+
+$FS
