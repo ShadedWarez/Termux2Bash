@@ -55,7 +55,7 @@ mv kali-arm64 $PREFIX/var/lib/proot-distro/installed-rootfs/$FS
 # Create a proot-distro configuration file for the Kali minimal rootfs
 cat > $PREFIX/etc/proot-distro/$FS.sh << EOF
 DISTRO_NAME="$NM Linux"
-TARBALL_URL['aarch64']="https://github.com/xiv3r/Termux-Pentesting-Distro/releases/download/rootfs/$FS.tar.xz"
+TARBALL_URL['aarch64']="https://kali.download/nethunter-images/current/rootfs/kali-nethunter-rootfs-minimal-arm64.tar.xz"
 TARBALL_SHA256['aarch64']="$(sha256sum $FS.tar.xz | awk '{print $1}')"
 EOF
 
