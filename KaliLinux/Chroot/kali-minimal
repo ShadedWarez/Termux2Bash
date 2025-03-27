@@ -6,7 +6,7 @@ clear
 
 cd $HOME
 
-### Set variables
+# Set variables
 TAR=kali-nethunter-rootfs-minimal-arm64.tar.xz
 DIR=kali-arm64
 NM=kali
