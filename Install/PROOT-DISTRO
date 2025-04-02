@@ -4,7 +4,7 @@
 apt install proot proot-distro bsdtar axel neofetch -y
 clear
 
-# Display the menuecho 
+# Display the menu
 echo "Select your Distro:"
 echo "1. adelie"
 echo "2. alma"
@@ -33,9 +33,10 @@ echo "24. pardus"
 echo "25. parrot"
 echo "26. photon"
 echo "27. rocky"
-echo "28. ubuntu"
-echo "29. ujammy"
-echo "30. void"
+echo "28. slackware"
+echo "29. ubuntu"
+echo "30. ujammy"
+echo "31. void"
 
 # Read the user's choice
 read -p "Enter the Number: " choice
@@ -124,12 +125,15 @@ case $choice in
         FS="rocky"
         ;;
     28)
-        FS="ubuntu"
+        FS="slackware"
         ;;
     29)
-        FS="ujammy"
+        FS="ubuntu"
         ;;
     30)
+        FS="ujammy"
+        ;;
+    31)
         FS="void"
         ;;
     *)
