@@ -48,20 +48,31 @@ Proot-Distro Scripts: Each distro has a configuration script (e.g., kali.sh, ubu
 ```diff
 -; apt update && apt upgrade -y && apt install wget -y && wget -O $PREFIX/bin/PROOT-DISTRO https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Install/PROOT-DISTRO && chmod 755 $PREFIX/bin/PROOT-DISTRO && PROOT-DISTRO
 ```
+<details><summary>
+</summary>
+  
 ### CHROOT-DISTRO
 > optional
 ```diff
 -; apt update && apt upgrade -y && apt install wget -y && wget -O $PREFIX/bin/CHROOT-DISTRO https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Install/CHROOT-DISTRO && chmod 755 $PREFIX/bin/CHROOT-DISTRO && CHROOT-DISTRO
 ```
+</details>
+
 # Install Distro
 > For proot
 ```diff
 PROOT-DISTRO
 ```
+<details><summary>
+  
+</summary>
+
 > For chroot
 ```diff
 CHROOT-DISTRO
 ```
+</details>
+
 ### Login
 > Example: `kali`
 ```diff
@@ -295,6 +306,19 @@ apt update && apt install wget -y && clear && wget -qO- https://raw.githubuserco
 <br>
 <br>
 
+-------------
+# Crux Linux 
+- Install
+```
+apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Crux/install | bash && crux
+```
+
+<img width="800" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/Crux/crux.png">
+
+<br>
+<br>
+<br>
+<br>
 
 -------------
 # Debian Linux 
