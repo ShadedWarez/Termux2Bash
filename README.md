@@ -33,8 +33,6 @@ Proot-Distro Scripts: Each distro has a configuration script (e.g., kali.sh, ubu
 </div>
 
 # Requirements
-  
-## Download
 
 | [Termux](https://play.google.com/store/apps/details?id=com.termux)
 |
