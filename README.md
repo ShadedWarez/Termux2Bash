@@ -536,6 +536,20 @@ apt update && apt install wget -y && clear && wget -qO- https://raw.githubuserco
 <br>
 
 -------------
+# Slackware Linux 
+- Install
+```
+apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Slackware/install | bash && slackware 
+```
+
+<img width="800" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/Slackware/slackware.png">
+
+<br>
+<br>
+<br>
+<br>
+
+-------------
 # Termux Linux
 - Install
 ```
