@@ -581,7 +581,7 @@ apt update && apt install wget neofetch -y && wget -O $PREFIX/etc/bash.bashrc ht
 <img width="800" height="500" src="https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Termux/term.png">
 
 -------------
-# Ubuntu Linux Noble
+# Ubuntu Linux (Noble)
 - Install
 ```
 apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Ubuntu/install | bash && ubuntu 
@@ -595,7 +595,7 @@ apt update && apt install wget -y && clear && wget -qO- https://raw.githubuserco
 <br>
 
 -------------
-# Ubuntu Linux Jammy
+# Ubuntu Linux (Jammy)
 - Install
 ```
 apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Ubuntu_jammy/install | bash && ujammy 
