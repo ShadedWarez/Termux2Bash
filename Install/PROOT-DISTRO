@@ -5,7 +5,7 @@ apt install proot proot-distro bsdtar axel neofetch -y
 clear
 
 # Display the menu
-echo "Select your Distro:"
+echo "Select your Distro Number:"
 echo "1. adelie"
 echo "2. alma"
 echo "3. alpine"
@@ -17,26 +17,27 @@ echo "8. backbox"
 echo "9. blackarch"
 echo "10. centos"
 echo "11. chimera"
-echo "12. debian"
-echo "13. deepin"
-echo "14. devuan"
-echo "15. fedora"
-echo "16. gentoo"
-echo "17. kali"
-echo "18. manjaro"
-echo "19. openeuler"
-echo "20. openkylin"
-echo "21. opensuse"
-echo "22. openwrt"
-echo "23. oracle"
-echo "24. pardus"
-echo "25. parrot"
-echo "26. photon"
-echo "27. rocky"
-echo "28. slackware"
-echo "29. ubuntu"
-echo "30. ujammy"
-echo "31. void"
+echo "12. crux"
+echo "13. debian"
+echo "14. deepin"
+echo "15. devuan"
+echo "16. fedora"
+echo "17. gentoo"
+echo "18. kali"
+echo "19. manjaro"
+echo "20. openeuler"
+echo "21. openkylin"
+echo "22. opensuse"
+echo "23. openwrt"
+echo "24. oracle"
+echo "25. pardus"
+echo "26. parrot"
+echo "27. photon"
+echo "28. rocky"
+echo "29. slackware"
+echo "30. ubuntu"
+echo "31. ujammy"
+echo "32. void"
 
 # Read the user's choice
 read -p "Enter the Number: " choice
@@ -77,63 +78,66 @@ case $choice in
         FS="chimera"
         ;;
     12)
-        FS="debian"
+        FS="crux"
         ;;
     13)
-        FS="deepin"
+        FS="debian"
         ;;
     14)
-        FS="devuan"
+        FS="deepin"
         ;;
     15)
-        FS="fedora"
+        FS="devuan"
         ;;
     16)
-        FS="gentoo"
+        FS="fedora"
         ;;
     17)
-        FS="kali"
+        FS="gentoo"
         ;;
     18)
-        FS="manjaro"
+        FS="kali"
         ;;
     19)
-        FS="openeuler"
+        FS="manjaro"
         ;;
     20)
-        FS="openkylin"
+        FS="openeuler"
         ;;
     21)
-        FS="opensuse"
+        FS="openkylin"
         ;;
     22)
-        FS="openwrt"
+        FS="opensuse"
         ;;
     23)
-        FS="oracle"
+        FS="openwrt"
         ;;
     24)
-        FS="pardus"
+        FS="oracle"
         ;;
     25)
-        FS="parrot"
+        FS="pardus"
         ;;
     26)
-        FS="photon"
+        FS="parrot"
         ;;
     27)
-        FS="rocky"
+        FS="photon"
         ;;
     28)
-        FS="slackware"
+        FS="rocky"
         ;;
     29)
-        FS="ubuntu"
+        FS="slackware"
         ;;
     30)
-        FS="ujammy"
+        FS="ubuntu"
         ;;
     31)
+        FS="ujammy"
+        ;;
+    32)
         FS="void"
         ;;
     *)
