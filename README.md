@@ -39,6 +39,8 @@ Proot-Distro Scripts: Each distro has a configuration script (e.g., kali.sh, ubu
 | [VNC](https://store.nethunter.com/packages/com.offsec.nethunter.kex/)
 |
 
+<br>
+
 # Installation
 
 ### PROOT-DISTRO
@@ -602,6 +604,34 @@ apt update && apt install wget -y && clear && wget -qO- https://raw.githubuserco
 ```
 
 <img width="800" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/Ubuntu_jammy/ujammy.png">
+
+<br>
+<br>
+<br>
+<br>
+
+-------------
+# Ubuntu Linux (Focal Fossa)
+- Install
+```
+apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Ufocal/install | bash && ufocal
+```
+
+<img width="800" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/Ufocal/ufocal.png">
+
+<br>
+<br>
+<br>
+<br>
+
+-------------
+# Ubuntu Linux (Oracular)
+- Install
+```
+apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Uoracular/install | bash && uoracular 
+```
+
+<img width="800" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/Uoracular/uoracular.png">
 
 <br>
 <br>
