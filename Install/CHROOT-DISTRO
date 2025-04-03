@@ -7,7 +7,7 @@ clear
 cd $HOME
 
 # Display the menu
-echo "Select your Distro:"
+echo "Select your Distro Number:"
 echo "1. adelie"
 echo "2. alma"
 echo "3. alpine"
@@ -38,8 +38,10 @@ echo "27. photon"
 echo "28. rocky"
 echo "29. slackware"
 echo "30. ubuntu"
-echo "31. ujammy"
-echo "32. void"
+echo "31. ufocal"
+echo "32. ujammy"
+echo "33. uoracular"
+echo "34. void"
 
 # Read the user's choice
 read -p "Enter the Number: " choice
@@ -137,9 +139,15 @@ case $choice in
         FS="ubuntu"
         ;;
     31)
-        FS="ujammy"
+        FS="ufocal"
         ;;
     32)
+        FS="ujammy"
+        ;;
+    33)
+        FS="uoracular"
+        ;;
+    34)
         FS="void"
         ;;
     *)
