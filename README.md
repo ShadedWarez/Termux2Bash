@@ -43,7 +43,7 @@ Proot-Distro Scripts: Each distro has a configuration script (e.g., kali.sh, ubu
 
 # Installation
 
-### PROOT-DISTRO
+## PROOT-DISTRO
 > recommended 
 ```diff
 -; apt update && apt upgrade -y && apt install wget -y && wget -O $PREFIX/bin/PROOT-DISTRO https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Install/PROOT-DISTRO && chmod 755 $PREFIX/bin/PROOT-DISTRO && PROOT-DISTRO
@@ -51,7 +51,7 @@ Proot-Distro Scripts: Each distro has a configuration script (e.g., kali.sh, ubu
 <details><summary>
 </summary>
   
-### CHROOT-DISTRO
+## CHROOT-DISTRO
 > optional
 ```diff
 -; apt update && apt upgrade -y && apt install wget -y && wget -O $PREFIX/bin/CHROOT-DISTRO https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Install/CHROOT-DISTRO && chmod 755 $PREFIX/bin/CHROOT-DISTRO && CHROOT-DISTRO
@@ -73,23 +73,47 @@ CHROOT-DISTRO
 ```
 </details>
 
-### Login
-> Example: `kali`
-```diff
+## Login
+> example 
+```
 kali
 ```
-### Logout
-> Back to Termux
-```diff
+## Logout
+```
 exit
 ```
-### Uninstall
-> Example: `uninstall-kali`
-```diff 
+## Uninstall
+> example 
+```
 uninstall-kali
 ```
+## Reinstall
+> example 
+```
+pd reinstall kali
+```
+## Rename
+> example 
+```
+pd rename kali (new name)
+```
+## Restore
+> example 
+```
+pd restore kali
+```
+## Reset 
+> example 
+```
+pd reset kali
+```
+## Backup 
+> example 
+```
+pd backup kali
+```
 
-# Proot Options
+# Proot-Distro Options
 ### List of the available proot-distro commands:
 
 - `pd help`         - Show this help information.
