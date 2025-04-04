@@ -1,4 +1,4 @@
-<img width="800" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/Termux/termux.png">
+<img width="800" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/Termux/term.png">
 
 # Install
 ```diff
