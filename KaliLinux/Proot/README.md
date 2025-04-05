@@ -6,7 +6,7 @@
 ```
 # Minimal Installation 
 ```diff
--; apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Proot/kali-minimal | bash && kali
+-; apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Proot/install | bash && kali
 ```
 # Login
 ```
