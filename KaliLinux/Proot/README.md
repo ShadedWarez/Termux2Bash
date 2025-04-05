@@ -1,8 +1,12 @@
 <img width="800" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/KaliLinux/Proot/NH.png">
 
-# Install
+# Full Installation 
 ```diff
--; apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinu/Proot/minimal | bash && kali
+-; apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Proot/full | bash && kali
+```
+# minimal Installation 
+```diff
+-; apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Proot/kali-minimal | bash && kali
 ```
 # Login
 ```
