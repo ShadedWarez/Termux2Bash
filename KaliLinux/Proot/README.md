@@ -2,7 +2,7 @@
 
 # Full Installation 
 ```diff
--; apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Proot/full | bash && kali
+-; apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/KaliLinux/Proot/kali-full | bash && kali
 ```
 # minimal Installation 
 ```diff
