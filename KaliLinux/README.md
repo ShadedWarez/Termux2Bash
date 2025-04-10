@@ -5,4 +5,4 @@
 
 > Chroot
 
-[Kali in Chroot](https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/KaliLinux/Proot/README.md)
+[Kali in Chroot](https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/KaliLinux/Chroot/README.md)
