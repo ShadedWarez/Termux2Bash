@@ -31,20 +31,16 @@ axel -o $FS.tar.xz https://image-nethunter.kali.org/nethunter-fs/kali-daily/kali
 
 # Check file integrity
 echo " "
-echo "Checking $NM Linux File Integrity...!!!"
+echo "[*] Checking $NM Linux File Integrity...!!!"
 echo " "
-sleep 3s
-echo "MD5"
+echo "[*] MD5"
 md5sum $FS.tar.xz
-sleep 3s
 echo " "
-echo "SHA256"
+echo "[*] SHA256"
 sha256sum $FS.tar.xz
-sleep 3s
 echo " "
-echo "SHA512"
+echo "[*] SHA512"
 sha512sum $FS.tar.xz
-sleep 3s
 
 # Extract the rootfs
 echo " "
