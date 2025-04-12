@@ -15,28 +15,24 @@ NM=kali
 neofetch --ascii_distro Kali -L
 
 # Download Kali rootfs
-axel -a -o $TAR https://image-nethunter.kali.org/nethunter-fs/kali-daily/kali-nethunter-daily-dev-rootfs-minimal-arm64.tar.xz
+axel -o $TAR https://image-nethunter.kali.org/nethunter-fs/kali-daily/kali-nethunter-daily-dev-rootfs-minimal-arm64.tar.xz
 
 # Check file integrity
 echo " "
-echo "Checking $NM Linux File Integrity...!!!"
+echo "[*] Checking $NM Linux File Integrity...!!!"
 echo " "
-sleep 3s
-echo "MD5"
+echo "[*] MD5"
 md5sum $TAR
-sleep 3s
 echo " "
-echo "SHA256"
+echo "[*] SHA256"
 sha256sum $TAR
-sleep 3s
 echo " "
-echo "SHA512"
+echo "[*] SHA512"
 sha512sum $TAR
-sleep 3s
 
 # Extract rootfs
 echo " "
-echo "[*] Extracting $TAR, Please wait..."
+echo "[*] Extracting $TAR, Please wait...!!!"
 proot --link2symlink bsdtar -xpJf $TAR 2>/dev/null
 
 # Update bash.bashrc
@@ -100,7 +96,7 @@ else
     \$cmdline -c "\$cmd"
 fi
 EOF
-chmod 755 $PREFIX/bin/$NM
+chmod 700 $PREFIX/bin/$NM
 
 # Add neofetch
 wget -O $DIR/bin/neofetch https://raw.githubusercontent.com/xiv3r/Kali-Linux-Termux/refs/heads/main/kali_nethunter/neofetch
@@ -114,7 +110,7 @@ sed -i 's/clear//g' $PREFIX/etc/bash.bashrc
 sed -i 's/$NM//g' $PREFIX/etc/bash.bashrc
 rm -rf $PREFIX/bin/$NM-uninstall
 EOF
-chmod 755 $PREFIX/bin/$NM-uninstall
+chmod 700 $PREFIX/bin/$NM-uninstall
 
 # Modify .bash_profile
 sed -i '/if/,/fi/d' $DIR/root/.bash_profile
@@ -126,8 +122,6 @@ chmod +s $DIR/usr/bin/su
 # Fix DNS issue
 cat > $DIR/etc/resolv.conf << EOF
 nameserver 9.9.9.10
-nameserver 8.8.8.8
-nameserver 1.1.1.1
 EOF
 
 # Fix sudoer file
