@@ -25,6 +25,7 @@ mkdir -p $PREFIX/var/lib/proot-distro/installed-rootfs
 
 # Change directory
 cd $PREFIX/var/lib/proot-distro/installed-rootfs/
+mkdir -p $FS
 
 # Download the rootfs using axel
 axel -o $FS.tar.xz https://image-nethunter.kali.org/nethunter-fs/kali-daily/kali-nethunter-daily-dev-rootfs-minimal-arm64.tar.xz
@@ -50,6 +51,7 @@ sleep 3s
 echo " "
 echo "[*] Extracting ${NM} Linux Rootfs, Please wait...!!!"
 proot --link2symlink bsdtar -xpJf $FS.tar.xz 2>/dev/null
+mv kali-arm64/* $FS
 
 # Create a proot-distro configuration file for the Kali minimal rootfs
 cat > $PREFIX/etc/proot-distro/$FS.sh << EOF
