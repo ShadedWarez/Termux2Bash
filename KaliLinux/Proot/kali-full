@@ -1,7 +1,7 @@
 #!/data/data/com.termux/files/usr/bin/bash
 
 # Install required packages
-apt install proot proot-distro bsdtar axel neofetch -y
+apt install proot proot-distro bsdtar libxml2 axel neofetch -y
 clear
 
 # Read FS value
@@ -27,7 +27,7 @@ mkdir -p $PREFIX/var/lib/proot-distro/installed-rootfs/$FS
 cd $PREFIX/var/lib/proot-distro/installed-rootfs/
 
 # Download the rootfs using axel
-axel -a -o $FS.tar.xz https://kali.download/nethunter-images/current/rootfs/kali-nethunter-rootfs-full-arm64.tar.xz
+axel -a -o $FS.tar.xz https://image-nethunter.kali.org/nethunter-fs/kali-daily/kali-nethunter-daily-dev-rootfs-full-arm64.tar.xz
 
 # Check file integrity
 echo " "
