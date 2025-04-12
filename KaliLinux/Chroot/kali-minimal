@@ -1,13 +1,13 @@
 #!/data/data/com.termux/files/usr/bin/bash
 
 # Install required packages
-apt install proot bsdtar axel neofetch -y
+apt install proot bsdtar libxml2 axel neofetch -y
 clear
 
 cd $HOME
 
 # Set variables
-TAR=kali-nethunter-rootfs-minimal-arm64.tar.xz
+TAR=kali-minimal-arm64.tar.xz
 DIR=kali-arm64
 NM=kali
 
@@ -15,7 +15,7 @@ NM=kali
 neofetch --ascii_distro Kali -L
 
 # Download Kali rootfs
-axel -a -o $TAR https://kali.download/nethunter-images/current/rootfs/$TAR
+axel -a -o $TAR https://image-nethunter.kali.org/nethunter-fs/kali-daily/kali-nethunter-daily-dev-rootfs-minimal-arm64.tar.xz
 
 # Check file integrity
 echo " "
