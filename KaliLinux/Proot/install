@@ -57,7 +57,6 @@ DISTRO_NAME="$NM Linux"
 TARBALL_URL['aarch64']="https://github.com/xiv3r/Termux-Pentesting-Distro/releases/download/rootfs/$FS.tar.xz"
 TARBALL_SHA256['aarch64']="$(sha256sum $FS.tar.xz | awk '{print $1}')"
 EOF
-mv kali-arm64/* $FS
 
 # Create a shortcut command to launch the distro
 cat > $PREFIX/bin/$FS << EOF
