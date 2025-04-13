@@ -179,24 +179,20 @@ mkdir -p $PREFIX/var/lib/proot-distro/installed-rootfs
 cd $PREFIX/var/lib/proot-distro/installed-rootfs/
 
 # Download the rootfs using axel
-axel -a -o $FS.tar.xz https://github.com/xiv3r/Termux-Pentesting-Distro/releases/download/rootfs/$FS.tar.xz || exit 1
+axel -o $FS.tar.xz https://github.com/xiv3r/Termux-Pentesting-Distro/releases/download/rootfs/$FS.tar.xz || exit 1
 
 # Check the file integrity
 echo " "
-echo "Checking $NM Linux File Integrity...!!!"
+echo "[*] Checking $NM Linux File Integrity..."
 echo " "
-sleep 3s
-echo "MD5"
+echo "[*] Checking MD5..."
 md5sum $FS.tar.xz
-sleep 3s
 echo " "
-echo "SHA256"
+echo "[*] Checking SHA256..."
 sha256sum $FS.tar.xz
-sleep 3s
 echo " "
-echo "SHA512"
+echo "[*] Checking SHA512..."
 sha512sum $FS.tar.xz
-sleep 3s
 
 # Extract the rootfs
 echo " "
