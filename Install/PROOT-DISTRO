@@ -1,7 +1,7 @@
 #!/data/data/com.termux/files/usr/bin/bash
 
 # Install required packages
-apt install proot proot-distro bsdtar axel neofetch -y
+apt install proot proot-distro bsdtar libxml2 axel neofetch -y
 clear
 
 # Display the menu
