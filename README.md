@@ -2,7 +2,7 @@
   
   <details><summary>
 
-# Termux Proot-Distro
+# $${\color{orange}Termux- Proot- Distro}$$
 
 Proot Distro uses pre-built root filesystems (rootfs) of Linux distributions. These are essentially the core files of a Linux OS.
 
@@ -42,8 +42,7 @@ Proot-Distro Scripts: Each distro has a configuration script (e.g., kali.sh, ubu
 <br>
 
 # Installation
-
-## PROOT-DISTRO
+> PROOT-DISTRO
 > recommended 
 ```diff
 -; apt update && apt upgrade -y && apt install wget -y && wget -O $PREFIX/bin/PROOT-DISTRO https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Install/PROOT-DISTRO && chmod 755 $PREFIX/bin/PROOT-DISTRO && PROOT-DISTRO
@@ -51,7 +50,7 @@ Proot-Distro Scripts: Each distro has a configuration script (e.g., kali.sh, ubu
 <details><summary>
 </summary>
   
-## CHROOT-DISTRO
+> CHROOT-DISTRO
 > optional
 ```diff
 -; apt update && apt upgrade -y && apt install wget -y && wget -O $PREFIX/bin/CHROOT-DISTRO https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Install/CHROOT-DISTRO && chmod 755 $PREFIX/bin/CHROOT-DISTRO && CHROOT-DISTRO
@@ -73,6 +72,7 @@ CHROOT-DISTRO
 ```
 </details>
 
+# Usage
 ## Login
 > example 
 ```
@@ -113,8 +113,7 @@ pd reset kali
 pd backup kali
 ```
 
-# Proot-Distro Options
-### List of the available proot-distro commands:
+## List of the available proot-distro commands:
 
 - `pd help`         - Show this help information.
 - `pd backup`       - Backup a specified distribution.
