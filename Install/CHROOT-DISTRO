@@ -7,6 +7,7 @@ clear
 cd $HOME
 
 # Display the menu
+echo "Select your Distro Number:"
 echo "1. adelie"
 echo "2. alma"
 echo "3. alpine"
