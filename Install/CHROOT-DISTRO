@@ -7,7 +7,6 @@ clear
 cd $HOME
 
 # Display the menu
-echo "Select your Distro Number:"
 echo "1. adelie"
 echo "2. alma"
 echo "3. alpine"
@@ -19,29 +18,30 @@ echo "8. backbox"
 echo "9. blackarch"
 echo "10. centos"
 echo "11. chimera"
-echo "12. crux"
-echo "13. debian"
-echo "14. deepin"
-echo "15. devuan"
-echo "16. fedora"
-echo "17. gentoo"
-echo "18. kali"
-echo "19. manjaro"
-echo "20. openeuler"
-echo "21. openkylin"
-echo "22. opensuse"
-echo "23. openwrt"
-echo "24. oracle"
-echo "25. pardus"
-echo "26. parrot"
-echo "27. photon"
-echo "28. rocky"
-echo "29. slackware"
-echo "30. ubuntu"
-echo "31. ufocal"
-echo "32. ujammy"
-echo "33. uoracular"
-echo "34. void"
+echo "12. cirros"
+echo "13. crux"
+echo "14. debian"
+echo "15. deepin"
+echo "16. devuan"
+echo "17. fedora"
+echo "18. gentoo"
+echo "19. kali"
+echo "20. manjaro"
+echo "21. openeuler"
+echo "22. openkylin"
+echo "23. opensuse"
+echo "24. openwrt"
+echo "25. oracle"
+echo "26. pardus"
+echo "27. parrot"
+echo "28. photon"
+echo "29. rocky"
+echo "30. slackware"
+echo "31. ubuntu"
+echo "32. ufocal"
+echo "33. ujammy"
+echo "34. uoracular"
+echo "35. void"
 
 # Read the user's choice
 read -p "Enter the Number: " choice
@@ -82,72 +82,75 @@ case $choice in
         FS="chimera"
         ;;
     12)
-        FS="crux"
+        FS="cirros"
         ;;
     13)
-        FS="debian"
+        FS="crux"
         ;;
     14)
-        FS="deepin"
+        FS="debian"
         ;;
     15)
-        FS="devuan"
+        FS="deepin"
         ;;
     16)
-        FS="fedora"
+        FS="devuan"
         ;;
     17)
-        FS="gentoo"
+        FS="fedora"
         ;;
     18)
-        FS="kali"
+        FS="gentoo"
         ;;
     19)
-        FS="manjaro"
+        FS="kali"
         ;;
     20)
-        FS="openeuler"
+        FS="manjaro"
         ;;
     21)
-        FS="openkylin"
+        FS="openeuler"
         ;;
     22)
-        FS="opensuse"
+        FS="openkylin"
         ;;
     23)
-        FS="openwrt"
+        FS="opensuse"
         ;;
     24)
-        FS="oracle"
+        FS="openwrt"
         ;;
     25)
-        FS="pardus"
+        FS="oracle"
         ;;
     26)
-        FS="parrot"
+        FS="pardus"
         ;;
     27)
-        FS="photon"
+        FS="parrot"
         ;;
     28)
-        FS="rocky"
+        FS="photon"
         ;;
     29)
-        FS="slackware"
+        FS="rocky"
         ;;
     30)
-        FS="ubuntu"
+        FS="slackware"
         ;;
     31)
-        FS="ufocal"
+        FS="ubuntu"
         ;;
     32)
-        FS="ujammy"
+        FS="ufocal"
         ;;
     33)
-        FS="uoracular"
+        FS="ujammy"
         ;;
     34)
+        FS="uoracular"
+        ;;
+    35)
         FS="void"
         ;;
     *)
