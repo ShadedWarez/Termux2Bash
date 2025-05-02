@@ -330,6 +330,20 @@ apt update && apt install wget -y && clear && wget -qO- https://raw.githubuserco
 <br>
 
 -------------
+# Cirros Linux 
+- Install
+```
+apt update && apt install wget -y && clear && wget -qO- https://raw.githubusercontent.com/xiv3r/Termux-Pentesting-Distro/refs/heads/main/Cirros/install | bash && cirros
+```
+
+<img width="800" height="500" src="https://github.com/xiv3r/Termux-Pentesting-Distro/blob/main/Cirros/cirros.png">
+
+<br>
+<br>
+<br>
+<br>
+
+-------------
 # Crux Linux 
 - Install
 ```
